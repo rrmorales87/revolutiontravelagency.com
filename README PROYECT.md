@@ -12,5 +12,5 @@
 
 ## Correr el proyecto
 
-- Usar el comando **yarn o npm run** y luego la opcion de build para que se compilen los asset del proyecto, ya sea cambios en css y javascript
-- Usar el comando **php artisan serve** para arrancar un servidor de desarrollo local donde se puede probar el proyecto
+- Usar el comando **yarn o npm run** y luego la opcion de dev para levantar el server que corre los assets de vue, framework de javascript,
+- Usar el comando **php artisan serve** para arrancar un servidor de desarrollo local donde se puede probar el proyecto, por defecto es http://localhost:8000
