@@ -10,7 +10,7 @@ import NavLink from "../Components/NavLink.vue";
     <div class="flex-col max-w-screen font-Musticapro">
         <Head title="Revolution Travel" />
         <div class="flex justify-between bg-blue-950  border-cyan-50 px-28">
-            <div class="flex p-1 gap-1">
+            <div class="flex py-1 gap-1">
                 <img class="w-5 cursor-pointer" src="/icons/facebook-white.png" alt="facebook">
                 <img class="w-5 cursor-pointer" src="/icons/twitter-white.png" alt="twitter">
                 <img class="w-5 cursor-pointer" src="/icons/whatsapp-white.png" alt="whatsapp">
