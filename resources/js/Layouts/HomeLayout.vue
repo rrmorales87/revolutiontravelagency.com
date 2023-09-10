@@ -3,23 +3,35 @@
 import {Head} from "@inertiajs/vue3";
 import { PhoneIcon } from '@heroicons/vue/24/solid'
 import NavLink from "../Components/NavLink.vue";
-
+import {computed} from "vue";
+const setDeviceType = computed(() => {
+  const platform = navigator.platform.toLowerCase();
+  if (/(android|webos|iphone|ipad|ipod|blackberry|windows phone)/.test(platform)) {
+    return  'mobile';
+  } else if (/mac|win|linux/i.test(platform)) {
+    return  'desktop';
+  } else if (/tablet|ipad/i.test(platform)) {
+     return  'tablet';
+  } else {
+    return  'unknown';
+  }
+});
 </script>
 
 <template>
     <div class="flex-col max-w-screen font-Musticapro">
         <Head title="Revolution Travel" />
-        <div class="flex justify-between bg-blue-950  border-cyan-50 px-28">
-            <div class="flex py-1 gap-1">
-                <img class="w-5 cursor-pointer" src="/icons/facebook-white.png" alt="facebook">
-                <img class="w-5 cursor-pointer" src="/icons/twitter-white.png" alt="twitter">
-                <img class="w-5 cursor-pointer" src="/icons/whatsapp-white.png" alt="whatsapp">
+        <div class="flex justify-between bg-blue-950  border-cyan-50 px-28 py-2">
+            <div class="flex  gap-4">
+                <img class="w-7 cursor-pointer" src="/icons/facebook-white.png" alt="facebook">
+                <img class="w-7 cursor-pointer" src="/icons/twitter-white.png" alt="twitter">
+                <img v-if="setDeviceType==='mobile' || setDeviceType==='tablet'" class="w-7 cursor-pointer" src="/icons/whatsapp-white.png" alt="whatsapp">
             </div>
-            <div class="flex p-1">
-               <div class="flex gap-2 cursor-pointer">
+            <div class="flex justify-center justify-items-center p-1">
+               <div class="flex gap-2 cursor-pointer ">
 
                    <p class="text-white">Contactus</p>
-                   <PhoneIcon class="w-5 text-white" />
+                   <PhoneIcon class="w-6 text-white" />
 
                </div>
             </div>
