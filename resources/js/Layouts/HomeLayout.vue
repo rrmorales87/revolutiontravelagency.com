@@ -4,6 +4,7 @@ import {Head} from "@inertiajs/vue3";
 import { PhoneIcon } from '@heroicons/vue/24/solid'
 import NavLink from "../Components/NavLink.vue";
 import {computed} from "vue";
+import RegisterButton from "../Components/RegisterButton.vue";
 const setDeviceType = computed(() => {
   const platform = navigator.platform.toLowerCase();
   if (/(android|webos|iphone|ipad|ipod|blackberry|windows phone)/.test(platform)) {
@@ -19,48 +20,67 @@ const setDeviceType = computed(() => {
 </script>
 
 <template>
-    <div class="flex-col max-w-screen font-Musticapro">
+    <div class="flex-col max-w-screen px-5">
         <Head title="Revolution Travel" />
-        <div class="flex justify-between bg-blue-950  border-cyan-50 px-28 py-2">
-            <div class="flex  gap-4">
-                <img class="w-7 cursor-pointer" src="/icons/facebook-white.png" alt="facebook">
-                <img class="w-7 cursor-pointer" src="/icons/twitter-white.png" alt="twitter">
-                <img v-if="setDeviceType==='mobile' || setDeviceType==='tablet'" class="w-7 cursor-pointer" src="/icons/whatsapp-white.png" alt="whatsapp">
-            </div>
-            <div class="flex justify-center justify-items-center p-1">
-               <div class="flex gap-2 cursor-pointer ">
 
-                   <p class="text-white">Contactus</p>
-                   <PhoneIcon class="w-6 text-white" />
+        <div class="header">
 
-               </div>
-            </div>
+            <img class="logo w-5/12 pl-3" src="/icons/logo.png" alt="logo">
+
+            <div class="menu">
 
 
-        </div>
-        <nav class="flex m-2 justify-items-center">
-            <div class="self-start">
-                <img class="w-5/12 pl-3" src="/icons/logo.png" alt="logo">
+                  <nav-link>
+                    Subscription
+                  </nav-link>
+
+                  <nav-link>
+                    Login
+                  </nav-link>
+                  <RegisterButton type="String">
+                    Registers
+                  </RegisterButton>
+                  <div>
+                    <img src="/storage/icon/Leng.png" >
+                  </div>
+
+
+
+
             </div>
-            <div class=" flex text-xl gap-4 mr-auto">
-                <nav-link>
-                    Home
-                </nav-link>
-                <nav-link>
-                    About
-                </nav-link>
-            </div>
-            <div class="flex text-xl mr-4">
+<!--            <div class="flex text-xl mr-4">
                 <nav-link>Login</nav-link>
                 <p class="self-center">|</p>
                 <nav-link>Register</nav-link>
-            </div>
-        </nav>
+            </div>-->
+        </div>
 
         <slot/>
     </div>
 </template>
 
-<style scoped>
+<style  scoped>
+div.header{
+  display: flex;
+  height: 85px;
+}
+
+div.header .logo{
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  top: 22px;
+  left: 180px;
+}
+
+div.menu{
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  width: 100%;
+  padding-right:10rem;
+  gap:2rem;
+
+}
 
 </style>
