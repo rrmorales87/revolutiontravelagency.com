@@ -1,7 +1,7 @@
 <script setup>
 
 import {Head} from "@inertiajs/vue3";
-import { PhoneIcon } from '@heroicons/vue/24/solid'
+//import { PhoneIcon } from '@heroicons/vue/24/solid'
 import NavLink from "../Components/NavLink.vue";
 import {computed} from "vue";
 import RegisterButton from "../Components/RegisterButton.vue";
@@ -41,7 +41,7 @@ const setDeviceType = computed(() => {
                     Registers
                   </RegisterButton>
                   <div>
-                    <img src="/storage/icon/Leng.png" >
+                    <img src="/storage/icon/Leng.png" alt="lang">
                   </div>
 
 
