@@ -20,7 +20,7 @@ const setDeviceType = computed(() => {
 </script>
 
 <template>
-    <div class="flex-col max-w-screen px-5">
+    <div class="flex-col max-w-screen px-16">
         <Head title="Revolution Travel" />
 
         <div class="header">
@@ -75,7 +75,7 @@ div.header .logo{
 
 div.menu{
   display: flex;
-  justify-content:end;
+  justify-content:flex-end;
   align-items: center;
   width: 100%;
   padding-right:10rem;
