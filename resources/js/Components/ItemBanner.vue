@@ -43,7 +43,12 @@ import ReserveButton from "./ReserveButton.vue";
     background-size: cover;
     height: 1300px;
     background-position:1200px;
-
+  }
+  @media screen and (max-width: 425px) {
+     background-position:990px;
+  }
+  @media screen and (max-width: 320px) {
+       background-position:890px;
   }
 
   .title{
@@ -60,11 +65,33 @@ import ReserveButton from "./ReserveButton.vue";
       margin-top:4rem;
       font-size: 36px;
       line-height: 43.88px;
-
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 25px;
+        margin-top:2rem;
+        width:260px;
+        line-height:30px;
+      }
     }
     @media screen and (max-width: 1024px) {
       top: 2rem;
       left: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      width:400px;
+      font-size: 50px;
+    }
+    @media screen and (max-width: 425px) {
+      width:380px;
+      line-height: 40px;
+      font-size:40px;
+      left:1rem
+    }
+    @media screen and (max-width: 320px) {
+      width:310px;
+      left:0.5rem
     }
 
   }
@@ -73,9 +100,17 @@ import ReserveButton from "./ReserveButton.vue";
     left: 10rem;
     top:30rem;
     @media screen and (max-width: 1024px) {
+      top:25rem;
       left: 2rem;
     }
-
+    @media screen and (max-width: 425px) {
+      top:18rem;
+      left:1rem;
+    }
+    @media screen and (max-width: 320px) {
+      top:20rem;
+      left:0.5rem
+    }
   };
 
 }
