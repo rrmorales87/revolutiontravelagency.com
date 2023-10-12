@@ -20,7 +20,7 @@ const setDeviceType = computed(() => {
 </script>
 
 <template>
-    <div class="flex-col max-w-screen px-16">
+    <div class="flex-col max-w-screen lg:px-16  md:px-4 sm:px-2.5 ">
         <Head title="Revolution Travel" />
 
         <div class="header">
@@ -30,23 +30,21 @@ const setDeviceType = computed(() => {
             <div class="menu">
 
 
-                  <nav-link>
+                  <nav-link >
                     Subscription
                   </nav-link>
 
                   <nav-link>
                     Login
                   </nav-link>
-                  <RegisterButton type="String">
-                    Registers
-                  </RegisterButton>
-                  <div>
-                    <img src="/storage/icon/Leng.png" alt="lang">
-                  </div>
 
 
-
-
+            </div>
+            <RegisterButton type="String">
+              Registers
+            </RegisterButton>
+            <div>
+              <img src="/storage/icon/Leng.png" alt="lang">
             </div>
 <!--            <div class="flex text-xl mr-4">
                 <nav-link>Login</nav-link>
@@ -60,27 +58,64 @@ const setDeviceType = computed(() => {
 </template>
 
 <style  scoped>
-div.header{
+.header{
   display: flex;
   height: 85px;
 }
 
-div.header .logo{
-  position: absolute;
-  width: 200px;
-  height: 40px;
-  top: 22px;
-  left: 180px;
-}
-
-div.menu{
+.header{
   display: flex;
   justify-content:flex-end;
   align-items: center;
   width: 100%;
   padding-right:10rem;
-  gap:2rem;
+  gap: 5rem;
 
+  @media screen and (max-width: 1440px) {
+    padding-right:2rem;
+    gap:2rem
+  }
+
+  @media screen and (max-width: 425px) {
+    gap:0.5rem;
+    padding-right:0.2rem;
+  }
+  @media screen and (max-width: 375px) {
+    padding-right:0.5rem;
+    .btn-format{
+      display: none;
+    }
+  }
+  .logo{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 22px;
+    left: 180px;
+    @media screen and (max-width: 1440px) {
+      left:30px ;
+    }
+
+    @media screen and (max-width: 425px) {
+      left:2px ;
+    }
+  }
+  .menu{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+
+    gap:2rem;
+    @media screen and (max-width: 425px) {
+      display: none;
+    }
+
+
+
+
+  }
 }
+
+
 
 </style>

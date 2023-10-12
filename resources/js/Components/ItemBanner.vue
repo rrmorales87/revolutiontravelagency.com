@@ -27,7 +27,24 @@ import ReserveButton from "./ReserveButton.vue";
   height: 650px;
   background-image: url("../storage/bg/Fondo.png") ;
   background-size: cover;
-  background-repeat: no-repeat;
+
+  
+  @media screen and (max-width: 1440px) {
+    background-position: right;
+
+  }
+  @media screen and (max-width: 1024px) {
+    background-size: cover;
+    height: 1300px;
+    background-position:1300px;
+
+  }
+  @media screen and (max-width: 768px) {
+    background-size: cover;
+    height: 1300px;
+    background-position:1200px;
+
+  }
 
   .title{
     position: absolute;
@@ -45,12 +62,19 @@ import ReserveButton from "./ReserveButton.vue";
       line-height: 43.88px;
 
     }
+    @media screen and (max-width: 1024px) {
+      top: 2rem;
+      left: 2rem;
+    }
 
   }
   .btn{
     position: absolute;
     left: 10rem;
     top:30rem;
+    @media screen and (max-width: 1024px) {
+      left: 2rem;
+    }
 
   };
 

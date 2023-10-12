@@ -19,5 +19,9 @@ import ItemSubscriptionBanner from "./ItemSubscriptionBanner.vue";
 </template>
 
 <style scoped>
+@media screen and (max-width: 1024px) {
 
+  height: 1300px;
+
+}
 </style>
