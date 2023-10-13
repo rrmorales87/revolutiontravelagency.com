@@ -65,6 +65,10 @@ import ReserveButton from "./ReserveButton.vue";
       margin-top:4rem;
       font-size: 36px;
       line-height: 43.88px;
+      @media screen and (max-width: 1024px) {
+        margin-top:1.5rem;
+
+      }
       @media screen and (max-width: 768px) {
         font-size: 30px;
       }
@@ -104,11 +108,11 @@ import ReserveButton from "./ReserveButton.vue";
       left: 2rem;
     }
     @media screen and (max-width: 425px) {
-      top:18rem;
+      top:16rem;
       left:1rem;
     }
     @media screen and (max-width: 320px) {
-      top:20rem;
+      top:16rem;
       left:0.5rem
     }
   };
