@@ -25,7 +25,7 @@ import ReserveButton from "./ReserveButton.vue";
 <style lang="scss" scoped>
 .main{
   height: 650px;
-  background-image: url("../storage/bg/Fondo.png") ;
+  background-image: url("/storage/bg/Fondo.png") ;
   background-size: cover;
 
   
