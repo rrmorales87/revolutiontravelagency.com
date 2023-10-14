@@ -30,7 +30,7 @@ import RegisterButton from "./RegisterButton.vue";
 .main{
   height: 650px;
   background-size: cover;
-  background-image: url("/storage/bg/Fondo-subscripcion.png") ;
+  background-image: url("/storage/bg/Fondo-subscripcion.svg") ;
   background-repeat: no-repeat;
   @media screen and (max-width: 1440px) {
     background-position: center;

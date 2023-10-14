@@ -11,8 +11,6 @@ import ReserveButton from "./ReserveButton.vue";
     Travel as a family quickly and without commitment
   </div>
 
-
-
 </div>
   <div class="btn">
     <ReserveButton>
@@ -25,7 +23,7 @@ import ReserveButton from "./ReserveButton.vue";
 <style lang="scss" scoped>
 .main{
   height: 650px;
-  background-image: url("/storage/bg/Fondo.png") ;
+  background-image: url("/storage/bg/Fondo.svg") ;
   background-size: cover;
 
   

@@ -57,7 +57,7 @@ const setDeviceType = computed(() => {
     </div>
 </template>
 
-<style  scoped>
+<style lang="scss"  scoped>
 .header{
   display: flex;
   height: 85px;
@@ -82,10 +82,9 @@ const setDeviceType = computed(() => {
   }
   @media screen and (max-width: 375px) {
     padding-right:0.5rem;
-    .btn-format{
-      display: none;
-    }
+
   }
+
   .logo{
     position: absolute;
     width: 200px;
