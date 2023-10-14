@@ -1,0 +1,17 @@
+name: GitHub Actions Deploy
+on: [
+  push:
+    branches:
+      deploy
+]
+jobs:
+  Deploy-in-prod:
+    run-on: ubuntu-lates
+      steps:
+          run: ssh dh_dyq4tc@achebe.dreamhost.com
+          run: Pilo*2023
+          run: cd revolutiontravelagency.com/
+          run: git pull origin deploy &&  php composer.phar install && php artisan config:cache && php artisan config:clear && php artisan cache:clear && npm install && npm run build
+
+
+
