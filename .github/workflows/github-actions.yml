@@ -12,9 +12,9 @@ jobs:
       - name: executing remote ssh commands using ssh key
         uses: ./
         with:
-            host: ${{ SSH_SECRET_HOST }}
-            username: ${{ SSH_SECRET_USERNAME }}
-            key: ${{ SSH_SECRET_HOST }}
+            host: ${{ secrets.SSH_SECRET_HOST }}
+            username: ${{ secrets.SSH_SECRET_USERNAME }}
+            key: ${{ secrets.SSH_SECRET_HOST }}
             script: |
               cd revolutiontravelagency.com/
               git pull origin deploy &&  php composer.phar install && php artisan config:cache && php artisan config:clear && php artisan cache:clear && npm install && npm run build
