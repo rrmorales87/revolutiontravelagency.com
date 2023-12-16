@@ -8,10 +8,15 @@ jobs:
   Deploy-in-prod:
     runs-on: ubuntu-latest
     steps:
-      - run: ssh dh_dyq4tc@achebe.dreamhost.com
-      - run: Pilo*2023
-      - run: cd revolutiontravelagency.com/
-      - run: git pull origin deploy &&  php composer.phar install && php artisan config:cache && php artisan config:clear && php artisan cache:clear && npm install && npm run build
-
-
+      - name: executing remote ssh commands using ssh key
+        uses: ./
+        with:
+            host: ${{ deploy.SSH_SECRET_HOST }}
+            username: ${{ deploy.SSH_SECRET_USERNAME }}
+            key: ${{ deploy.SSH_SECRET_HOST }}
+            script: |
+              cd revolutiontravelagency.com/
+              git pull origin deploy &&  php composer.phar install && php artisan config:cache && php artisan config:clear && php artisan cache:clear && npm install && npm run build
+              
+              
 
