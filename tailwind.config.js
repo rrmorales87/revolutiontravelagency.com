@@ -14,8 +14,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                Musticapro:['Musticapro','blod']
+               Musticapro:['Musticapro']
             },
         },
     },
