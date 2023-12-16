@@ -10,7 +10,7 @@ jobs:
     environment: deploy
     steps:
       - name: executing remote ssh commands using ssh key
-        uses: ./
+        uses: appleboy/ssh-action@v0.1.10
         with:
             host: ${{ secrets.SSH_SECRET_HOST }}
             username: ${{ secrets.SSH_SECRET_USERNAME }}
