@@ -3,7 +3,7 @@
 <template>
 <div class="main">
 <div class="title title-text-banner">
-  <div>Cuba is waiting for you by taxi</div>
+  <div>{{ $t('cubaWaitingForYou') }}</div>
   <div class="subtitle subtitle-text-banner">
     With more than 20 circuits available throughout
     the country, you won't find a faster way to get around
