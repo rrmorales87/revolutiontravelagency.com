@@ -33,9 +33,7 @@ defineProps({
   line-height: 20px;
   letter-spacing: 0em;
   gap:10px;
-  @media screen and (max-width: 375px) {
-    display: none;
-  }
+
 }
 .circle{
   border-radius:100px;

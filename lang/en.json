@@ -189,5 +189,15 @@
     "You may delete any of your existing tokens if they are no longer needed.": "You may delete any of your existing tokens if they are no longer needed.",
     "You may not delete your personal team.": "You may not delete your personal team.",
     "You may not leave a team that you created.": "You may not leave a team that you created.",
-    "Your email address is unverified.": "Your email address is unverified."
+    "Your email address is unverified.": "Your email address is unverified.",
+    "spanish": "Spanish",
+    "english": "English",
+    "subscription": "Subscription",
+    "registers": "Registers",
+    "searchInput": "Find the circuit that best suits you.",
+    "en": "EN",
+    "es": "ES",
+    "community": "Community",
+    "support": "Support",
+    "Sign in": "Sign in"
 }

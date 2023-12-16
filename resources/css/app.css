@@ -3,11 +3,37 @@
 @tailwind utilities;
 
 
-@font-face {
-    font-family: "Musticapro";
-    src: url("../public/fonts/MusticaproSemibold-2OG5o.otf");
-}
 
 [x-cloak] {
     display: none;
+}
+
+@layer base{
+    @font-face {
+        font-family: "Musticapro";
+        src:  url("../../public/fonts/MusticaPro-SemiBold.otf") format('otf');
+
+    }
+    .title-text-banner {
+        font-family: Musticapro;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 55px;
+        letter-spacing: 0;
+        text-align: left;
+        color: #E5F3FF;
+
+
+    }
+
+    .subtitle-text-banner {
+        font-family: Musticapro;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0;
+        text-align: left;
+        color: #E5F3FF;
+
+    }
 }
