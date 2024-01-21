@@ -52,6 +52,7 @@ const search = ref();
 .btn-circuit {
 
   background: #EEF2F7;
+  width: 8.25rem;
 
   &_icon {
     height: 1.68rem;
