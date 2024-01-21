@@ -2,11 +2,12 @@
 import PrimaryButton from "./PrimaryButton.vue";
 </script>
 <template>
-<div class="main ">
-<div class="title title-text-banner">
-  <div>{{ $t('cubaWaitingForYou') }}</div>
+<div class="main">
+  <img src="/storage/bg/fondo3.svg" alt="">
+<div class="title title-text-banner ">
+  <div>{{ $t('Your travel begin here') }}</div>
   <div class="subtitle subtitle-text-banner">
-    {{ $t("With more than 20")}}
+    {{ $t("withUs")}}
   </div>
   <div class="mt-5">
     <primary-button>
@@ -22,23 +23,25 @@ import PrimaryButton from "./PrimaryButton.vue";
 <style lang="scss" scoped>
 .main{
   height:650px;
-  background-image: url("/storage/bg/Fondo.svg") ;
+  background-image: url("/storage/bg/Fondo3.svg") ;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  padding-left: 10rem;
+  padding-right: 10rem;
   .title{
 
     width:600px;
-
 
     .subtitle{
       margin-top:4rem;
       width: 497px;
     }
   }
+
+
+
 
 }
 

@@ -14,8 +14,8 @@ const setLocale = async (locale)  =>  {
 
   <el-dropdown >
     <div class="flex flex-nowrap justify-center justify-items-center outline-transparent">
-      <img class="w-6" src="/storage/icon/lang.svg" alt="language" >
-      <div class="self-center ml-1 font-bold text-2xl uppercase">{{showLocale}}</div>
+      <img class="icon-view" src="/storage/icon/language-icon.svg" alt="language" >
+      <div class="uppercase underline underline-offset-1 menu-text">{{showLocale}}</div>
     </div>
 
     <template #dropdown>
@@ -40,5 +40,20 @@ const setLocale = async (locale)  =>  {
 </template>
 
 <style scoped lang="scss">
+.icon-view {
+  width: 27px;
+  height: 18.81px;
+}
+.menu-text {
+  font-family: Mustica Pro;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #0F3B53;
 
+
+
+}
 </style>

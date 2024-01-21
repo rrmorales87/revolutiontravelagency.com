@@ -1,11 +1,6 @@
 <script setup>
-
 import {Head} from "@inertiajs/vue3";
-//import { PhoneIcon } from '@heroicons/vue/24/solid'
-import NavLink from "../Components/NavLink.vue";
 import {computed} from "vue";
-import RegisterButton from "../Components/RegisterButton.vue";
-import { loadLanguageAsync } from 'laravel-vue-i18n';
 import Header from "../Components/Header.vue";
 
 
@@ -26,7 +21,7 @@ const setDeviceType = computed(() => {
 </script>
 
 <template>
-  <div class="flex-col max-w-screen lg:px-16  md:px-4 sm:px-2.5 ">
+  <div class="flex-col max-w-screen ">
     <Head title="Revolution Travel"/>
     <Header/>
      <slot/>

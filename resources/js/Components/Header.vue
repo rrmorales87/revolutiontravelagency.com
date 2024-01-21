@@ -1,41 +1,72 @@
 <script setup>
-import { Search } from '@element-plus/icons-vue';
 import {ref} from "vue";
 import SelectorLanguage from "./SelectorLanguage.vue";
-import NavLink from "./NavLink.vue";
 const search = ref();
 </script>
 
 <template>
-<div class="w-full h-20 flex flex-row gap-4 py-4">
-  <div class="w-full">
-    <img class="w-32" src="/storage/icon/logo.svg" alt="logo" >
+<div class="w-full flex flex-row justify-between items-center gap-4 py-4 lg:px-24 md:px-14 sm:px-5">
+  <div class="flex flex-row flex-nowrap">
+     <img class="icon-view" src="/storage/icon/subscripcion-icon.svg" alt="subscription logo">
+    <span class="menu-text px-2">{{$t("subscription")}}</span>
   </div>
-  <div class="w-full lg:flex md:flex flex-row justify-items-center justify-center sm:hidden ">
-    <el-input
-        v-model="search"
-        class="w-100 m-2 rounded-full outline-transparent"
-        size="large"
-        :placeholder="$t('searchInput')"
-        :prefix-icon="Search"
-    />
+  <div>
+    <img class="icon-logo" src="/storage/icon/rtravel-Logo.svg" alt="main logo">
   </div>
-  <div class="w-full flex flex-row px-5 justify-items-center justify-end gap-4 h-full">
-    <SelectorLanguage/>
-    <nav class="mx-5 flex justify-items-end h-full gap-2">
-      <nav-link href="/">{{$t('community')}}</nav-link>
-      <nav-link href="/">{{$t('support')}}</nav-link>
-    </nav>
-    <div class="flex flex-row px-5 justify-items-center justify-end h-full">
-      <el-button class="self-center" :round="true" :size="'large'">{{$t('Sign in')}}</el-button>
+  <div class="flex flex-row gap-8 items-center">
+    <div class="menu-text flex flex-row gap-8 cursor-pointer">
+      <nav>{{$t('community')}}</nav>
+      <nav>{{$t('support')}}</nav>
     </div>
-
+    <selector-language/>
+    <button class="btn-circuit flex flex-row justify-center items-center px-4 py-2 rounded-full">
+      <img class="btn-circuit_icon" src="/storage/icon/circuit-icon.svg" alt="circuit-icon">
+      <span class="btn-circuit_text">{{$t('circuits')}}</span>
+    </button>
   </div>
+
 </div>
 </template>
 
 <style  lang="scss">
-.el-input__wrapper {
-  border-radius: 20px;
+.icon-view {
+  width: 27px;
+  height: 18.81px;
 }
+.icon-logo {
+  width: 135px;
+  height: 45px;
+
+}
+.menu-text {
+  font-family: Mustica Pro;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #0F3B53;
+
+
+}
+.btn-circuit {
+
+  background: #EEF2F7;
+
+  &_icon {
+    height: 1.68rem;
+    width: 1.68rem;
+  }
+
+  &_text {
+    font-family: Mustica Pro;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0;
+    text-align: left;
+
+  }
+}
+
 </style>
