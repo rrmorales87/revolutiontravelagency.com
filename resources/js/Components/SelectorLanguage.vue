@@ -20,13 +20,13 @@ const setLocale = async (locale)  =>  {
 
     <template #dropdown>
       <el-dropdown-menu class="my-2 ">
-        <el-dropdown-item @click="setLocale('en')">
+        <el-dropdown-item @click="setLocale('en')" v-if="showLocale!=='en'">
                 <span class="float-left mr-4">
                   <img src="/storage/icon/us.webp" alt="us">
                 </span>
           <span class="float-right">{{ $t("english") }}</span>
         </el-dropdown-item>
-        <el-dropdown-item @click="setLocale('es')">
+        <el-dropdown-item @click="setLocale('es') " v-if="showLocale!=='es'">
                 <span class="float-left mr-4">
                   <img src="/storage/icon/es.webp" alt="es">
                 </span>
