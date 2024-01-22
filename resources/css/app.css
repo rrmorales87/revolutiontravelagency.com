@@ -12,10 +12,12 @@
     @font-face {
         font-family: "Musticapro";
         src:  url("../../public/fonts/MusticaPro-SemiBold.otf") format('otf');
+        font-weight: normal;
+        font-style: normal;
 
     }
     .title-text-banner {
-        font-family: Musticapro;
+
         font-size: 40px;
         font-weight: 600;
         line-height: 55px;
@@ -27,7 +29,7 @@
     }
 
     .subtitle-text-banner {
-        font-family: Musticapro;
+
         font-size: 20px;
         font-weight: 400;
         line-height: 28px;
