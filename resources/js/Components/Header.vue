@@ -7,15 +7,15 @@ const search = ref();
 <template>
 <div class="flex flex-col">
   <div class="w-full flex flex-row justify-between items-center gap-4 py-4 lg:px-24 md:px-14 sm:px-5 mb-10">
-    <div class="flex flex-row flex-nowrap cursor-pointer">
+    <div class="hidden-sm flex flex-row flex-nowrap cursor-pointer " >
       <img class="icon-view" src="/storage/icon/subscripcion-icon.svg" alt="subscription logo">
       <span class="menu-text px-2">{{$t("subscription")}}</span>
     </div>
     <div>
       <img class="icon-logo" src="/storage/icon/rtravel-Logo.svg" alt="main logo">
     </div>
-    <div class="flex flex-row gap-8 items-center">
-      <div class="menu-text flex flex-row gap-8 cursor-pointer">
+    <div class="flex flex-row gap-8 items-center ">
+      <div class="hidden-sm  menu-text flex flex-row gap-8 cursor-pointer">
         <nav>{{$t('support')}}</nav>
         <nav>{{$t('community')}}</nav>
 
@@ -37,13 +37,22 @@ const search = ref();
 </template>
 
 <style  lang="scss">
+.hidden-sm {
+  @media screen and (max-width: 768px){
+    display: none;
+  }
+}
 .title-search {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 600;
-  line-height: 55px;
+  line-height: 3.4375rem;
   letter-spacing: 0;
   text-align: left;
   color: #0F3B53;
+  @media screen and (max-width: 768px){
+     padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
   .title-cuba {
     color:#0084BD;
   }

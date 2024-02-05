@@ -15,7 +15,7 @@ const widthScreen = computed(() => {
 
 <template>
 
-  <el-carousel height="600px"  :interval="5000">
+  <el-carousel height="700px" class="carrousel"  :interval="5000">
     <el-carousel-item >
       <ItemBanner></ItemBanner>
     </el-carousel-item>
@@ -34,10 +34,9 @@ const widthScreen = computed(() => {
 
 <style lang="scss" scoped>
 .carrousel {
-  height: 600px;
-  @media screen and (min-width: 1024px) {
-    height: 1300px;
-  }
+  height:1900px;
+  margin: 2rem 5rem;
+  border-radius: 20px;
 
 }
 

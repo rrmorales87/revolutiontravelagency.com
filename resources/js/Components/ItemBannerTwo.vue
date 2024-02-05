@@ -22,7 +22,7 @@ import PrimaryButton from "./PrimaryButton.vue";
 
 <style lang="scss" scoped>
 .main{
-  height:650px;
+  height:700px;
   background-image: url("/storage/bg/Fondo3.svg") ;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,6 +30,7 @@ import PrimaryButton from "./PrimaryButton.vue";
   justify-content: flex-end;
   align-items: center;
   padding-right: 10rem;
+  border-radius: 20px;
   .title{
 
     width:600px;

@@ -21,7 +21,7 @@ const setDeviceType = computed(() => {
 </script>
 
 <template>
-  <div class="flex-col max-w-screen ">
+  <div class="flex-col ">
     <Head title="Revolution Travel"/>
     <Header/>
      <slot/>

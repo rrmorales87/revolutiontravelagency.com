@@ -29,13 +29,14 @@ import PrimaryButton from "./PrimaryButton.vue";
 
 <style lang="scss" scoped>
 .main{
-  height:650px;
+  height:700px;
   background-size: cover;
   background-image: url("/storage/bg/Fondo-subscripcion.svg") ;
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border-radius: 20px;
 
 
   .title{
