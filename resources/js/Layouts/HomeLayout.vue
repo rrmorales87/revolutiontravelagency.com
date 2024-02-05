@@ -22,7 +22,7 @@ const setDeviceType = computed(() => {
 
 <template>
   <div class="flex-col ">
-    <Head title="Revolution Travel"/>
+    <Head title="Travel with"/>
     <Header/>
      <slot/>
   </div>
