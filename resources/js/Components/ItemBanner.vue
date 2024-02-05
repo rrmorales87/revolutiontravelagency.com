@@ -26,7 +26,7 @@ import PrimaryButton from "./PrimaryButton.vue";
 .main {
   height:700px;
   margin: 2rem 5rem;
-  background-image: url("/storage/bg/Fondo.svg") ;
+  background-image: url("/storage/bg/Fondon.svg") ;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
