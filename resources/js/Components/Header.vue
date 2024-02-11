@@ -50,8 +50,10 @@ const search = ref();
   text-align: left;
   color: #0F3B53;
   @media screen and (max-width: 768px){
-     padding-right: 1.5625rem;
-    padding-left: 1.5625rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .title-cuba {
     color:#0084BD;
