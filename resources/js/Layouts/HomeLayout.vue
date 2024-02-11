@@ -2,6 +2,7 @@
 import {Head} from "@inertiajs/vue3";
 import {computed} from "vue";
 import Header from "../Components/Header.vue";
+import Footer from "../Components/Footer.vue";
 
 
 const setDeviceType = computed(() => {
@@ -25,6 +26,7 @@ const setDeviceType = computed(() => {
     <Head title="Travel with"/>
     <Header/>
      <slot/>
+    <Footer/>
   </div>
 </template>
 
