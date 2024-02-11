@@ -81,7 +81,7 @@ watch(()=>store.state.locale,(newVal)=>{
 
     </div>
   </div>
-  <div class="fallow mt-10">
+  <div class="fallow mt-10 border-b pb-5">
     <div class="icons">
         <h1>{{$t("fallow")}} {{$t("agency-name")}}</h1>
         <img src="/storage/icon/linkedin-icon.svg" alt="linkedin">
@@ -91,6 +91,9 @@ watch(()=>store.state.locale,(newVal)=>{
     <div class="underline underline-offset-1">
         {{formatLocale(showLocale)}}
     </div>
+  </div>
+  <div class="copyright flex justify-center my-2">
+    {{$t("copyright")}}
   </div>
 </footer>
 </template>
@@ -132,8 +135,12 @@ watch(()=>store.state.locale,(newVal)=>{
     .icons {
       display: flex;
       gap: 1rem;
-      justify-content: start;
+      justify-content: flex-start;
     }
+  }
+  .copyright {
+    font-size: 14px;
+    font-weight: 300;
   }
 
 }
