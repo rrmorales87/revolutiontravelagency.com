@@ -14,7 +14,7 @@ import PrimaryButton from "./PrimaryButton.vue";
   <div class="btn-more mt-5">
     <primary-button>
       <span class="link">{{$t("more")}}</span>
-      <span><i><img class="w-3" src="/storage/icon/arrow-right.svg"></i></span>
+      <span><i><img class="w-3" src="/storage/icon/arrow-right.svg" alt="arrow"></i></span>
     </primary-button>
   </div>
 
@@ -43,7 +43,7 @@ import PrimaryButton from "./PrimaryButton.vue";
     text-align: center;
     padding-left: 0;
     margin: 2rem 2rem;
-    height:80rem;
+    height:68rem;
     background-position: 50%;
 
   }
