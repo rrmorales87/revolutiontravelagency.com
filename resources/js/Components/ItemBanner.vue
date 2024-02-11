@@ -44,6 +44,8 @@ import PrimaryButton from "./PrimaryButton.vue";
     padding-left: 0;
     margin: 2rem 2rem;
     height:80rem;
+    background-position: 50%;
+
   }
   .title{
     width: 36rem;
@@ -56,9 +58,10 @@ import PrimaryButton from "./PrimaryButton.vue";
 
     @media screen and (max-width: 768px) {
       font-size: 3rem;
+
       width: auto;
       padding: 2rem;
-      line-height: 6.875rem;
+      line-height: 3rem;
       text-align: center;
     }
 
