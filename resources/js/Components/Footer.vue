@@ -14,7 +14,6 @@ const formatLocale = (locale)=>{
   }
 }
 watch(()=>store.state.locale,(newVal)=>{
-
   showLocale.value = newVal;
 })
 </script>
