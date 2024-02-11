@@ -8,7 +8,7 @@ import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { i18nVue } from 'laravel-vue-i18n';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
-
+import store from '@/store/index';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'TR';
 
@@ -31,6 +31,7 @@ createInertiaApp({
                 }
             })
             .use(ElementPlus)
+            .use(store)
             .mount(el);
 
     },

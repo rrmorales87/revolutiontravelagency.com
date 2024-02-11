@@ -1,11 +1,16 @@
 <script setup>
-import {getActiveLanguage, loadLanguageAsync, trans} from "laravel-vue-i18n";
-import {ref} from "vue";
+import {getActiveLanguage, loadLanguageAsync} from "laravel-vue-i18n";
+import {onMounted, ref} from "vue";
+import {useStore} from "vuex";
+import {SET_LOCALE} from "../store/mutations/type";
 const showLocale = ref(getActiveLanguage());
+const store = useStore();
 const setLocale = async (locale)  =>  {
   await loadLanguageAsync(locale);
   showLocale.value = locale;
+  store.commit(SET_LOCALE,locale);
 }
+onMounted(()=>store.commit(SET_LOCALE,showLocale.value))
 
 </script>
 
