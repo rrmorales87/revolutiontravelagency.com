@@ -1,12 +1,14 @@
 <script setup>
 import {ref} from "vue";
+import {router} from '@inertiajs/vue3';
 import SelectorLanguage from "./SelectorLanguage.vue";
 const search = ref();
+const gotToLogin = ()=> router.get('login');
 </script>
 
 <template>
 <div class="flex flex-col">
-  <div class="w-full flex flex-row justify-between items-center gap-4 py-4 lg:px-24 md:px-14 sm:px-5 mb-10">
+  <div class="w-full flex flex-row justify-between items-center gap-4 py-4 lg:px-24 md:px-14 sm:px-5">
     <div class="hidden-sm flex flex-row flex-nowrap cursor-pointer " >
       <img class="icon-view" src="/storage/icon/subscripcion-icon.svg" alt="subscription logo">
       <span class="menu-text px-2">{{$t("subscription")}}</span>
@@ -23,14 +25,14 @@ const search = ref();
       <selector-language/>
       <button class="btn-circuit flex flex-row justify-center items-center px-4 py-2 rounded-full">
         <img class="btn-circuit_icon" src="/storage/icon/circuit-icon.svg" alt="circuit-icon">
-        <span class="btn-circuit_text">{{$t('circuits')}}</span>
+         <span class="btn-circuit_text" @click="gotToLogin">{{$t('Sign in')}}</span>
       </button>
     </div>
 
   </div>
-  <div class="flex flex-row justify-center items-center">
-    <h1 class="title-search">{{$t("title-search1")}} <span class="title-cuba"> Cuba </span>{{$t("title-search2")}}</h1>
-  </div>
+<!--  <div class="flex flex-row justify-center items-center">-->
+<!--    <h1 class="title-search">{{$t("title-search1")}} <span class="title-cuba"> Cuba </span>{{$t("title-search2")}}</h1>-->
+<!--  </div>-->
 </div>
 
 
@@ -83,7 +85,7 @@ const search = ref();
 .btn-circuit {
 
   background: #EEF2F7;
-  width: 8.25rem;
+  width: auto;
 
   &_icon {
     height: 1.68rem;

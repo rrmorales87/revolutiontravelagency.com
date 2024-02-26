@@ -215,7 +215,7 @@
     "title-banner-description-mobile": "Viaja con tu familia y disfruta del Caribe como nunca antes.",
     "more": "Explore más",
     "agency-name": "Rtravel",
-    "mission": "The agency offers trips on established circuits throughout the island. All you have to do is go to this website and request the circuit you want.  If you wish, you can choose to subscribe to two travel plans and tour any part of the island. Our goal is to provide you with the necessary means so that you can move around and discover Cuba like never before.",
+    "mission": "La agencia ofrece viajes en circuitos establecidos por toda la isla. Lo único que tienes que hacer es entrar en esta web y solicitar el circuito que desees. Si lo deseas, puedes optar por contratar dos planes de viaje y recorrer cualquier parte de la isla. Nuestro objetivo es facilitarte los medios necesarios para que puedas moverte y descubrir Cuba como nunca antes.",
     "Sitemap": "Menu",
     "home": "Inicio",
     "User": "Usuario",
@@ -225,6 +225,11 @@
     "about us": "Sobre nosotros",
     "Terms of Use": "Condiciones de uso",
     "fallow": "Sigue a",
-    "copyright": "© Copyright 2024 RTravel - Todos los derechos reservados"
+    "copyright": "© Copyright 2024 RTravel - Todos los derechos reservados",
+    "Sign up": "Registrarse",
+    "and enjoy the full experience": " y a disfrutar de la experiencia completa",
+    "Keep track of your subscriptions and organize your trips faster": "Realiza un seguimiento de tus suscripciones y organiza tus viajes más rápido",
+    "Continue with Google": "Continuar con Google",
+    "Continue with email": "Continuar con email"
 
 }
