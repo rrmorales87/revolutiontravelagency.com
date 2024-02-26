@@ -34,3 +34,4 @@ Route::middleware([
     })->name('dashboard');
 });*/
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
+Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");

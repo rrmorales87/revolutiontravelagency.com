@@ -14,7 +14,8 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-               Musticapro:['Musticapro']
+               Musticapro:['Musticapro'],
+               Lato:['Lato']
             },
         },
     },

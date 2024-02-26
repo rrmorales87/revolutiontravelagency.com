@@ -100,7 +100,6 @@ watch(()=>store.state.locale,(newVal)=>{
 
 <style scoped lang="scss">
 .footer {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   padding: 2rem 5rem;

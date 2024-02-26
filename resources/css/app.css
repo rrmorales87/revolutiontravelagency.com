@@ -16,6 +16,13 @@
         font-style: normal;
 
     }
+    @font-face {
+        font-family: "Lato";
+        src:  url("../../public/fonts/Lato-Thin.ttf") format('ttf');
+        font-weight: normal;
+        font-style: normal;
+
+    }
     .hidden-sm {
         @media screen and (max-width: 768px){
             display: none;

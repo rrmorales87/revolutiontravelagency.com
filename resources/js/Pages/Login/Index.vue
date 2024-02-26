@@ -1,0 +1,85 @@
+<script setup>
+import HomeLayout from "../../Layouts/HomeLayout.vue";
+
+</script>
+
+<template>
+
+      <HomeLayout>
+        <div class="min-h-screen  flex flex-col justify-center items-center bg-gray-100">
+          <div class="card-form flex flex-col  justify-center items-center bg-white rounded-2xl p-6">
+            <img class="w-28" src="/storage/icon/rtravel-Logo.svg" alt="">
+            <div class="text-title mt-5 lg:w-3/4  md:w-3/4 sm:w-3/6">
+              <span class="text-[#0084BD]">{{$t('Sign in')}}</span>
+              <span>{{$t('and enjoy the full experience')}}</span>
+            </div>
+            <div  class="subtitle mt-8 w-2/4">
+               {{$t('Keep track of your subscriptions and organize your trips faster')}}
+            </div>
+            <div class="form-login mt-8 w-3/4 ">
+              <el-button round size="large" class="w-full">
+                <template #icon >
+                  <img src="/storage/icon/google_icon.webp" alt="google">
+                </template>
+                {{$t('Continue with Google')}}
+              </el-button>
+              <el-button round size="large" class="w-full">
+                <template #icon>
+                  <img src="/storage/icon/email.svg" alt="google">
+                </template>
+                {{$t('Continue with email')}}
+              </el-button>
+            </div>
+
+          </div>
+        </div>
+      </HomeLayout>
+
+
+
+</template>
+
+<style scoped>
+.card-form {
+  @media screen and (max-width: 568px){
+    padding: 20px;
+  }
+  .text-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 0;
+    text-align: center;
+    @media screen and (max-width: 568px) {
+      font-size: 35px;
+    }
+
+  }
+  .subtitle {
+    @apply font-Lato;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #0F3B53;
+
+  }
+  .form-login {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.6vw;
+    .el-button {
+      :deep(span) {
+        font-size: 0.7vw;
+      }
+    }
+
+  }
+}
+
+
+</style>
