@@ -1,5 +1,6 @@
 <script setup>
 import HomeLayout from "../../Layouts/HomeLayout.vue";
+import TermsUse from "../../Components/TermsUse.vue";
 
 </script>
 
@@ -7,7 +8,7 @@ import HomeLayout from "../../Layouts/HomeLayout.vue";
 
       <HomeLayout>
         <div class="min-h-screen  flex flex-col justify-center items-center bg-gray-100">
-          <div class="card-form flex flex-col  justify-center items-center bg-white rounded-2xl p-6">
+          <div class="card-form flex flex-col  justify-center items-center bg-white rounded-2xl p-4">
             <img class="w-28" src="/storage/icon/rtravel-Logo.svg" alt="">
             <div class="text-title mt-5 lg:w-3/4  md:w-3/4 sm:w-3/6">
               <span class="text-[#0084BD]">{{$t('Sign in')}}</span>
@@ -29,9 +30,20 @@ import HomeLayout from "../../Layouts/HomeLayout.vue";
                 </template>
                 {{$t('Continue with email')}}
               </el-button>
+              <div class="mt-5 w-full">
+                <el-divider>
+                 <p class="no-account">{{$t('No account')}}</p>
+                </el-divider>
+              </div>
+              <el-button round size="large" color="#0F3B53" class="w-full">{{$t('join')}}</el-button>
+              <div class="mt-5">
+                <terms-use />
+              </div>
+
             </div>
 
           </div>
+
         </div>
       </HomeLayout>
 
@@ -39,20 +51,18 @@ import HomeLayout from "../../Layouts/HomeLayout.vue";
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .card-form {
+  margin: 10px;
   @media screen and (max-width: 568px){
     padding: 20px;
   }
   .text-title {
-    font-size: 40px;
     font-weight: 700;
     line-height: 55px;
     letter-spacing: 0;
     text-align: center;
-    @media screen and (max-width: 568px) {
-      font-size: 35px;
-    }
+    font-size: 1.8rem;
 
   }
   .subtitle {
@@ -74,8 +84,13 @@ import HomeLayout from "../../Layouts/HomeLayout.vue";
     font-size: 0.6vw;
     .el-button {
       :deep(span) {
-        font-size: 0.7vw;
+        font-size: 0.7rem;
       }
+    }
+    .no-account {
+      @apply font-Lato;
+      font-size: 0.8rem;
+
     }
 
   }
