@@ -232,10 +232,13 @@
     "Continue with Google": "Continuar con Google",
     "Continue with email": "Continuar con email",
     "No account": "No tienes cuenta?",
-    "join": "Unirte",
+    "join": "Únete",
     "terms1": "By proceeding, you agree to our ",
     "terms2": "Terms of Use",
     "terms3": " and confirm you have read our ",
-    "terms4": "Privacy and Cookie Statement."
+    "terms4": "Privacy and Cookie Statement.",
+    "Welcome back": "Bienvenido",
+    "Email address": "Dirección de correo",
+    "and unlock the full experience": " y desbloquea la experiencia completa."
 
 }

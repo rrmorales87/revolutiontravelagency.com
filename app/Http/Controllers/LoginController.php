@@ -16,4 +16,12 @@ class LoginController extends Controller
     {
         return Inertia::render('Login/Index', []);
     }
+    /**
+     * Show Home page
+     * @return Response
+     */
+    public function signIn(): Response
+    {
+        return Inertia::render('Login/SignIn', []);
+    }
 }

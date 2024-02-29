@@ -35,3 +35,4 @@ Route::middleware([
 });*/
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");
+Route::get('/signIn',[\App\Http\Controllers\LoginController::class,'signIn'])->name("signIn");

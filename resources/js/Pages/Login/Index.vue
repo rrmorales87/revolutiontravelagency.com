@@ -1,6 +1,7 @@
 <script setup>
 import HomeLayout from "../../Layouts/HomeLayout.vue";
 import TermsUse from "../../Components/TermsUse.vue";
+import {router} from "@inertiajs/vue3";
 
 </script>
 
@@ -24,7 +25,7 @@ import TermsUse from "../../Components/TermsUse.vue";
                 </template>
                 {{$t('Continue with Google')}}
               </el-button>
-              <el-button round size="large" class="w-full">
+              <el-button round size="large" class="w-full" @click="router.get('/signIn')">
                 <template #icon>
                   <img src="/storage/icon/email.svg" alt="google">
                 </template>
