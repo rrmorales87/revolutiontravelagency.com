@@ -36,7 +36,7 @@ import {router} from "@inertiajs/vue3";
                  <p class="no-account">{{$t('No account')}}</p>
                 </el-divider>
               </div>
-              <el-button round size="large" color="#0F3B53" class="w-full">{{$t('join')}}</el-button>
+              <el-button round size="large" color="#0F3B53" class="w-full" @click="router.get('/signUp')">{{$t('join')}}</el-button>
               <div class="mt-5">
                 <terms-use />
               </div>
@@ -70,7 +70,7 @@ import {router} from "@inertiajs/vue3";
     @apply font-Lato;
     font-size: 17px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 20.4px;
     letter-spacing: 0;
     text-align: center;
     color: #0F3B53;

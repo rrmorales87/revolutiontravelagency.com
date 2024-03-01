@@ -11,17 +11,11 @@
 @layer base{
     @font-face {
         font-family: "Musticapro";
-        src:  url("../../public/fonts/MusticaPro-SemiBold.otf") format('otf');
-        font-weight: normal;
-        font-style: normal;
-
+        src:  url("../../public/fonts/MusticaPro-SemiBold.otf");
     }
     @font-face {
         font-family: "Lato";
-        src:  url("../../public/fonts/Lato-Thin.ttf") format('ttf');
-        font-weight: normal;
-        font-style: normal;
-
+        src:  url("../../public/fonts/Lato-Regular.ttf");
     }
     .hidden-sm {
         @media screen and (max-width: 768px){

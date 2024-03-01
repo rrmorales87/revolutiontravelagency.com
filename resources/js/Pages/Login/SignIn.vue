@@ -37,10 +37,10 @@ const setViewPassword = () => {
               </div>
 
 
-              <el-button round size="large" color="#0F3B53" class="w-full mt-5">{{$t('Sign in')}}</el-button>
+              <el-button round size="large" color="#0F3B53" class="w-full mt-5">{{$t('Sign In')}}</el-button>
               <div class="no-account mt-5 w-full text-center">
 
-                  <span><a class="underline font-bold">{{$t('join')}}</a></span>
+                  <span><a href="/signUp" class="underline font-bold">{{$t('join')}}</a></span>
                   <span>{{$t('and unlock the full experience')}}</span>
 
               </div>

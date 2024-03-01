@@ -24,4 +24,12 @@ class LoginController extends Controller
     {
         return Inertia::render('Login/SignIn', []);
     }
+    /**
+     * Show Home page
+     * @return Response
+     */
+    public function signUp(): Response
+    {
+        return Inertia::render('Login/Register', []);
+    }
 }
