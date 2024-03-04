@@ -39,10 +39,12 @@ const gotToLogin = ()=> router.get('login');
 </template>
 
 <style  lang="scss">
+@import "../../css/mixin";
 .hidden-sm {
-  @media screen and (max-width: 768px){
+  @include media(sm) {
     display: none;
   }
+
 }
 .title-search {
   font-size: 2.5rem;
@@ -51,12 +53,13 @@ const gotToLogin = ()=> router.get('login');
   letter-spacing: 0;
   text-align: left;
   color: #0F3B53;
-  @media screen and (max-width: 768px){
+  @include media(md) {
     padding-right: 2rem;
     padding-left: 2rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
   .title-cuba {
     color:#0084BD;
   }

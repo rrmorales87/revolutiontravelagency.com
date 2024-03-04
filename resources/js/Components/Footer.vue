@@ -38,9 +38,7 @@ watch(()=>store.state.locale,(newVal)=>{
           <li>
             {{$t('home')}}
           </li>
-          <li>
-            {{$t('circuits')}}
-          </li> <li>
+         <li>
             {{$t('subscription')}}
           </li>
         </ul>
@@ -81,6 +79,61 @@ watch(()=>store.state.locale,(newVal)=>{
 
     </div>
   </div>
+  <div class="collapsible">
+    <el-collapse class="w-full bg-transparent" accordion>
+      <el-collapse-item  name="1">
+        <template #title>
+          <div class="font-bold">{{$t('agency-name')}}</div>
+        </template>
+        <p class="text-justify px-2">
+          {{$t("mission")}}
+        </p>
+      </el-collapse-item>
+      <el-collapse-item  name="2">
+        <template #title>
+          <div class="font-bold">{{$t('Sitemap')}}</div>
+        </template>
+        <ul class="option-ul">
+          <li>
+            {{$t('home')}}
+          </li>
+          <li>
+            {{$t('subscription')}}
+          </li>
+        </ul>
+      </el-collapse-item>
+      <el-collapse-item  name="3">
+        <template #title>
+          <div class="font-bold">{{$t('User')}}</div>
+        </template>
+        <ul class="option-ul">
+          <li>
+            {{$t('Travel profile')}}
+          </li>
+          <li>
+            {{$t('support')}}
+          </li> <li>
+          {{$t('contact')}}
+        </li>
+        </ul>
+      </el-collapse-item>
+      <el-collapse-item  name="4">
+        <template #title>
+          <div class="font-bold">{{$t('agency')}}</div>
+        </template>
+        <ul class="option-ul">
+          <li>
+            {{$t('about us')}}
+          </li>
+          <li>
+            {{$t('Terms of Use')}}
+          </li> <li>
+          {{$t('Privacy Policy')}}
+        </li>
+        </ul>
+      </el-collapse-item>
+    </el-collapse>
+  </div>
   <div class="fallow mt-10 border-b pb-5">
     <div class="icons">
         <h1>{{$t("fallow")}} {{$t("agency-name")}}</h1>
@@ -99,6 +152,7 @@ watch(()=>store.state.locale,(newVal)=>{
 </template>
 
 <style scoped lang="scss">
+@import "../../css/mixin";
 .footer {
   display: flex;
   flex-direction: column;
@@ -106,9 +160,13 @@ watch(()=>store.state.locale,(newVal)=>{
   background: #EEF2F7;
   color: black;
   .options {
+    @apply font-Lato;
     display: flex;
     justify-content: space-between;
     gap: 4rem;
+    @include media(sm){
+      display: none;
+    }
     .option {
       display: flex;
       flex-direction: column;
@@ -126,7 +184,23 @@ watch(()=>store.state.locale,(newVal)=>{
       }
     }
   }
+  .collapsible {
+    :deep(.el-collapse-item__header ) {
+      background-color: transparent !important;
+    }
+    :deep(.el-collapse-item__wrap ) {
+      background-color: transparent !important;
+    }
+    @apply font-Lato;
+
+      display: none;
+
+    @include media(sm){
+      display: flex;
+    }
+  }
   .fallow {
+    @apply font-Lato;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
@@ -138,6 +212,7 @@ watch(()=>store.state.locale,(newVal)=>{
     }
   }
   .copyright {
+    @apply font-Lato;
     font-size: 14px;
     font-weight: 300;
   }

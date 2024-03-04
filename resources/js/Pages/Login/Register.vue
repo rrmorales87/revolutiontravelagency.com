@@ -3,14 +3,14 @@ import HomeLayout from "../../Layouts/HomeLayout.vue";
 import TermsUse from "../../Components/TermsUse.vue";
 import { View, Hide } from '@element-plus/icons-vue'
 import {ref} from "vue";
-import { useVuelidate } from '@vuelidate/core'
-import { required, email } from '@vuelidate/validators'
 const view = ref(false);
+const user = ref({
+  email:'',
+  name:'',
+  lastName:"",
+  password:''
+})
 
-const mail = ref('');
-const password = ref('');
-const name = ref('');
-const lastName = ref('');
 const setViewPassword = () => {
   view.value = !view.value;
  }
@@ -30,21 +30,21 @@ const setViewPassword = () => {
               <el-row :gutter="10">
                 <el-col :md="12">
                   <label for="name">{{$t('Name')}}</label>
-                  <el-input size="large"  id="name" :placeholder="$t('Name')" type="text" v-model="name" input-style="border-radius:150px;"></el-input>
+                  <el-input size="large"  id="name" :placeholder="$t('Name')" type="text" v-model="user.name" input-style="border-radius:150px;"></el-input>
                 </el-col>
                 <el-col :md="12">
                   <label for="last_name">{{$t('Last name')}}</label>
-                  <el-input size="large" id="last_name" :placeholder="$t('Last name')" type="text" v-model="lastName"></el-input>
+                  <el-input size="large" id="last_name" :placeholder="$t('Last name')" type="text" v-model="user.lastName"></el-input>
                 </el-col>
               </el-row>
               <div class="w-full">
                 <label for="email">{{$t('Email address')}}</label>
-                <el-input size="large" id="email" :placeholder="$t('Email')" type="text" v-model="mail"></el-input>
+                <el-input size="large" id="email" :placeholder="$t('Email')" type="text" v-model="user.email"></el-input>
               </div>
               <div class="w-full">
                 <label for="password" class="mt-5">{{$t('Password')}}</label>
                 <el-input  size="large" id="password" :placeholder="$t('Password')"
-                          :type="view ? 'text':'password'" v-model="password">
+                          :type="view ? 'text':'password'" v-model="user.password">
                   <template #append>
                     <el-button v-if="!view" :icon="View" @click="setViewPassword()" />
                     <el-button v-if="view" :icon="Hide" @click="setViewPassword()" />
