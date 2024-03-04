@@ -19,7 +19,7 @@ import {router} from "@inertiajs/vue3";
                {{$t('Keep track of your subscriptions and organize your trips faster')}}
             </div>
             <div class="form-login mt-8 w-3/4 ">
-              <el-button round size="large" class="w-full">
+              <el-button round size="large" class="w-full" @click="router.get('/login/google')">
                 <template #icon >
                   <img src="/storage/icon/google_icon.webp" alt="google">
                 </template>

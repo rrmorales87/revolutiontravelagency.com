@@ -14,7 +14,7 @@ const gotToLogin = ()=> router.get('login');
       <span class="menu-text px-2">{{$t("subscription")}}</span>
     </div>
     <div>
-      <img class="icon-logo" src="/storage/icon/rtravel-Logo.svg" alt="main logo">
+      <a href="/"><img class="icon-logo" src="/storage/icon/rtravel-Logo.svg" alt="main logo"></a>
     </div>
     <div class="flex flex-row gap-8 items-center ">
       <div class="hidden-sm  menu-text flex flex-row gap-8 cursor-pointer">
@@ -24,7 +24,7 @@ const gotToLogin = ()=> router.get('login');
       </div>
       <selector-language/>
       <button class="btn-circuit flex flex-row justify-center items-center px-4 py-2 rounded-full">
-        <img class="btn-circuit_icon" src="/storage/icon/circuit-icon.svg" alt="circuit-icon">
+         <img class="btn-circuit_icon" src="/storage/icon/circuit-icon.svg" alt="circuit-icon">
          <span class="btn-circuit_text" @click="gotToLogin">{{$t('Sign in')}}</span>
       </button>
     </div>

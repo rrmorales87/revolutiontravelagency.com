@@ -37,3 +37,5 @@ Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");
 Route::get('/signIn',[\App\Http\Controllers\LoginController::class,'signIn'])->name("signIn");
 Route::get('/signUp',[\App\Http\Controllers\LoginController::class,'signUp'])->name("signUp");
+Route::get('/login/google', [\App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('/login/google/callback', [\App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback']);
