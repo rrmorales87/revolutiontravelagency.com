@@ -203,17 +203,17 @@ watch(()=>store.state.locale,(newVal)=>{
     @apply font-Lato;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 0.7rem;
     font-weight: 300;
     .icons {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       justify-content: flex-start;
     }
   }
   .copyright {
     @apply font-Lato;
-    font-size: 14px;
+    font-size: 0.7rem;
     font-weight: 300;
   }
 
