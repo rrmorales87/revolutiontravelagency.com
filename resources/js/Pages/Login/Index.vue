@@ -19,18 +19,15 @@ import {router} from "@inertiajs/vue3";
                {{$t('Keep track of your subscriptions and organize your trips faster')}}
             </div>
             <div class="form-login mt-8 w-3/4 ">
-              <el-button round size="large" class="w-full" @click="router.get('/login/google')">
-                <template #icon >
-                  <img src="/storage/icon/google_icon.webp" alt="google">
-                </template>
-                {{$t('Continue with Google')}}
-              </el-button>
-              <el-button round size="large" class="w-full" @click="router.get('/signIn')">
-                <template #icon>
-                  <img src="/storage/icon/email.svg" alt="google">
-                </template>
-                {{$t('Continue with email')}}
-              </el-button>
+              <a href="/login/google" class="border rounded-full w-full flex flex-row justify-center items-center  p-2 gap-4">
+                <img class="basis-2" src="/storage/icon/google_icon.webp" alt="google">
+                <p class="btn-text">{{$t('Continue with Google')}}</p>
+              </a>
+              <a href="/signUp" class="border rounded-full w-full flex flex-row justify-center items-center  p-2 gap-4">
+                <img src="/storage/icon/email.svg" alt="google">
+                <p class="btn-text"> {{$t('Continue with email')}}</p>
+              </a>
+
               <div class="mt-5 w-full">
                 <el-divider>
                  <p class="no-account">{{$t('No account')}}</p>
@@ -82,7 +79,16 @@ import {router} from "@inertiajs/vue3";
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    font-size: 0.6vw;
+    font-size: 0.6rem;
+    .btn-text {
+      @apply font-Lato;
+      font-size: 0.7rem;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0;
+      text-align: center;
+      color: #0F3B53;;
+    }
     .el-button {
       :deep(span) {
         font-size: 0.7rem;
