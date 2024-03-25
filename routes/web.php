@@ -23,19 +23,21 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
-
+*/
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-});*/
-Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
+    Route::get('/home',[\App\Http\Controllers\HomeController::class,'home'])->name('home');
+});
+Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");
 Route::get('/signIn',[\App\Http\Controllers\LoginController::class,'signIn'])->name("signIn");
+Route::post('/inAction',[\App\Http\Controllers\LoginController::class,'signInAction'])->name("signInAction");
 Route::get('/signUp',[\App\Http\Controllers\LoginController::class,'signUp'])->name("signUp");
 Route::get('/login/google', [\App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('/login/google/callback', [\App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback']);
+Route::post('/register', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
+Route::post('/email-validate', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
+Route::get('/change-locale', [\App\Http\Controllers\LanguageController::class, 'index'])->name('changeLocale');

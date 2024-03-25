@@ -18,4 +18,12 @@ class HomeController extends Controller
     {
         return Inertia::render('Home/Index', []);
     }
+    /**
+     * Show Home page
+     * @return Response
+     */
+    public function home(): Response
+    {
+        return Inertia::render('Home/home', []);
+    }
 }

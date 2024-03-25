@@ -19,13 +19,19 @@ import {router} from "@inertiajs/vue3";
                {{$t('Keep track of your subscriptions and organize your trips faster')}}
             </div>
             <div class="form-login mt-8 w-3/4 ">
-              <a href="/login/google" class="border rounded-full w-full flex flex-row justify-center items-center  p-2 gap-4">
+              <a href="/login/google" class="border rounded-full w-full flex flex-row justify-start items-center  p-4">
                 <img class="basis-2" src="/storage/icon/google_icon.webp" alt="google">
-                <p class="btn-text">{{$t('Continue with Google')}}</p>
+                <div class="flex flex-row justify-center w-full">
+                  <p class="btn-text">{{$t('Continue with Google')}}</p>
+                </div>
+
               </a>
-              <a href="/signUp" class="border rounded-full w-full flex flex-row justify-center items-center  p-2 gap-4">
+              <a href="/signIn" class="border rounded-full w-full flex flex-row justify-center items-center  p-4 ">
                 <img src="/storage/icon/email.svg" alt="google">
-                <p class="btn-text"> {{$t('Continue with email')}}</p>
+                <div class="flex flex-row justify-center w-full">
+                  <p class="btn-text"> {{$t('Continue with email')}}</p>
+                </div>
+
               </a>
 
               <div class="mt-5 w-full">
@@ -82,7 +88,7 @@ import {router} from "@inertiajs/vue3";
     font-size: 0.6rem;
     .btn-text {
       @apply font-Lato;
-      font-size: 0.7rem;
+      font-size: 0.88rem;
       font-weight: 600;
       line-height: 20px;
       letter-spacing: 0;

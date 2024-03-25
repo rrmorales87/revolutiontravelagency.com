@@ -242,6 +242,18 @@
     "and unlock the full experience": " y desbloquea la experiencia completa.",
     "Join right now": "Únete ahora mismo",
     "Last name": "Apellidos",
-    "with your RTravel account": " con su cuenta de RTravel"
+    "with your RTravel account": " con su cuenta de RTravel",
+    "requiredField": "Campo es obligatorio",
+    "emailFail": "Incorrecta dirección de correo",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Correcto",
+    "info": "info",
+    "warning": "Adventencia",
+    "errorField": "Error de llenar los datos de los campos",
+    "exit": "Salir",
+    "update account": "Update your account's profile information and email address.",
+    "resendEmail": " Click here to re-send the verification email."
+
 
 }
