@@ -1,8 +1,8 @@
-$breakpoint-xs: 360px; // Para pantallas muy pequeñas
-$breakpoint-sm: 576px; // Para pantallas pequeñas
-$breakpoint-md: 768px; // Para pantallas medianas
-$breakpoint-lg: 992px; // Para pantallas grandes
-$breakpoint-xl: 1200px; // Para pantallas muy grandes
+$breakpoint-xs: 530px; // Para pantallas muy pequeñas
+$breakpoint-sm: 768px; // Para pantallas pequeñas
+$breakpoint-md: 1024px; // Para pantallas medianas
+$breakpoint-lg: 1200px; // Para pantallas grandes
+$breakpoint-xl: 1600px; // Para pantallas muy grandes
 @mixin media($breakpoint) {
   @if $breakpoint == xs {
     @media (max-width: $breakpoint-xs) {

@@ -1,13 +1,13 @@
 <script setup>
 defineProps({
-    message: String,
+    errors: Array,
 });
 </script>
 
 <template>
-    <div v-show="message">
+    <div v-if="errors && errors.length>0" v-for="error in errors" :key="error.$uid">
         <p class="text-sm text-red-600">
-            {{ message }}
+            {{ error.$message }}
         </p>
     </div>
 </template>

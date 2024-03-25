@@ -27,5 +27,12 @@
             display: none;
         }
     }
+    .notification {
+        color: #0F3B53 !important;
+        background: transparent;
+
+        filter: brightness(-50%);
+
+    }
 
 }

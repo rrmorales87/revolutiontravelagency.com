@@ -43,7 +43,9 @@ class HandleInertiaRequests extends Middleware
                     return;
                 }
             },
-            'locale' => app()->getLocale()
+            'locale' => app()->getLocale(),
+            'isLogin' => auth()->check(),
+            'userData' => auth()
         ]);
     }
 }

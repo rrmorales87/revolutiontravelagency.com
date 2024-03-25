@@ -188,4 +188,18 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    /*
+        |--------------------------------------------------------------------------
+        | Available locales
+        |--------------------------------------------------------------------------
+        |
+        | List all locales that your application works with
+        |
+    */
+    'available_locales' => [
+        'English' => 'en',
+        'Spain' => 'es',
+
+    ],
+
 ];

@@ -242,6 +242,19 @@
     "and unlock the full experience": " and unlock the full experience.",
     "Join right now": "Join right now",
     "Last name": "Last name",
-    "with your RTravel account": " with your RTravel account"
+    "with your RTravel account": " with your RTravel account",
+    "requiredField": "Field is required",
+    "emailFail": "Incorrect address of email",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "info": "info",
+    "warning": "Warning",
+    "errorField": "Error filling in field data",
+    "exit": "Exit",
+    "update account": "Update your account's profile information and email address.",
+    "resendEmail": " Click here to re-send the verification email."
+
+
 
 }
