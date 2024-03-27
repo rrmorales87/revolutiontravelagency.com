@@ -253,7 +253,8 @@
     "errorField": "Error de llenar los datos de los campos",
     "exit": "Salir",
     "update account": "Update your account's profile information and email address.",
-    "resendEmail": " Click here to re-send the verification email."
+    "resendEmail": " Click here to re-send the verification email.",
+    "trustPilotTitle": "Ecos del Servicio: Tus Comentarios"
 
 
 }
