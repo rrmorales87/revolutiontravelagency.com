@@ -41,3 +41,4 @@ Route::get('/login/google/callback', [\App\Http\Controllers\GoogleLoginControlle
 Route::post('/register', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
 Route::post('/email-validate', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
 Route::get('/change-locale', [\App\Http\Controllers\LanguageController::class, 'index'])->name('changeLocale');
+Route::get('/support', [\App\Http\Controllers\BuilderController::class, 'index'])->name('changeLocale');

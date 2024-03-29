@@ -51,12 +51,13 @@ const profile = ()=> router.get(route("profile.show"));
     </div>
     <div class="flex flex-row gap-8 items-center ">
       <div class="hidden-sm  menu-text flex flex-row gap-8 cursor-pointer">
-        <nav>{{$t('support')}}</nav>
-        <nav>{{$t('community')}}</nav>
+        <nav>
+          <a href="/support">{{$t('support')}}</a>
+        </nav>
 
       </div>
       <selector-language/>
-      <button v-if="!isLogin" class="btn-circuit flex flex-row justify-center items-center px-4 py-2 rounded-full">
+      <button v-if="!isLogin" class="btn-circuit flex flex-row justify-center items-center px-4 py-2 rounded-full gap-2">
          <img class="btn-circuit_icon" src="/storage/icon/circuit-icon.svg" alt="circuit-icon">
          <span class="btn-circuit_text" @click="gotToLogin">{{$t('Sign in')}}</span>
       </button>
@@ -124,8 +125,8 @@ const profile = ()=> router.get(route("profile.show"));
   width: auto;
 
   &_icon {
-    height: 1.68rem;
-    width: 1.68rem;
+    height: 1.4rem;
+    width: 1.4rem;
   }
 
   &_text {
