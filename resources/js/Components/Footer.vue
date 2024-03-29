@@ -138,7 +138,9 @@ watch(()=>store.state.locale,(newVal)=>{
     <div class="icons">
         <h1>{{$t("fallow")}} {{$t("agency-name")}}</h1>
         <img src="/storage/icon/linkedin-icon.svg" alt="linkedin">
-        <img src="/storage/icon/facebook.svg" alt="facebook">
+        <a href="https://www.facebook.com/share/X3JeMJxXtGaiLjQz/?mibextid=qi2Omg">
+          <img src="/storage/icon/facebook.svg" alt="facebook">
+        </a>
         <img src="/storage/icon/instagram.svg" alt="instagram">
     </div>
     <div class="underline underline-offset-1">

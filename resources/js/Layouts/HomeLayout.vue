@@ -3,6 +3,7 @@ import {Head} from "@inertiajs/vue3";
 import {computed} from "vue";
 import Header from "../Components/Header.vue";
 import Footer from "../Components/Footer.vue";
+import LiveChatComponent from "../Components/LiveChatComponent.vue";
 
 
 const setDeviceType = computed(() => {
@@ -27,6 +28,7 @@ const setDeviceType = computed(() => {
     <Header/>
      <slot/>
     <Footer/>
+
   </div>
 </template>
 

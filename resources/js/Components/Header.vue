@@ -135,6 +135,9 @@ const profile = ()=> router.get(route("profile.show"));
     line-height: 25px;
     letter-spacing: 0;
     text-align: left;
+    @include media(sm) {
+      font-size: 12px;
+    }
 
   }
 }

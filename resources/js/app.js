@@ -10,10 +10,10 @@ import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import store from '@/store/index';
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'TR';
+const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'RT';
 
 import { InertiaProgress } from "@inertiajs/progress";
-
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-3';
 InertiaProgress.init();
 i18nVue.locale = 'en';
 createInertiaApp({
@@ -24,6 +24,10 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
+            .use(TawkMessengerVue,{
+                propertyId : '65e5ce3b9131ed19d974c793',
+                widgetId : '1ho4qr6tt'
+            })
             .use(i18nVue, {
                 resolve: async lang => {
                     const langs = import.meta.glob('../../lang/*.json');

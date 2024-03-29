@@ -1,10 +1,9 @@
 <script setup>
 import {getActiveLanguage, loadLanguageAsync} from "laravel-vue-i18n";
-import {onMounted, ref} from "vue";
+import {computed, inject, onMounted, ref} from "vue";
 import {useStore} from "vuex";
 import {SET_LOCALE} from "../store/mutations/type";
 import {router} from "@inertiajs/vue3";
-import {InertiaProgress} from "@inertiajs/progress";
 const showLocale = ref(getActiveLanguage());
 const store = useStore();
 const setLocale = async (locale)  =>  {
@@ -14,6 +13,24 @@ const setLocale = async (locale)  =>  {
   router.get("/change-locale",{locale});
 }
 onMounted(()=>store.commit(SET_LOCALE,showLocale.value))
+
+const src_en = '1ho4qr6tt';
+const src_es = '1hq43401q';
+const idChat = computed(()=>{
+  return (showLocale.value === "es") ? src_es : src_en;
+})
+const switchWidget = inject('switchWidget');
+const onLoad = inject('onLoad');
+
+onLoad(()=>{
+  switchWidget({
+    propertyId : '65e5ce3b9131ed19d974c793',
+    widgetId : idChat.value
+  }, function (error) {
+    console.log("Error in twak chat live",error);
+  });
+})
+
 
 </script>
 
