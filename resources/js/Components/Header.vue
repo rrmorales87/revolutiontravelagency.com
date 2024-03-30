@@ -1,11 +1,11 @@
 <script setup>
-import {computed, ref} from "vue";
+import {computed} from "vue";
 import {router, usePage} from '@inertiajs/vue3';
 import SelectorLanguage from "./SelectorLanguage.vue";
-import {Avatar, CloseBold} from "@element-plus/icons-vue"
-const search = ref();
+import {Avatar, CloseBold, UserFilled, Message} from "@element-plus/icons-vue"
 const gotToLogin = ()=> router.get('login');
 const page = usePage();
+const user = computed(()=>page.props.auth.user);
 const isLogin = computed(()=>page.props.isLogin);
 const logout = ()=> router.post(route("logout"));
 const profile = ()=> router.get(route("profile.show"));
@@ -19,31 +19,47 @@ const profile = ()=> router.get(route("profile.show"));
       <span class="menu-text px-2">{{$t("subscription")}}</span>
     </div>
     <div class="flex flex-row flex-nowrap cursor-pointer " v-if="isLogin" >
-      <el-dropdown >
-        <el-image fit="cover" class="rounded-full  border-8"></el-image>
-        <template #dropdown>
-          <el-dropdown-menu class="my-2 ">
-            <el-dropdown-item @click="profile" >
+
+        <div class="flex items-center gap-4">
+          <el-dropdown >
+          <el-avatar  class="border-4" :size="50" :icon="Avatar" :src="user.profile_photo_url"> </el-avatar>
+            <template #dropdown>
+              <el-dropdown-menu class="my-2 ">
+                <el-dropdown-item @click="profile" >
                 <span class="float-left mr-4">
                   <el-icon >
-                        <Avatar/>
+                        <UserFilled/>
                   </el-icon>
 
                 </span>
-              <span class="float-right">{{ $t("Profile") }}</span>
-            </el-dropdown-item>
-            <el-dropdown-item @click="logout" >
+                  <span class="float-right">{{ $t("Profile") }}</span>
+                </el-dropdown-item>
+                <el-dropdown-item @click="logout" >
                 <span class="float-left mr-4">
                   <el-icon>
                     <CloseBold/>
                   </el-icon>
                 </span>
-              <span class="float-right">{{ $t("exit") }}</span>
-            </el-dropdown-item>
+                  <span class="float-right">{{ $t("exit") }}</span>
+                </el-dropdown-item>
 
-          </el-dropdown-menu>
-        </template>
-      </el-dropdown>
+              </el-dropdown-menu>
+            </template>
+          </el-dropdown>
+          <div class="flex flex-col ">
+            <div class="name">{{user.name}}</div>
+            <div class="email flex items-center gap-1">
+              <el-icon >
+                <Message/>
+              </el-icon>
+              {{user.email}}
+            </div>
+          </div>
+        </div>
+
+
+
+
 
     </div>
     <div>
@@ -78,6 +94,19 @@ const profile = ()=> router.get(route("profile.show"));
   @include media(sm) {
     display: none;
   }
+
+}
+.name {
+  @apply font-Musticapro;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0F3B53;
+
+
+}
+.email {
+ @apply font-Lato;
+  color: #265873;
 
 }
 .title-search {

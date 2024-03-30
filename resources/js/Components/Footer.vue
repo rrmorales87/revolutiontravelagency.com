@@ -36,10 +36,11 @@ watch(()=>store.state.locale,(newVal)=>{
 
         <ul class="option-ul">
           <li>
-            {{$t('home')}}
+            <a href="/home">{{$t('home')}}</a>
           </li>
          <li>
-            {{$t('subscription')}}
+            <a href="/subscription"> {{$t('subscription')}}</a>
+
           </li>
         </ul>
 
@@ -50,13 +51,12 @@ watch(()=>store.state.locale,(newVal)=>{
       </div>
 
         <ul class="option-ul">
+
           <li>
-            {{$t('Travel profile')}}
+           <a href="/support">{{$t('support')}}</a>
           </li>
           <li>
-            {{$t('support')}}
-          </li> <li>
-            {{$t('contact')}}
+            <a href="/concat">{{$t('contact')}}</a>
           </li>
         </ul>
 
@@ -68,13 +68,15 @@ watch(()=>store.state.locale,(newVal)=>{
 
         <ul class="option-ul">
           <li>
-            {{$t('about us')}}
+            <a href="/aboutUs">{{$t('about us')}}</a>
           </li>
           <li>
-            {{$t('Terms of Use')}}
-          </li> <li>
-            {{$t('Privacy Policy')}}
+            <a href="/pprivacy">{{$t('Privacy Policy')}}</a>
           </li>
+          <li>
+            <a href="/term">{{$t('Terms of Use')}}</a>
+          </li>
+
         </ul>
 
     </div>
