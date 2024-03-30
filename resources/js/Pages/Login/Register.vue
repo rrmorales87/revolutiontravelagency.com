@@ -5,11 +5,13 @@ import { View, Hide } from '@element-plus/icons-vue'
 import { useVuelidate } from '@vuelidate/core'
 import { required, email,helpers } from '@vuelidate/validators'
 import InputError from "@/Components/InputError.vue";
-import {computed, ref} from "vue";
-import {useForm} from "@inertiajs/vue3";
+import {computed, ref, watch} from "vue";
+import {useForm, usePage} from "@inertiajs/vue3";
 import { wTrans } from 'laravel-vue-i18n';
 import {ElLoading} from "element-plus";
+import Notifications from "../../Components/Notifications";
 const view = ref(false);
+const page = usePage();
 const user = useForm({
   email:'',
   name:'',
@@ -48,6 +50,12 @@ const submit = async () => {
   }
 
 };
+console.log("Page",page.props);
+watch(()=>page.props.errors,(value)=>{
+  console.log("Errores",value);
+  if( value && value.email)
+    Notifications.open(value.email,'error');
+})
 </script>
 
 <template>
