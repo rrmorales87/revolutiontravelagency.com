@@ -42,8 +42,6 @@ Route::get('/login/google/callback', [\App\Http\Controllers\GoogleLoginControlle
 Route::post('/register', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
 Route::post('/email-validate', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
 Route::get('/change-locale', [\App\Http\Controllers\LanguageController::class, 'index'])->name('changeLocale');
-Route::get('/support', [\App\Http\Controllers\BuilderController::class, 'index'])->name('changeLocale');
-Route::get('/concat', [\App\Http\Controllers\BuilderController::class, 'index'])->name('concact');
-Route::get('/aboutUs', [\App\Http\Controllers\BuilderController::class, 'index'])->name('aboutsUs');
+Route::get('/support', [\App\Http\Controllers\ContactUsController::class, 'index'])->name('support');
 Route::get('/pprivacy', [\App\Http\Controllers\BuilderController::class, 'index'])->name('ppprivacity');
 Route::get('/term', [\App\Http\Controllers\BuilderController::class, 'index'])->name('term');

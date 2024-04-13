@@ -256,7 +256,11 @@
     "resendEmail": " Click here to re-send the verification email.",
     "trustPilotTitle": "Ecos del Servicio: Tus Comentarios",
     "titlePageBuild": "Página en construcción muy pronto regresamos",
-    "subTitlePageBuild": "Estamos ajustado los últimos detalles, muy pronto regresaremos para brindarte la mejor experiencia de viaje. Estate atento que tenemos grandes anuncios que compartir."
+    "subTitlePageBuild": "Estamos ajustando los últimos detalles, muy pronto regresaremos para brindarte la mejor experiencia de viaje. Estate atento que tenemos grandes anuncios que compartir.",
+    "contactUS": "Contacte a soporte",
+    "emailNumber": "Email/Number phone",
+    "message": "Mensaje",
+    "send": "Enviar"
 
 
 }
