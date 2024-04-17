@@ -43,5 +43,6 @@ Route::post('/register', [\App\Http\Controllers\LoginController::class, 'registe
 Route::post('/email-validate', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');
 Route::get('/change-locale', [\App\Http\Controllers\LanguageController::class, 'index'])->name('changeLocale');
 Route::get('/support', [\App\Http\Controllers\ContactUsController::class, 'index'])->name('support');
+Route::post('/support_create', [\App\Http\Controllers\ContactUsController::class, 'create'])->name('support_create');
 Route::get('/pprivacy', [\App\Http\Controllers\BuilderController::class, 'index'])->name('ppprivacity');
 Route::get('/term', [\App\Http\Controllers\BuilderController::class, 'index'])->name('term');
