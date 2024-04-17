@@ -3,7 +3,7 @@ import {Head} from "@inertiajs/vue3";
 import {computed} from "vue";
 import Header from "../Components/Header.vue";
 import Footer from "../Components/Footer.vue";
-import LiveChatComponent from "../Components/LiveChatComponent.vue";
+
 
 
 const setDeviceType = computed(() => {
@@ -26,7 +26,10 @@ const setDeviceType = computed(() => {
   <div class="flex-col ">
     <Head title="Travel with"/>
     <Header/>
-     <slot/>
+    <div class="mt-32">
+      <slot/>
+    </div>
+
     <Footer/>
 
   </div>

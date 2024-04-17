@@ -12,7 +12,7 @@ const profile = ()=> router.get(route("profile.show"));
 </script>
 
 <template>
-<div class="flex flex-col">
+<div class="flex flex-col border-b-2 fixed left-0 right-0 top-0 z-50 bg-white shadow-2xl">
   <div class="w-full flex flex-row justify-between items-center gap-4 py-4 lg:px-24 md:px-14 sm:px-5">
     <div class="hidden-sm flex flex-row flex-nowrap cursor-pointer " v-if="!isLogin" >
       <img class="icon-view" src="/storage/icon/subscripcion-icon.svg" alt="subscription logo">
