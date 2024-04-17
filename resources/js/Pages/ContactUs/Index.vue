@@ -95,7 +95,7 @@ const sendMenssage = async () => {
           <div>CEO Maikel Reyes Roche</div>
           <div class="flex  items-center gap-1">
             <el-icon><Message /></el-icon>
-            <a href="mailto:revolutiontravel2023.ds@gmail.com">revolutiontravel2023.ds@gmail.com</a>
+            <a href="mailto:revolutiontravel2023@gmail.com">revolutiontravel2023@gmail.com</a>
           </div>
           <div class="flex  items-center gap-1">
             <el-icon><Cellphone /></el-icon>
