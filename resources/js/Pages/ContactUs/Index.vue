@@ -1,7 +1,7 @@
 <script setup>
 import HomeLayout from "../../Layouts/HomeLayout.vue";
 import {useForm, usePage} from "@inertiajs/vue3";
-import {computed, watch} from "vue";
+import {computed} from "vue";
 import { helpers, required} from "@vuelidate/validators";
 import {wTrans} from "laravel-vue-i18n";
 import {useVuelidate} from "@vuelidate/core";
@@ -90,7 +90,7 @@ const sendMenssage = async () => {
         </div>
       </div>
       <div class="flex flex-row gap-2.5">
-        <el-avatar shape="square" :size="80" src="https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png" />
+        <el-avatar shape="square" :size="80" src="storage/img/maikel.png" />
         <div class="flex flex-col gap-2">
           <div>CEO Maikel Reyes Roche</div>
           <div class="flex  items-center gap-1">
