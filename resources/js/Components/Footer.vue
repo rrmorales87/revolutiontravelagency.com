@@ -36,7 +36,7 @@ watch(()=>store.state.locale,(newVal)=>{
 
         <ul class="option-ul">
           <li>
-            <a href="/home">{{$t('home')}}</a>
+            <a href="/">{{$t('home')}}</a>
           </li>
          <li>
             <a href="/subscription"> {{$t('subscription')}}</a>
@@ -55,9 +55,7 @@ watch(()=>store.state.locale,(newVal)=>{
           <li>
            <a href="/support">{{$t('support')}}</a>
           </li>
-          <li>
-            <a href="/concat">{{$t('contact')}}</a>
-          </li>
+
         </ul>
 
     </div>
@@ -114,9 +112,7 @@ watch(()=>store.state.locale,(newVal)=>{
           </li>
           <li>
             {{$t('support')}}
-          </li> <li>
-          {{$t('contact')}}
-        </li>
+          </li>
         </ul>
       </el-collapse-item>
       <el-collapse-item  name="4">
