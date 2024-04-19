@@ -36,10 +36,10 @@ watch(()=>store.state.locale,(newVal)=>{
 
         <ul class="option-ul">
           <li>
-            <a href="/">{{$t('home')}}</a>
+            <a :href="route('index')">{{$t('home')}}</a>
           </li>
          <li>
-            <a href="/subscription"> {{$t('subscription')}}</a>
+            <a :href="route('subscription')"> {{$t('subscription')}}</a>
 
           </li>
         </ul>
@@ -53,7 +53,7 @@ watch(()=>store.state.locale,(newVal)=>{
         <ul class="option-ul">
 
           <li>
-           <a href="/support">{{$t('support')}}</a>
+           <a :href="route('support')">{{$t('support')}}</a>
           </li>
 
         </ul>
@@ -66,13 +66,13 @@ watch(()=>store.state.locale,(newVal)=>{
 
         <ul class="option-ul">
           <li>
-            <a href="/aboutUs">{{$t('about us')}}</a>
+            <a :href="route('support')">{{$t('about us')}}</a>
           </li>
           <li>
-            <a href="/pprivacy">{{$t('Privacy Policy')}}</a>
+            <a :href="route('ppprivacity')">{{$t('Privacy Policy')}}</a>
           </li>
           <li>
-            <a href="/term">{{$t('Terms of Use')}}</a>
+            <a :href="route('term')">{{$t('Terms of Use')}}</a>
           </li>
 
         </ul>
@@ -95,10 +95,10 @@ watch(()=>store.state.locale,(newVal)=>{
         </template>
         <ul class="option-ul">
           <li>
-            {{$t('home')}}
+            <a :href="route('index')">{{$t('home')}}</a>
           </li>
           <li>
-            {{$t('subscription')}}
+            <a :href="route('subscription')"> {{$t('subscription')}}</a>
           </li>
         </ul>
       </el-collapse-item>
@@ -108,10 +108,10 @@ watch(()=>store.state.locale,(newVal)=>{
         </template>
         <ul class="option-ul">
           <li>
-            {{$t('Travel profile')}}
+           <a :href="route('profile.show')" >{{$t('Travel profile')}}</a>
           </li>
           <li>
-            {{$t('support')}}
+            <a :href="route('support')">{{$t('support')}}</a>
           </li>
         </ul>
       </el-collapse-item>
@@ -121,7 +121,7 @@ watch(()=>store.state.locale,(newVal)=>{
         </template>
         <ul class="option-ul">
           <li>
-            {{$t('about us')}}
+            <a :href="route('support')">{{$t('about us')}}</a>
           </li>
           <li>
             {{$t('Terms of Use')}}

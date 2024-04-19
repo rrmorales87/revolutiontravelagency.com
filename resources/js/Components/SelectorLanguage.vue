@@ -44,18 +44,20 @@ onLoad(()=>{
     </div>
 
     <template #dropdown>
-      <el-dropdown-menu class="my-2 ">
+      <el-dropdown-menu class=" font-Musticapro">
         <el-dropdown-item @click="setLocale('en')" v-if="showLocale!=='en'">
-                <span class="float-left mr-4">
-                  <img src="/storage/icon/us.webp" alt="us">
-                </span>
-          <span class="float-right">{{ $t("english") }}</span>
+          <div class="flex justify-between w-24">
+            <img class="w-10" src="/storage/icon/us.webp" alt="us">
+            <div>{{ $t("english") }}</div>
+          </div>
+
         </el-dropdown-item>
         <el-dropdown-item @click="setLocale('es') " v-if="showLocale!=='es'">
-                <span class="float-left mr-4">
-                  <img src="/storage/icon/es.webp" alt="es">
-                </span>
-          <span class="float-right">{{ $t("spanish") }}</span>
+          <div class="flex justify-between w-24">
+            <img class="w-10"  src="/storage/icon/es.webp" alt="es">
+            <div>{{ $t("spanish") }}</div>
+          </div>
+
         </el-dropdown-item>
 
       </el-dropdown-menu>
@@ -65,12 +67,18 @@ onLoad(()=>{
 </template>
 
 <style scoped lang="scss">
+@import "../../css/mixin";
+.flags {
+  width: 1.8rem;
+
+}
 .icon-view {
   width: 27px;
   height: 18.81px;
+
 }
 .menu-text {
-  font-family: Mustica Pro;
+  @apply font-Musticapro;
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;

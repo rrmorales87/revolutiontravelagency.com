@@ -30,7 +30,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/home',[\App\Http\Controllers\HomeController::class,'home'])->name('home');
-    Route::get('/subscription', [\App\Http\Controllers\BuilderController::class, 'index'])->name('changeLocale');
+    Route::get('/subscription', [\App\Http\Controllers\BuilderController::class, 'index'])->name('subscription');
 });
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");

@@ -12,7 +12,7 @@ const profile = ()=> router.get(route("profile.show"));
 </script>
 
 <template>
-<div class="flex flex-col border-b-2 fixed left-0 right-0 top-0 z-50 bg-white shadow-2xl">
+<div class="flex flex-col border-b-2 fixed left-0 right-0 top-0 z-50 bg-white shadow-2xl px-2">
   <div class="w-full flex flex-row justify-between items-center gap-4 py-4 lg:px-24 md:px-14 sm:px-5">
     <div class="hidden-sm flex flex-row flex-nowrap cursor-pointer " v-if="!isLogin" >
       <img class="icon-view" src="/storage/icon/subscripcion-icon.svg" alt="subscription logo">
@@ -46,7 +46,7 @@ const profile = ()=> router.get(route("profile.show"));
               </el-dropdown-menu>
             </template>
           </el-dropdown>
-          <div class="flex flex-col ">
+          <div class="flex flex-col hidden-sm">
             <div class="name">{{user.name}}</div>
             <div class="email flex items-center gap-1">
               <el-icon >
@@ -63,12 +63,12 @@ const profile = ()=> router.get(route("profile.show"));
 
     </div>
     <div>
-      <a href="/"><img class="icon-logo" src="/storage/icon/rtravel-Logo.svg" alt="main logo"></a>
+      <a :href="route('index')"><img class="icon-logo" src="/storage/icon/rtravel-Logo.svg" alt="main logo"></a>
     </div>
     <div class="flex flex-row gap-8 items-center ">
       <div class="hidden-sm  menu-text flex flex-row gap-8 cursor-pointer">
         <nav>
-          <a href="/support">{{$t('support')}}</a>
+          <a :href="route('support')">{{$t('support')}}</a>
         </nav>
 
       </div>
