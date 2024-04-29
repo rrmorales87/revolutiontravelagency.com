@@ -49,4 +49,12 @@ class UserServices
             return false;
         }
     }
+
+    /**
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return Auth::check() && Auth::user()->roles == 'admin';
+    }
 }

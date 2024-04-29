@@ -30,6 +30,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/home',[\App\Http\Controllers\HomeController::class,'home'])->name('home');
+    Route::get('/dashboard',[\App\Http\Controllers\HomeController::class,'home'])->name('dashboard');
     Route::get('/subscription', [\App\Http\Controllers\BuilderController::class, 'index'])->name('subscription');
 });
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');

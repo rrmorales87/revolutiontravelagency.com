@@ -2,13 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Services\UserServices;
 use Inertia\Inertia;
 use Inertia\Response;
 
 class HomeController extends Controller
 {
-    //
+    protected $service;
+
+    public function __construct(UserServices $userServices)
+    {
+        $this->service = $userServices;
+    }
 
     /**
      * Show Home page
@@ -16,6 +21,8 @@ class HomeController extends Controller
      */
     public function index(): Response
     {
+        if ($this->service->isAdmin())
+            return Inertia::render('Admin/Index', []);
         return Inertia::render('Home/Index', []);
     }
     /**
@@ -24,6 +31,8 @@ class HomeController extends Controller
      */
     public function home(): Response
     {
+        if ($this->service->isAdmin())
+            return Inertia::render('Admin/Index', []);
         return Inertia::render('Home/home', []);
     }
 }
