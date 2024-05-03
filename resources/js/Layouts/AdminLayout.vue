@@ -335,7 +335,7 @@ const logout = (e)=>{
                       @click="isOpen = false"
                       @keydown.esc="isOpen = false"
                       v-show="isOpen"
-                      class="absolute mt-3 transform bg-white rounded-md shadow-lg -translate-x-3/4 min-w-max"
+                      class="absolute mt-3 transform bg-white rounded-md shadow-lg -translate-x-3/4 min-w-max z-50"
                   >
                     <div class="p-4 text-lg font-medium border-b">Web apps & services</div>
                     <ul class="flex flex-col p-2 my-3 space-y-3">
@@ -464,7 +464,7 @@ const logout = (e)=>{
                 <div
                     @click="isOpen = false"
                     v-show="isOpen"
-                    class="absolute mt-3 transform -translate-x-full bg-white rounded-md shadow-lg min-w-max"
+                    class="absolute mt-3 transform -translate-x-full bg-white rounded-md shadow-lg min-w-max z-50"
                 >
                   <div class="flex flex-col p-4 space-y-1 font-medium border-b">
                     <span class="text-gray-800">Ahmed Kamel</span>
