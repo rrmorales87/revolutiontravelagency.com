@@ -11,7 +11,7 @@ const add = ()=> router.visit(route('createTopDestinations'));
 <template>
 <AdminLayout>
   <AdminHeaderContent :title="$t('TopDestinations')">
-    <div class="float-right">
+    <div>
        <AdminAddButton :title="$t('New')" @onClick="add"/>
     </div>
   </AdminHeaderContent>

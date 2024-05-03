@@ -12,17 +12,18 @@ class ImageController extends Controller
      *
      *
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request): bool
     {
-        dd($request);
 
-        $imageName = time() . '.' . $request->image->extension();
+        if($request->has('file')){
 
-        $request->image->move(public_path('images'), $imageName);
-
-
-        return back()
-            ->with('success', 'You have successfully upload image.')
-            ->with('image', $imageName);
+            $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension();
+            $imageName = time() . '.' . $extension;
+            print_r($imageName);
+            $file->move(public_path('images'), $imageName);
+            return true;
+        }
+        return false;
     }
 }
