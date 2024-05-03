@@ -30,8 +30,16 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/home',[\App\Http\Controllers\HomeController::class,'home'])->name('home');
-    Route::get('/dashboard',[\App\Http\Controllers\HomeController::class,'home'])->name('dashboard');
+
     Route::get('/subscription', [\App\Http\Controllers\BuilderController::class, 'index'])->name('subscription');
+    Route::middleware([
+        'is.admin'
+    ])->group(function () {
+        Route::get('/dashboard',[\App\Http\Controllers\HomeController::class,'home'])->name('dashboard');
+        Route::get('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'index'])->name('topDestinations');
+        Route::get('/top-destinations-create',[\App\Http\Controllers\Admin\TopDestinationsController::class,'create'])->name('createTopDestinations');
+        Route::post('/store-image',[\App\Http\Controllers\ImageController::class,'store'])->name('image.store');
+    });
 });
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");

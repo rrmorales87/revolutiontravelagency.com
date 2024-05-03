@@ -1,4 +1,7 @@
 <script setup>
+import { HomeIcon } from '@heroicons/vue/24/outline'
+import { UsersIcon } from '@heroicons/vue/24/outline'
+import { GlobeAmericasIcon } from '@heroicons/vue/24/outline'
 import {ref} from "vue";
 import {router} from "@inertiajs/vue3";
 const loading = ref(false);
@@ -9,7 +12,10 @@ const isOpen = ref(false);
 const toggleSidbarMenu = ()=> {
   isSidebarOpen.value = !isSidebarOpen.value;
 }
-const logout = ()=> router.post(route("logout"));
+const logout = (e)=>{
+  e.preventDefault();
+  router.post(route("logout"));
+}
 
 
 </script>
@@ -63,7 +69,7 @@ const logout = ()=> router.post(route("logout"));
           </button>
         </div>
         <!-- Sidebar links -->
-        <nav class="flex-1 overflow-hidden hover:overflow-y-auto">
+        <nav class="flex-1 overflow-hidden hover:overflow-y-auto gap-2">
           <ul class="p-2 overflow-hidden">
             <li>
               <a
@@ -71,23 +77,34 @@ const logout = ()=> router.post(route("logout"));
                   class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
                   :class="{'justify-center': !isSidebarOpen}"
               >
-                <span>
-                  <svg
-                      class="w-6 h-6 text-gray-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                  >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                    />
-                  </svg>
-                </span>
+
+                <HomeIcon class="w-8 text-gray-950" />
+
                 <span :class="{ 'lg:hidden': !isSidebarOpen }">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                  href="#"
+                  class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
+                  :class="{'justify-center': !isSidebarOpen}"
+              >
+
+                <UsersIcon class="w-8 text-gray-950" />
+
+                <span :class="{ 'lg:hidden': !isSidebarOpen }">{{ $t('Users')}}</span>
+              </a>
+            </li>
+            <li>
+              <a
+                  :href="route('topDestinations')"
+                  class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
+                  :class="{'justify-center': !isSidebarOpen}"
+              >
+
+                <GlobeAmericasIcon class="w-8 text-gray-950" />
+
+                <span :class="{ 'lg:hidden': !isSidebarOpen }">{{ $t('TopDestinations')}}</span>
               </a>
             </li>
             <!-- Sidebar Links... -->
@@ -462,7 +479,7 @@ const logout = ()=> router.post(route("logout"));
                     </li>
                   </ul>
                   <div class="flex items-center justify-center p-4 text-blue-700 underline border-t">
-                    <a :href="logout">{{ $t("exit") }}</a>
+                    <button @click="logout">{{ $t("exit") }}</button>
                   </div>
                 </div>
               </div>

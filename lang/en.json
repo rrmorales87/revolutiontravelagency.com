@@ -260,7 +260,12 @@
     "contactUS": "Contacte a soporte",
     "emailNumber": "Email/Number phone",
     "message": "Message",
-    "send": "Send"
+    "send": "Send",
+    "Users": "Users",
+    "TopDestinations": "Top destinations",
+    "New": "New",
+    "Price": "Price",
+    "limitImage": "jpg/png files with a size less than 500kb"
 
 
 
