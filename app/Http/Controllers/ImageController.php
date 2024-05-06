@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 
 class ImageController extends Controller
 {
@@ -12,7 +13,7 @@ class ImageController extends Controller
      *
      *
      */
-    public function store(Request $request): bool
+    public function store(Request $request): void
     {
 
         if($request->has('file')){
@@ -22,8 +23,8 @@ class ImageController extends Controller
             $imageName = time() . '.' . $extension;
             print_r($imageName);
             $file->move(public_path('images'), $imageName);
-            return true;
+
         }
-        return false;
+
     }
 }

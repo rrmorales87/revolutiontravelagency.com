@@ -265,7 +265,8 @@
     "TopDestinations": "Principales destinos",
     "New": "Nuevo",
     "Price": "Precio",
-    "limitImage": "Archivos jpg/png con un peso menor que 500kb"
+    "limitImage": "Archivos jpg/png con un peso menor que 500kb",
+    "location": "Localización"
 
 
 }

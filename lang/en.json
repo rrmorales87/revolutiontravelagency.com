@@ -265,7 +265,8 @@
     "TopDestinations": "Top destinations",
     "New": "New",
     "Price": "Price",
-    "limitImage": "jpg/png files with a size less than 500kb"
+    "limitImage": "jpg/png files with a size less than 500kb",
+    "location": "Location"
 
 
 

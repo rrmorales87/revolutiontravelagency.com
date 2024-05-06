@@ -38,6 +38,7 @@ Route::middleware([
         Route::get('/dashboard',[\App\Http\Controllers\HomeController::class,'home'])->name('dashboard');
         Route::get('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'index'])->name('topDestinations');
         Route::get('/top-destinations/create',[\App\Http\Controllers\Admin\TopDestinationsController::class,'create'])->name('createTopDestinations');
+        Route::post('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'store'])->name('destination.store');
         Route::post('/store/image',[\App\Http\Controllers\ImageController::class,'store'])->name('image.store');
     });
 });
