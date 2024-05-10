@@ -2,10 +2,15 @@
 import AdminLayout from "../../Layouts/AdminLayout.vue";
 import AdminHeaderContent from "../../Components/AdminHeaderContent.vue";
 import AdminAddButton from "../../Components/AdminAddButton.vue";
-import { PencilSquareIcon,HandThumbUpIcon,TrashIcon} from '@heroicons/vue/24/outline'
-import {router} from "@inertiajs/vue3";
+import { PencilSquareIcon,HandThumbUpIcon,TrashIcon} from '@heroicons/vue/24/outline';
+import { InfoFilled } from '@element-plus/icons-vue';
+import {router,Link,usePage} from "@inertiajs/vue3";
 const add = ()=> router.visit(route('createTopDestinations'));
-const props = defineProps(['tableData'])
+const props = defineProps(['tableData']);
+const confirmEvent = async (id) => {
+   router.delete(route('destination.delete',id));
+}
+
 </script>
 
 <template>
@@ -53,14 +58,26 @@ const props = defineProps(['tableData'])
             </template>
           </el-table-column>
           <el-table-column fixed="right" label="Operations" width="120">
-            <template #default>
-              <el-button link type="primary" size="small" @click="handleClick">
-                <PencilSquareIcon class="w-8 text-blue-600" />
+            <template #default="scope">
+              <div class="flex">
+                <Link :href="route('destination.edit',scope.row.id)" type="button">
+                  <PencilSquareIcon class="w-8 text-blue-600" />
+                </Link>
+                <el-popconfirm
+                    confirm-button-text="Yes"
+                    cancel-button-text="No"
+                    :icon="InfoFilled"
+                    icon-color="#626AEF"
+                    title="Are you sure to delete this?"
+                    @confirm="confirmEvent(scope.row.id)"
+                >
+                  <template #reference>
+                      <TrashIcon class="w-8 text-red-600 cursor-pointer" />
+                  </template>
+                </el-popconfirm>
 
-              </el-button>
-              <el-button link type="primary" size="small">
-                <TrashIcon class="w-8 text-red-600" />
-              </el-button>
+              </div>
+
             </template>
           </el-table-column>
         </el-table>

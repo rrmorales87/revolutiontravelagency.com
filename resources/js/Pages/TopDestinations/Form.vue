@@ -1,15 +1,18 @@
 <script setup>
 import {UploadFilled} from "@element-plus/icons-vue";
-import {computed, onMounted, ref} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
 import { helpers, required} from "@vuelidate/validators";
 import InputError from "@/Components/InputError.vue";
 import {wTrans} from "laravel-vue-i18n";
 import {useVuelidate} from "@vuelidate/core";
+import {usePage} from "@inertiajs/vue3";
 const layer = ref([]);
 const map = ref({});
-const props = defineProps(['data']);
+const page = usePage();
+const props = defineProps(['data','update']);
 const emits = defineEmits(['submit']);
 import Notifications from "../../Components/Notifications";
+import {router} from "@inertiajs/vue3";
 const rules = computed(() => {
   return {
     name:{ required: helpers.withMessage(wTrans("requiredField"), required)},
@@ -21,6 +24,10 @@ const $v = useVuelidate(rules, props.data);
 const sendData = async ()=> {
   const valid = await $v.value.$validate();
   console.log("Valid",valid);
+  if(props.data.images.length === 0){
+    Notifications.open(wTrans('notImage').value,'error');
+    return;
+  }
   if (valid)
     emits('submit',props.data);
   else
@@ -45,14 +52,48 @@ const initMap = () => {
 }
 const destroyMap = ()=>map.value.remove();
 const cancelSend = () => {
+  if(props.update)
+  {
+    router.visit(route('topDestinations'));
+    return;
+  }
   props.data.reset();
   destroyMap();
   initMap();
 }
+const loadImage = () => {
+
+  props.data.images = [
+    {
+      name: props.data.photo.split('/')[props.data.photo.split('/').length-1],
+      url: props.data.photo
+    }
+  ];
+}
+const loadMap = () => {
+  if(props.data.location){
+    //console.log("Maapppppp",JSON.parse(props.data.location));
+    const marker = L.marker(JSON.parse(props.data.location)).addTo(map.value);
+    layer.value.push(marker);
+    map.value.flyTo(marker.getLatLng(),12);
+  }
+
+}
 onMounted(()=>{
   initMap();
+  if (props.update) {
+    loadImage();
+    loadMap();
+  }
 
 })
+watch(()=>page.props.success,(newVal)=>{
+  console.log("Change",newVal);
+      if (!newVal)
+      {
+        Notifications.open(page.props.message,'error');
+      }
+});
 </script>
 
 <template>

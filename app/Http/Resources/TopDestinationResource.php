@@ -20,6 +20,7 @@ class TopDestinationResource extends JsonResource
             'price' => $this->price,
             'likes' => $this->likes,
             'photo' => url('images/'.$this->photo),
+            'location' => $this->location,
         ];
     }
 

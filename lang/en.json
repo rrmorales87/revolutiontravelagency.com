@@ -266,7 +266,8 @@
     "New": "New",
     "Price": "Price",
     "limitImage": "jpg/png files with a size less than 500kb",
-    "location": "Location"
+    "location": "Location",
+    "notImage": "Image not selected"
 
 
 
