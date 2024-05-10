@@ -2,27 +2,43 @@
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel'
 import TopDestinationCard from "./TopDestinationCard.vue";
-import {computed} from "vue";
+import {onMounted, ref} from "vue";
 const props = defineProps(["destinations"]);
-console.log("Dest",props.destinations);
-const itemsToShow = computed(() => {
-  const width = window.innerWidth;
-  console.log("Widt",width);
-  if(width > 1344)
-    return 4;
-  if(width > 1000 && width < 1344 ){
-    return 3;
-  }
-  if( width > 760 && width < 1000){
-    return 2;
-  }
-  if (width < 760) return 1;
-  return 3;
+const renderComponent = ref(true);
+
+const itemsToShow = ref( 4);
+
+const windowResize = () => {
+
+    const width = window.innerWidth;
+    console.log("Widt",width);
+    if(width > 1344){
+      itemsToShow.value = 4;
+      return ;
+    }
+
+    if(width > 1000 && width < 1344 ){
+      itemsToShow.value = 3;
+      return 3;
+    }
+    if( width > 760 && width < 1000){
+      itemsToShow.value = 2;
+      return 2;
+    }
+    if (width < 760){
+      itemsToShow.value = 1;
+      return 1;
+    }
+
+}
+onMounted(()=>{
+  windowResize();
+  window.addEventListener('resize',windowResize);
 })
 </script>
 
 <template>
-  <div class="content">
+  <div class="content" v-if="renderComponent" >
     <div class="title mb-4">
       <span>Top </span>
       <span class="text-[#0084BD]">natural paradises </span>
