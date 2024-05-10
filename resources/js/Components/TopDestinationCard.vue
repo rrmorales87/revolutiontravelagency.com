@@ -1,6 +1,5 @@
 <script setup>
 import {HandThumbUpIcon} from "@heroicons/vue/24/outline";
-
 const props = defineProps(['destination']);
 </script>
 
@@ -16,8 +15,9 @@ const props = defineProps(['destination']);
               <HandThumbUpIcon class="w-4 text-gray-950 cursor-pointer" />
               <span class="text-md font-bold ">{{props.destination.likes}}</span>
             </div>
-            <div class="text-right  font-bold">
-              desde ${{ props.destination.price }}
+            <div class="text-right  font-bold ">
+              <span>{{$t("from")}}</span>
+              <span>${{ props.destination.price }}</span>
             </div>
           </div>
       </div>

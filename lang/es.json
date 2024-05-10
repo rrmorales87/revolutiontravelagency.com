@@ -267,7 +267,6 @@
     "Price": "Precio",
     "limitImage": "Archivos jpg/png con un peso menor que 500kb",
     "location": "Localización",
-    "notImage": "Image no seleccionada."
-
-
+    "notImage": "Image no seleccionada.",
+    "from":  "desde"
 }
