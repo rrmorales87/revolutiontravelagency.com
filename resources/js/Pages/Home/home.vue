@@ -3,7 +3,7 @@
 import HomeLayout from "../../Layouts/HomeLayout.vue";
 import TrustPilot from "../../Components/TrustPilot.vue";
 import ItemBanner from "../../Components/ItemBanner.vue";
-import TopDstinations from "../../Components/TopDstinations.vue";
+import TopDstinations from "../../Components/TopDestinations.vue";
 </script>
 
 <template>
