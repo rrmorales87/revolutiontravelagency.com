@@ -1,5 +1,10 @@
 <script setup>
 import PrimaryButton from "./PrimaryButton.vue";
+import {useForm} from "@inertiajs/vue3";
+const form = useForm({
+  origin:'',
+  destiny:''
+})
 </script>
 <template>
 <div class="main ">
@@ -11,7 +16,34 @@ import PrimaryButton from "./PrimaryButton.vue";
     <div class="hidden-md">{{ $t("title-banner-description-mobile")}}</div>
 
   </div>
-  <div class="btn-more mt-5">
+  <div class="btn-more ">
+    <div class="form flex flex-col gap-2">
+      <el-autocomplete
+          v-model="origin"
+          :fetch-suggestions="querySearchAsync"
+          placeholder="Please input"
+          @select="handleSelect"
+      >
+        <template #loading>
+          <svg class="circular" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" />
+          </svg>
+        </template>
+      </el-autocomplete>
+      <el-autocomplete
+          v-model="destiny"
+          :fetch-suggestions="querySearchAsync"
+          placeholder="Please input"
+          @select="handleSelect"
+          props.class="rounded-2xl"
+      >
+        <template #loading>
+          <svg class="circular" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" />
+          </svg>
+        </template>
+      </el-autocomplete>
+    </div>
     <primary-button>
       <span class="link">{{$t("more")}}</span>
       <span><i><img class="w-3" src="/storage/icon/arrow-right.svg" alt="arrow"></i></span>
@@ -24,7 +56,7 @@ import PrimaryButton from "./PrimaryButton.vue";
 
 <style lang="scss" scoped>
 .main {
-  height:700px;
+  height:500px;
   margin: 2rem 5rem;
   background-image: url("/storage/bg/Fondon.svg") ;
   background-repeat: no-repeat;
@@ -83,7 +115,7 @@ import PrimaryButton from "./PrimaryButton.vue";
     }
   }
   .btn-more {
-    margin-top: 4rem;
+    margin-top: 1rem;
     @media screen and (max-width: 768px) {
         display: flex;
        justify-items: center;
