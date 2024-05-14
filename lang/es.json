@@ -271,5 +271,6 @@
     "from":  "desde",
     "inputOrigin": "Seleccione su origen",
     "inputDestiny": "Seleccione su destino",
-    "origins": "Origenes"
+    "origins": "Origenes",
+    "requestTravel": "Solicitar viaje"
 }

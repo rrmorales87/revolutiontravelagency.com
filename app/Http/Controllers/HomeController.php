@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\OriginsCollections;
 use App\Http\Resources\TopDestinationsCollection;
+use App\Services\OriginServices;
 use App\Services\TopDestinations;
 use App\Services\UserServices;
 use Inertia\Inertia;
@@ -12,11 +14,13 @@ class HomeController extends Controller
 {
     protected UserServices $service;
     protected TopDestinations $serviceDestination;
+    protected OriginServices $originServices;
 
-    public function __construct(UserServices $userServices, TopDestinations $serviceDestination)
+    public function __construct(UserServices $userServices, TopDestinations $serviceDestination, OriginServices $originServices)
     {
         $this->service = $userServices;
         $this->serviceDestination = $serviceDestination;
+        $this->originServices = $originServices;
     }
 
     /**
@@ -28,7 +32,8 @@ class HomeController extends Controller
         if ($this->service->isAdmin())
             return Inertia::render('Admin/Index', []);
         $datas = new TopDestinationsCollection($this->serviceDestination->getAll());
-        return Inertia::render('Home/Index', ["destinations"=>$datas]);
+        $origins = new OriginsCollections($this->originServices->getAll());
+        return Inertia::render('Home/Index', ["destinations"=>$datas,"origins"=>$origins]);
     }
     /**
      * Show Home page

@@ -43,22 +43,16 @@ const querySearchAsyncOrigins = (queryString, cb) => {
 <template>
 <div class="main ">
 <div class="title">
-  <div class="hidden-sm">{{ $t("title-banner") }}</div>
-  <div class="hidden-md">{{ $t("title-banner-mobile") }}</div>
+  <div>{{ $t("title-banner") }}</div>
   <div class="subtitle">
-    <div class="hidden-sm">{{ $t("title-banner-description")}}</div>
-    <div class="hidden-md">{{ $t("title-banner-description-mobile")}}</div>
-
+    <div>{{ $t("title-banner-description")}}</div>
   </div>
-  <div class="btn-more ">
-    <div class="form flex flex-col w-56 mb-4">
+  <div class=" flex flex-col p-2 ">
+    <div class="form flex flex-col w-80">
       <el-autocomplete
           v-model="form.origin"
           :fetch-suggestions="querySearchAsyncOrigins"
-          :placeholder="$t('inputOrigin')"
-
-
-      >
+          :placeholder="$t('inputOrigin')">
         <template #loading>
           <svg class="circular" viewBox="0 0 50 50">
             <circle class="path" cx="25" cy="25" r="20" fill="none" />
@@ -78,11 +72,18 @@ const querySearchAsyncOrigins = (queryString, cb) => {
           </svg>
         </template>
       </el-autocomplete>
+      <div class=" mt-2 sm:self-center">
+        <primary-button>
+          <span class="link">{{$t("requestTravel")}}</span>
+        </primary-button>
+      </div>
+
+
+
+
+
     </div>
-    <primary-button>
-      <span class="link">{{$t("more")}}</span>
-      <span><i><img class="w-3" src="/storage/icon/arrow-right.svg" alt="arrow"></i></span>
-    </primary-button>
+
   </div>
 
 </div>
@@ -90,71 +91,7 @@ const querySearchAsyncOrigins = (queryString, cb) => {
 </template>
 
 <style lang="scss" scoped>
-.circular {
-  display: inline;
-  height: 30px;
-  width: 30px;
-  animation: loading-rotate 2s linear infinite;
-}
-.path {
-  animation: loading-dash 1.5s ease-in-out infinite;
-  stroke-dasharray: 90, 150;
-  stroke-dashoffset: 0;
-  stroke-width: 2;
-  stroke: var(--el-color-primary);
-  stroke-linecap: round;
-}
-.loading-path .dot1 {
-  transform: translate(3.75px, 3.75px);
-  fill: var(--el-color-primary);
-  animation: custom-spin-move 1s infinite linear alternate;
-  opacity: 0.3;
-}
-.loading-path .dot2 {
-  transform: translate(calc(100% - 3.75px), 3.75px);
-  fill: var(--el-color-primary);
-  animation: custom-spin-move 1s infinite linear alternate;
-  opacity: 0.3;
-  animation-delay: 0.4s;
-}
-.loading-path .dot3 {
-  transform: translate(3.75px, calc(100% - 3.75px));
-  fill: var(--el-color-primary);
-  animation: custom-spin-move 1s infinite linear alternate;
-  opacity: 0.3;
-  animation-delay: 1.2s;
-}
-.loading-path .dot4 {
-  transform: translate(calc(100% - 3.75px), calc(100% - 3.75px));
-  fill: var(--el-color-primary);
-  animation: custom-spin-move 1s infinite linear alternate;
-  opacity: 0.3;
-  animation-delay: 0.8s;
-}
-@keyframes loading-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes loading-dash {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -40px;
-  }
-  100% {
-    stroke-dasharray: 90, 150;
-    stroke-dashoffset: -120px;
-  }
-}
-@keyframes custom-spin-move {
-  to {
-    opacity: 1;
-  }
-}
+@import "../../css/mixin";
 .main {
   height:500px;
   margin: 2rem 5rem;
@@ -162,11 +99,12 @@ const querySearchAsyncOrigins = (queryString, cb) => {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+
   justify-content: flex-start;
   align-items: center;
   padding-left: 10rem;
   border-radius: 50px;
-  @media screen and (max-width: 768px) {
+  @include media(sm) {
     background-image: url("/storage/bg/banner-mobile.svg") ;
     flex-flow: column;
     justify-content: start;
@@ -174,12 +112,14 @@ const querySearchAsyncOrigins = (queryString, cb) => {
     align-items: center;
     text-align: center;
     padding-left: 0;
-    margin: 2rem 2rem;
-    height:68rem;
-    background-position: 50%;
+    margin: 0.5rem 0.5rem;
+    height:40rem;
+    width: 96%;
+    background-position: 50% 50%;
 
   }
   .title{
+    @apply font-Musticapro;
     width: 36rem;
     font-size: 2.8125rem;
     font-weight: 600;
@@ -188,35 +128,38 @@ const querySearchAsyncOrigins = (queryString, cb) => {
     text-align: left;
     color: #EEF2F7;
 
-    @media screen and (max-width: 768px) {
-      font-size: 3rem;
-
+    @include media(sm)  {
+      font-size: 1rem;
       width: auto;
-      padding: 2rem;
+      padding: 0.5rem;
       line-height: 3rem;
       text-align: center;
     }
 
 
     .subtitle{
-      margin-top: 1rem;
+      @apply font-Lato;
+      padding: 15px 15px;
       font-size: 1.5625rem;
       font-weight: 400;
       line-height: 2.125rem;
       letter-spacing: 0;
       text-align: left;
-      @media screen and (max-width: 768px) {
+      @include media(sm)  {
         width: auto;
         padding: 0.5rem;
         line-height: 1.875rem;
         text-align: center;
+        font-size: 0.8rem;
       }
 
     }
   }
   .btn-more {
     margin-top: 1rem;
-    @media screen and (max-width: 768px) {
+
+    @include media(sm) {
+       margin-top: 0;
         display: flex;
        justify-items: center;
       justify-content: center;
