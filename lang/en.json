@@ -268,7 +268,10 @@
     "limitImage": "jpg/png files with a size less than 500kb",
     "location": "Location",
     "notImage": "Image not selected",
-    "from":  "from"
+    "from":  "from",
+    "inputOrigin": "Input origen",
+    "inputDestiny": "Input destiny",
+    "origins": "Origins"
 
 
 

@@ -1,7 +1,7 @@
 <script setup>
 import { HomeIcon } from '@heroicons/vue/24/outline'
 import { UsersIcon } from '@heroicons/vue/24/outline'
-import { GlobeAmericasIcon } from '@heroicons/vue/24/outline'
+import { GlobeAmericasIcon,PaperAirplaneIcon } from '@heroicons/vue/24/outline'
 import {computed, ref} from "vue";
 import {router, usePage} from "@inertiajs/vue3";
 const page = usePage();
@@ -108,6 +108,18 @@ const logout = (e)=>{
                 <GlobeAmericasIcon class="w-8 text-gray-950" />
 
                 <span :class="{ 'lg:hidden': !isSidebarOpen }">{{ $t('TopDestinations')}}</span>
+              </a>
+            </li>
+            <li>
+              <a
+                  :href="route('origins')"
+                  class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
+                  :class="{'justify-center': !isSidebarOpen}"
+              >
+
+                <PaperAirplaneIcon class="w-8 text-gray-950" />
+
+                <span :class="{ 'lg:hidden': !isSidebarOpen }">{{ $t('origins')}}</span>
               </a>
             </li>
             <!-- Sidebar Links... -->

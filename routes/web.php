@@ -36,6 +36,7 @@ Route::middleware([
         'is.admin'
     ])->group(function () {
         Route::get('/dashboard',[\App\Http\Controllers\HomeController::class,'home'])->name('dashboard');
+        //TopDestinations
         Route::get('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'index'])->name('topDestinations');
         Route::get('/top-destinations/create',[\App\Http\Controllers\Admin\TopDestinationsController::class,'create'])->name('createTopDestinations');
         Route::get('/top-destinations/{id}',[\App\Http\Controllers\Admin\TopDestinationsController::class,'edit'])->name('destination.edit');
@@ -43,6 +44,14 @@ Route::middleware([
         Route::delete('/top-destinations/{id}',[\App\Http\Controllers\Admin\TopDestinationsController::class,'remove'])->name('destination.delete');
         Route::post('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'store'])->name('destination.store');
         Route::post('/store/image',[\App\Http\Controllers\ImageController::class,'store'])->name('image.store');
+        //Origins
+        Route::get('/origins',[\App\Http\Controllers\Admin\OriginsController::class,'index'])->name('origins');
+        Route::get('/origins/create',[\App\Http\Controllers\Admin\OriginsController::class,'create'])->name('create.origins');
+        Route::get('/origins/{id}',[\App\Http\Controllers\Admin\OriginsController::class,'edit'])->name('origins.edit');
+        Route::put('/origins',[\App\Http\Controllers\Admin\OriginsController::class,'update'])->name('origins.update');
+        Route::delete('/origins/{id}',[\App\Http\Controllers\Admin\OriginsController::class,'remove'])->name('origins.delete');
+        Route::post('/origins',[\App\Http\Controllers\Admin\OriginsController::class,'store'])->name('origins.store');
+
     });
 });
 Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
