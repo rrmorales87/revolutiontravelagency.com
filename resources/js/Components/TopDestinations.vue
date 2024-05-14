@@ -61,9 +61,13 @@ onMounted(()=>{
 </template>
 
 <style scoped lang="scss">
+@import "../../css/mixin";
 .content {
   margin: 2rem 5rem;
   @apply font-Musticapro;
+  @include media(sm) {
+    margin: 1rem 1rem;
+  }
   .title {
     font-size: 2.5rem;
     font-weight: 600;
