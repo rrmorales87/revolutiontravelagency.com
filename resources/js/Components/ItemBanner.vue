@@ -2,7 +2,7 @@
 import PrimaryButton from "./PrimaryButton.vue";
 import {useForm} from "@inertiajs/vue3";
 const props = defineProps(["origins","destinations"]);
-
+const emit = defineEmits(["request"]);
 const form = useForm({
   origin:'',
   destiny:''
@@ -73,7 +73,7 @@ const querySearchAsyncOrigins = (queryString, cb) => {
         </template>
       </el-autocomplete>
       <div class=" mt-2 sm:self-center">
-        <primary-button>
+        <primary-button @click="emit('request',{origin:form.origin,destiny:form.destiny})">
           <span class="link">{{$t("requestTravel")}}</span>
         </primary-button>
       </div>

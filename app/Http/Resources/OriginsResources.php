@@ -14,11 +14,26 @@ class OriginsResources extends JsonResource
      */
     public function toArray(Request $request): array
     {
+
         return  [
         'id' => $this->id,
         'name' => $this->name,
         'photo' => url('images/'.$this->photo),
         'location' => $this->location,
         ];
+    }
+
+    /**
+     * @param $tags
+     * @return array
+     */
+    public static function arrayCollection($tags): array
+    {
+        $output = [];
+        foreach ($tags as $tag) {
+            $output[] = (new self($tag))->toArray($tag);
+        }
+
+        return $output;
     }
 }
