@@ -32,6 +32,10 @@ Route::middleware([
     Route::get('/home',[\App\Http\Controllers\HomeController::class,'home'])->name('home');
 
     Route::get('/subscription', [\App\Http\Controllers\BuilderController::class, 'index'])->name('subscription');
+    //Reservations
+    Route::get('/reservations/{origin?}/{destiny?}',[\App\Http\Controllers\ReservationsController::class,'index'])->name('reservations');
+    Route::post('/reservations/store',[\App\Http\Controllers\ReservationsController::class,'store'])->name('reservations.store');
+
     Route::middleware([
         'is.admin'
     ])->group(function () {
@@ -70,5 +74,3 @@ Route::get('/aboutUs', [\App\Http\Controllers\ContactUsController::class, 'index
 Route::post('/support_create', [\App\Http\Controllers\ContactUsController::class, 'create'])->name('support_create');
 Route::get('/pprivacy', [\App\Http\Controllers\BuilderController::class, 'index'])->name('ppprivacity');
 Route::get('/term', [\App\Http\Controllers\BuilderController::class, 'index'])->name('term');
-//Reservations
-Route::get('/reservations/{origin?}/{destiny?}',[\App\Http\Controllers\ReservationsController::class,'index'])->name('reservations');

@@ -272,7 +272,30 @@
     "inputOrigin": "Input origen",
     "inputDestiny": "Input destiny",
     "origins": "Origins",
-    "requestTravel": "Request travel"
+    "requestTravel": "Request travel",
+    "requestTitle": "Request travel",
+    "originRequest": "Where do we pick you up",
+    "destinyRequest": "Where do you want to go",
+    "date": "Date",
+    "hours": "hours",
+    "totalTravelers": "Number of passengers",
+    "whoIs": "Who is the application for?",
+    "contactTravel": "Number or email",
+    "request": "Request",
+    "formTravelTerm": "By submitting a request you will be accepting our terms and conditions of use",
+    "yourTravel": "Your trip",
+    "totalAmount": "total Amount",
+    "feeTrip":"Trip fee",
+    "taxes": "Taxes",
+    "accredited": "Accredited to",
+    "numbersPeople": "Numbers of people",
+    "sendProof": "Send proof",
+    "travelTime": "Travel time",
+    "checkin": "Check in",
+    "history": "History",
+    "route": "Route"
+
+
 
 
 

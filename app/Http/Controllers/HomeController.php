@@ -44,6 +44,7 @@ class HomeController extends Controller
         if ($this->service->isAdmin())
             return Inertia::render('Admin/Index', []);
         $datas = new TopDestinationsCollection($this->serviceDestination->getAll());
-        return Inertia::render('Home/home', ["destinations"=>$datas]);
+        $origins = new OriginsCollections($this->originServices->getAll());
+        return Inertia::render('Home/home', ["destinations"=>$datas,"origins"=>$origins]);
     }
 }

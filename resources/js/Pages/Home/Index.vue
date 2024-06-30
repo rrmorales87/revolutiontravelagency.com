@@ -9,6 +9,7 @@ import {useStore} from "vuex";
 import {SET_DESTINY, SET_ORIGIN} from "../../store/mutations/type";
 const props = defineProps(['destinations','origins']);
 const store = useStore();
+
 const destinations = computed(()=> {
   if (!props.destinations || !props.destinations.data) return [];
   return toRaw(props.destinations.data);

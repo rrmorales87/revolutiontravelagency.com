@@ -72,7 +72,7 @@ const querySearchAsyncOrigins = (queryString, cb) => {
           </svg>
         </template>
       </el-autocomplete>
-      <div class=" mt-2 sm:self-center">
+      <div class=" mt-2 sm:self-center md:self-end">
         <primary-button @click="emit('request',{origin:form.origin,destiny:form.destiny})">
           <span class="link">{{$t("requestTravel")}}</span>
         </primary-button>

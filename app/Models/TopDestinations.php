@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TopDestinations extends Model
 {
@@ -21,4 +22,9 @@ class TopDestinations extends Model
         'photo',
         'location'
     ];
+
+    public function reservations(): HasMany
+    {
+        return $this->hasMany(Reservations::class);
+    }
 }
