@@ -24,46 +24,46 @@ Route::get('/', function () {
     ]);
 });
 */
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/home',[\App\Http\Controllers\HomeController::class,'home'])->name('home');
+    Route::get('/home', [\App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
     Route::get('/subscription', [\App\Http\Controllers\BuilderController::class, 'index'])->name('subscription');
     //Reservations
-    Route::get('/reservations/{origin?}/{destiny?}',[\App\Http\Controllers\ReservationsController::class,'index'])->name('reservations');
-    Route::post('/reservations/store',[\App\Http\Controllers\ReservationsController::class,'store'])->name('reservations.store');
+    Route::get('/reservations/{origin?}/{destiny?}', [\App\Http\Controllers\ReservationsController::class, 'index'])->name('reservations');
+    Route::post('/reservations/store', [\App\Http\Controllers\ReservationsController::class, 'store'])->name('reservations.store');
+    Route::post('/reservations/confirm', [\App\Http\Controllers\ReservationsController::class, 'confirm'])->name('reservations.confirm');
 
     Route::middleware([
         'is.admin'
     ])->group(function () {
-        Route::get('/dashboard',[\App\Http\Controllers\HomeController::class,'home'])->name('dashboard');
+        Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'home'])->name('dashboard');
         //TopDestinations
-        Route::get('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'index'])->name('topDestinations');
-        Route::get('/top-destinations/create',[\App\Http\Controllers\Admin\TopDestinationsController::class,'create'])->name('createTopDestinations');
-        Route::get('/top-destinations/{id}',[\App\Http\Controllers\Admin\TopDestinationsController::class,'edit'])->name('destination.edit');
-        Route::put('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'update'])->name('destination.update');
-        Route::delete('/top-destinations/{id}',[\App\Http\Controllers\Admin\TopDestinationsController::class,'remove'])->name('destination.delete');
-        Route::post('/top-destinations',[\App\Http\Controllers\Admin\TopDestinationsController::class,'store'])->name('destination.store');
-        Route::post('/store/image',[\App\Http\Controllers\ImageController::class,'store'])->name('image.store');
+        Route::get('/top-destinations', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'index'])->name('topDestinations');
+        Route::get('/top-destinations/create', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'create'])->name('createTopDestinations');
+        Route::get('/top-destinations/{id}', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'edit'])->name('destination.edit');
+        Route::put('/top-destinations', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'update'])->name('destination.update');
+        Route::delete('/top-destinations/{id}', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'remove'])->name('destination.delete');
+        Route::post('/top-destinations', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'store'])->name('destination.store');
+        Route::post('/store/image', [\App\Http\Controllers\ImageController::class, 'store'])->name('image.store');
         //Origins
-        Route::get('/origins',[\App\Http\Controllers\Admin\OriginsController::class,'index'])->name('origins');
-        Route::get('/origins/create',[\App\Http\Controllers\Admin\OriginsController::class,'create'])->name('create.origins');
-        Route::get('/origins/{id}',[\App\Http\Controllers\Admin\OriginsController::class,'edit'])->name('origins.edit');
-        Route::put('/origins',[\App\Http\Controllers\Admin\OriginsController::class,'update'])->name('origins.update');
-        Route::delete('/origins/{id}',[\App\Http\Controllers\Admin\OriginsController::class,'remove'])->name('origins.delete');
-        Route::post('/origins',[\App\Http\Controllers\Admin\OriginsController::class,'store'])->name('origins.store');
-
-
+        Route::get('/origins', [\App\Http\Controllers\Admin\OriginsController::class, 'index'])->name('origins');
+        Route::get('/origins/create', [\App\Http\Controllers\Admin\OriginsController::class, 'create'])->name('create.origins');
+        Route::get('/origins/{id}', [\App\Http\Controllers\Admin\OriginsController::class, 'edit'])->name('origins.edit');
+        Route::put('/origins', [\App\Http\Controllers\Admin\OriginsController::class, 'update'])->name('origins.update');
+        Route::delete('/origins/{id}', [\App\Http\Controllers\Admin\OriginsController::class, 'remove'])->name('origins.delete');
+        Route::post('/origins', [\App\Http\Controllers\Admin\OriginsController::class, 'store'])->name('origins.store');
     });
 });
-Route::get('/',[\App\Http\Controllers\HomeController::class,'index'])->name('index');
-Route::get('/login',[\App\Http\Controllers\LoginController::class,'index'])->name("login");
-Route::get('/signIn',[\App\Http\Controllers\LoginController::class,'signIn'])->name("signIn");
-Route::post('/inAction',[\App\Http\Controllers\LoginController::class,'signInAction'])->name("signInAction");
-Route::get('/signUp',[\App\Http\Controllers\LoginController::class,'signUp'])->name("signUp");
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
+Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index'])->name("login");
+Route::get('/signIn', [\App\Http\Controllers\LoginController::class, 'signIn'])->name("signIn");
+Route::post('/inAction', [\App\Http\Controllers\LoginController::class, 'signInAction'])->name("signInAction");
+Route::get('/signUp', [\App\Http\Controllers\LoginController::class, 'signUp'])->name("signUp");
 Route::get('/login/google', [\App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('/login/google/callback', [\App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback']);
 Route::post('/register', [\App\Http\Controllers\LoginController::class, 'registerAction'])->name('register');

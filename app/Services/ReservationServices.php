@@ -46,10 +46,27 @@ class ReservationServices
         $reservation->tax = 1;
         $reservation->status = $request->status;
         $reservation->travellers = $request->travellers;
+        $reservation->date = $request->date;
+        $reservation->time = $request->time;
         return $reservation->save();
     }
     public function getAll()
     {
         return Reservations::all();
+    }
+
+    public function getByCurrentUser()
+    {
+        $user = Auth::user();
+        $resutl = Reservations::where("user_id", $user->id)->get();
+        return $resutl;
+    }
+
+    public function confirmStatus($id)
+    {
+        $reservation = Reservations::where('id', $id)->first();
+        $reservation->status = 'confirmed';
+        $reservation->save();
+        return $reservation;
     }
 }

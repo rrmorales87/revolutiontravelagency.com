@@ -11,6 +11,7 @@ use App\Http\Resources\TopDestinationsCollection;
 use App\Services\OriginServices;
 use App\Services\ReservationServices;
 use App\Services\TopDestinations;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Inertia\Inertia;
@@ -39,26 +40,42 @@ class ReservationsController extends Controller
             $destiny = new TopDestinationResource($this->detiny->getOneTitle($request->destiny));
         $origins = new OriginsCollections($this->origin->getAll());
         $destinations = new TopDestinationsCollection($this->detiny->getAll());
-
+        $reservations = new ReservationsCollections($this->reservation->getByCurrentUser());
         return Inertia::render(
             'Reservations/Index',
-            ["origin" => $origin, "destiny" => $destiny, "origins" => $origins, "destinations" => $destinations]
+            [
+                "origin" => $origin,
+                "destiny" => $destiny,
+                "origins" => $origins,
+                "destinations" => $destinations,
+                "reservations" => $reservations
+            ]
         );
     }
 
-    public function store(Request $request): Response
+    public function store(Request $request): RedirectResponse
     {
+
         try {
             $this->reservation->create($request);
         } catch (\Error $e) {
             Log::error($e->getMessage());
         }
-        $reservations = new ReservationsCollections($this->reservation->getAll());
-        $origins = new OriginsCollections($this->origin->getAll());
-        $destinations = new TopDestinationsCollection($this->detiny->getAll());
-        return Inertia::render(
-            'Reservations/Index',
-            ["origins" => $origins, "destinations" => $destinations, 'reservations' => $reservations]
-        );
+
+        return redirect()->route('reservations');
+    }
+
+    public function confirm(Request $request): RedirectResponse
+    {
+        $message = "";
+
+        try {
+            $this->reservation->confirmStatus($request->id);
+            $message = __('reservations.confirm');
+        } catch (\Error $e) {
+            Log::error($e->getMessage());
+            $message = __('reservations.error_confirm');
+        }
+        return redirect()->route('reservations');
     }
 }

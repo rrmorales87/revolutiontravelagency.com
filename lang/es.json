@@ -293,6 +293,9 @@
     "travelTime": "Hora de salida",
     "checkin": "Hora de llegada",
     "history": "Historial",
-    "route": "Recorrido"
+    "route": "Recorrido",
+    "newRequest": "Nueva solicitud",
+    "success_confirm": "Reservación confirmada",
+    "error_confirm": "Ocurrio un error confirmando la reservación"
 
 }
