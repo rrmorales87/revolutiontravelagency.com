@@ -1,35 +1,23 @@
 <script setup>
 import {getActiveLanguage, loadLanguageAsync} from "laravel-vue-i18n";
-import {computed, inject, onMounted, ref} from "vue";
+import {onMounted, ref} from "vue";
 import {useStore} from "vuex";
+import { useTawkto } from "../module/useTawkto";
+const  { changeWidgetByLocale } = useTawkto();
 import {SET_LOCALE} from "../store/mutations/type";
 import {router} from "@inertiajs/vue3";
 const showLocale = ref(getActiveLanguage());
 const store = useStore();
+onMounted(()=>store.commit(SET_LOCALE,showLocale.value))
+
 const setLocale = async (locale)  =>  {
   await loadLanguageAsync(locale);
   showLocale.value = locale;
   store.commit(SET_LOCALE,locale);
   router.get("/change-locale",{locale});
+  changeWidgetByLocale(locale);
 }
-onMounted(()=>store.commit(SET_LOCALE,showLocale.value))
 
-const src_en = '1ho4qr6tt';
-const src_es = '1hq43401q';
-const idChat = computed(()=>{
-  return (showLocale.value === "es") ? src_es : src_en;
-})
-const switchWidget = inject('switchWidget');
-const onLoad = inject('onLoad');
-
-onLoad(()=>{
-  switchWidget({
-    propertyId : '65e5ce3b9131ed19d974c793',
-    widgetId : idChat.value
-  }, function (error) {
-    console.log("Error in twak chat live",error);
-  });
-})
 
 
 </script>
@@ -44,7 +32,7 @@ onLoad(()=>{
     </div>
 
     <template #dropdown>
-      <el-dropdown-menu class=" font-Musticapro">
+      <el-dropdown-menu class="@apply font-Musticapro">
         <el-dropdown-item @click="setLocale('en')" v-if="showLocale!=='en'">
           <div class="flex justify-between w-24">
             <img class="w-10" src="/storage/icon/us.webp" alt="us">

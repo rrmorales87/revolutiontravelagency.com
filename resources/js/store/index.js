@@ -3,9 +3,10 @@ import  Mutations from "@/store/mutations/index";
 import Getters from "@/store/getters/index";
 export default createStore({
     state:{
-        locale:'',
+        locale:'en',
         origin:'',
-        destiny:''
+        destiny:'',
+        locale_live_chat:''
     },
     mutations:{
         ...Mutations,

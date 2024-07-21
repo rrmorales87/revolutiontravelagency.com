@@ -9,13 +9,15 @@ import { i18nVue } from 'laravel-vue-i18n';
 import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import store from '@/store/index';
-
+import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-3';
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'RT';
 
 import { InertiaProgress } from "@inertiajs/progress";
-import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-3';
 InertiaProgress.init();
 i18nVue.locale = 'en';
+const src_en = '1ho4qr6tt';
+const src_es = '1hq43401q';
+const widgetId = store.state.locale === 'es'?src_es:src_en;
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
@@ -24,10 +26,6 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue)
-            .use(TawkMessengerVue,{
-                propertyId : '65e5ce3b9131ed19d974c793',
-                widgetId : '1ho4qr6tt'
-            })
             .use(i18nVue, {
                 resolve: async lang => {
                     const langs = import.meta.glob('../../lang/*.json');
@@ -35,6 +33,10 @@ createInertiaApp({
                 }
             })
             .use(ElementPlus)
+            .use(TawkMessengerVue, {
+                propertyId : '65e5ce3b9131ed19d974c793',
+                widgetId : widgetId
+            })
             .use(store)
             .mount(el);
 

@@ -1,25 +1,11 @@
 <script setup>
 import {Head} from "@inertiajs/vue3";
-import {computed} from "vue";
 import Header from "../Components/Header.vue";
 import Footer from "../Components/Footer.vue";
-
-
-
-const setDeviceType = computed(() => {
-  const platform = navigator.platform.toLowerCase();
-  if (/(android|webos|iphone|ipad|ipod|blackberry|windows phone)/.test(platform)) {
-    return 'mobile';
-  } else if (/mac|win|linux/i.test(platform)) {
-    return 'desktop';
-  } else if (/tablet|ipad/i.test(platform)) {
-    return 'tablet';
-  } else {
-    return 'unknown';
-  }
-});
-
-
+import { useTawkto } from "../module/useTawkto";
+const  { mounted } = useTawkto();
+import { onMounted} from "vue";
+onMounted(()=>mounted())
 </script>
 
 <template>
