@@ -185,6 +185,7 @@ watch(()=>store.state.locale,(newVal)=>{
     }
   }
   .collapsible {
+    display: none;
     :deep(.el-collapse-item__header ) {
       background-color: transparent !important;
     }
@@ -193,7 +194,6 @@ watch(()=>store.state.locale,(newVal)=>{
     }
     @apply font-Lato;
 
-      display: none;
 
     @include media(sm){
       display: flex;
