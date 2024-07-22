@@ -34,7 +34,7 @@ const setViewPassword = () => {
  const enterApp = async ()=>{
   const valid = await $v.value.$validate();
     if(valid) {
-     await form.post("/inAction",{
+      form.post("/inAction",{
        onFinish: () => {
          form.reset('email','password');
 
