@@ -11,7 +11,7 @@ const itemsToShow = ref( 4);
 const windowResize = () => {
 
     const width = window.innerWidth;
-    console.log("Widt",width);
+    
     if(width > 1344){
       itemsToShow.value = 4;
       return ;
