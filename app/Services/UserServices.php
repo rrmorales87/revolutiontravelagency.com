@@ -8,9 +8,8 @@ use App\Models\User;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Str;
+
 
 class UserServices
 {
@@ -56,5 +55,18 @@ class UserServices
     public function isAdmin(): bool
     {
         return Auth::check() && Auth::user()->roles == 'admin';
+    }
+
+    public function getAllUsers()
+    {
+        return User::all();
+    }
+
+    public function changeRole(Request $request)
+    {
+        $user = User::where('id',$request->id)->first();
+        $user->roles = $request->roles;
+        return $user->save();
+
     }
 }

@@ -4,6 +4,11 @@ import { UsersIcon } from '@heroicons/vue/24/outline'
 import { GlobeAmericasIcon,PaperAirplaneIcon } from '@heroicons/vue/24/outline'
 import {computed, ref} from "vue";
 import {router, usePage} from "@inertiajs/vue3";
+import { useTawkto } from "../module/useTawkto";
+const  { mounted } = useTawkto();
+import { onMounted} from "vue";
+import SelectorLanguage from "../Components/SelectorLanguage.vue";
+onMounted(()=>mounted())
 const page = usePage();
 const user = computed(()=>page.props.auth.user);
 const loading = ref(false);
@@ -88,7 +93,7 @@ const logout = (e)=>{
             </li>
             <li>
               <a
-                  href="#"
+                  :href="route('user.index')"
                   class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
                   :class="{'justify-center': !isSidebarOpen}"
               >
@@ -275,9 +280,12 @@ const logout = (e)=>{
               </button>
 
               <div class="items-center hidden space-x-3 md:flex">
+                <div class="relative">
+                  <selector-language/>
+                </div>
                 <!-- Notification Button -->
-                <div class="relative" >
-                  <!-- red dot -->
+<!--                <div class="relative" >
+                  &lt;!&ndash; red dot &ndash;&gt;
                   <div class="absolute right-0 p-1 bg-red-400 rounded-full animate-ping"></div>
                   <div class="absolute right-0 p-1 bg-red-400 border rounded-full"></div>
                   <button
@@ -300,7 +308,7 @@ const logout = (e)=>{
                     </svg>
                   </button>
 
-                  <!-- Dropdown card -->
+                  &lt;!&ndash; Dropdown card &ndash;&gt;
                   <div
                       @click="isOpen = false"
                       v-show="isOpen"
@@ -321,10 +329,10 @@ const logout = (e)=>{
                       <a href="#">See All</a>
                     </div>
                   </div>
-                </div>
+                </div>-->
 
                 <!-- Services Button -->
-                <div >
+<!--                <div >
                   <button
                       @click="isOpen = !isOpen"
                       class="p-2 bg-gray-100 rounded-full hover:bg-gray-200 focus:outline-none focus:ring"
@@ -345,7 +353,7 @@ const logout = (e)=>{
                     </svg>
                   </button>
 
-                  <!-- Dropdown -->
+                  &lt;!&ndash; Dropdown &ndash;&gt;
                   <div
                       @click="isOpen = false"
                       @keydown.esc="isOpen = false"
@@ -414,10 +422,11 @@ const logout = (e)=>{
                       <a href="#">Show all apps</a>
                     </div>
                   </div>
-                </div>
+                </div>-->
+
 
                 <!-- Options Button -->
-                <div class="relative" >
+<!--                <div class="relative" >
                   <button
                       @click="isOpen = !isOpen"
                       class="p-2 bg-gray-100 rounded-full hover:bg-gray-200 focus:outline-none focus:ring"
@@ -438,7 +447,7 @@ const logout = (e)=>{
                     </svg>
                   </button>
 
-                  <!-- Dropdown card -->
+                  &lt;!&ndash; Dropdown card &ndash;&gt;
                   <div
                       @click="isOpen = false"
                       v-show="isOpen"
@@ -459,7 +468,7 @@ const logout = (e)=>{
                       <a href="#">See All</a>
                     </div>
                   </div>
-                </div>
+                </div>-->
               </div>
 
               <!-- avatar button -->

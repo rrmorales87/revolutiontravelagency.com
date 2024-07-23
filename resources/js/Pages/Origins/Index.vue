@@ -21,10 +21,10 @@ const confirmEvent = async (id) => {
           <AdminAddButton :title="$t('New')" @onClick="add"/>
         </div>
       </AdminHeaderContent>
-      <div class="table lg:table-auto   lg:w-full md:w-96 mt-5 overflow-auto">
+      <div class="container mt-5 overflow-auto">
         <el-table :data="props.tableData.data" lazy style="width: 100%" size="small">
-          <el-table-column prop="name" label="Name"/>
-          <el-table-column prop="photo" label="Photo" >
+          <el-table-column prop="name" :label="$t('Name')"/>
+          <el-table-column prop="photo" :label="$t('Photo')" >
             <template #default="scope">
               <el-image
                   style="width:100px; height: 100px"
@@ -38,7 +38,7 @@ const confirmEvent = async (id) => {
               />
             </template>
           </el-table-column>
-          <el-table-column fixed="right" label="Operations" width="120">
+          <el-table-column fixed="right" :label="$t('Operations')" width="120">
             <template #default="scope">
               <div class="flex">
                 <Link :href="route('origins.edit',scope.row.id)" type="button">

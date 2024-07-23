@@ -57,6 +57,10 @@ Route::middleware([
         Route::put('/origins', [\App\Http\Controllers\Admin\OriginsController::class, 'update'])->name('origins.update');
         Route::delete('/origins/{id}', [\App\Http\Controllers\Admin\OriginsController::class, 'remove'])->name('origins.delete');
         Route::post('/origins', [\App\Http\Controllers\Admin\OriginsController::class, 'store'])->name('origins.store');
+        //Users
+        Route::get('/users', [\App\Http\Controllers\Admin\UserController::class, 'index'])->name('user.index');
+        Route::post('/changeRole', [\App\Http\Controllers\Admin\UserController::class, 'changeRole'])->name('user.change.roles');
+
     });
 });
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');

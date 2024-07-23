@@ -296,6 +296,11 @@
     "route": "Recorrido",
     "newRequest": "Nueva solicitud",
     "success_confirm": "Reservación confirmada",
-    "error_confirm": "Ocurrio un error confirmando la reservación"
+    "error_confirm": "Ocurrio un error confirmando la reservación",
+    "email": "Email",
+    "lastName": "Segundo Nombre",
+    "role": "Permiso",
+    "tooltipChangeRole": "Cambiar los permisos del usuario",
+    "Operations": "Operaciones"
 
 }

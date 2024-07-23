@@ -296,7 +296,12 @@
     "route": "Route",
     "newRequest": "New Request",
     "success_confirm": "The reservation has been added confirmed.",
-    "error_confirm": "An error occurred while the reservation is confirmed."
+    "error_confirm": "An error occurred while the reservation is confirmed.",
+    "email": "Email",
+    "lastName": "Last Name",
+    "role": "Role",
+    "tooltipChangeRole": "Change user roles",
+    "Operations": "Operations"
 
 
 

@@ -4,7 +4,7 @@ import AdminHeaderContent from "../../Components/AdminHeaderContent.vue";
 import AdminAddButton from "../../Components/AdminAddButton.vue";
 import { PencilSquareIcon,HandThumbUpIcon,TrashIcon} from '@heroicons/vue/24/outline';
 import { InfoFilled } from '@element-plus/icons-vue';
-import {router,Link,usePage} from "@inertiajs/vue3";
+import {router,Link} from "@inertiajs/vue3";
 const add = ()=> router.visit(route('createTopDestinations'));
 const props = defineProps(['tableData']);
 const confirmEvent = async (id) => {
@@ -21,9 +21,9 @@ const confirmEvent = async (id) => {
           <AdminAddButton :title="$t('New')" @onClick="add"/>
         </div>
       </AdminHeaderContent>
-      <div class="table lg:table-auto   lg:w-full md:w-96 mt-5 overflow-auto">
+      <div class="container mt-5 overflow-auto">
         <el-table :data="props.tableData.data" lazy style="width: 100%" size="small">
-          <el-table-column prop="name" label="Name"/>
+          <el-table-column prop="name" :label="$t('Name')"/>
           <el-table-column prop="likes" label="Likes" style="width:10% " >
             <template #default="scope">
               <div class="flex justify-items-center gap-1">
@@ -38,12 +38,12 @@ const confirmEvent = async (id) => {
             </template>
 
           </el-table-column>
-          <el-table-column prop="price" label="Price" style="width:10% " >
+          <el-table-column prop="price" :label="$t('Price')" style="width:10% " >
             <template #default="scope">
               ${{scope.row.price}}
             </template>
           </el-table-column>
-          <el-table-column prop="photo" label="Photo" >
+          <el-table-column prop="photo" :label="$t('Photo')" >
             <template #default="scope">
               <el-image
                   style="width:100px; height: 100px"
@@ -57,7 +57,7 @@ const confirmEvent = async (id) => {
               />
             </template>
           </el-table-column>
-          <el-table-column fixed="right" label="Operations" width="120">
+          <el-table-column fixed="right" :label="$t('Operations')" width="120">
             <template #default="scope">
               <div class="flex">
                 <Link :href="route('destination.edit',scope.row.id)" type="button">
