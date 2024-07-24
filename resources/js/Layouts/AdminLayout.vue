@@ -1,7 +1,5 @@
 <script setup>
-import { HomeIcon } from '@heroicons/vue/24/outline'
-import { UsersIcon } from '@heroicons/vue/24/outline'
-import { GlobeAmericasIcon,PaperAirplaneIcon } from '@heroicons/vue/24/outline'
+import { HomeIcon, ClipboardDocumentCheckIcon, UsersIcon, GlobeAmericasIcon, PaperAirplaneIcon } from '@heroicons/vue/24/outline'
 import {computed, ref} from "vue";
 import {router, usePage} from "@inertiajs/vue3";
 import { useTawkto } from "../module/useTawkto";
@@ -87,6 +85,18 @@ const logout = (e)=>{
               >
 
                 <HomeIcon class="w-8 text-gray-950" />
+
+                <span :class="{ 'lg:hidden': !isSidebarOpen }">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a
+                  :href="route('reservations.admin.index')"
+                  class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
+                  :class="{'justify-center': !isSidebarOpen}"
+              >
+
+                <ClipboardDocumentCheckIcon class="w-8 text-gray-950" />
 
                 <span :class="{ 'lg:hidden': !isSidebarOpen }">Dashboard</span>
               </a>

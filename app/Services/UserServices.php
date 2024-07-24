@@ -54,7 +54,7 @@ class UserServices
      */
     public function isAdmin(): bool
     {
-        return Auth::check() && Auth::user()->roles == 'admin';
+        return Auth::check() && Auth::user()->roles === 'admin';
     }
 
     public function getAllUsers()

@@ -301,7 +301,16 @@
     "lastName": "Last Name",
     "role": "Role",
     "tooltipChangeRole": "Change user roles",
-    "Operations": "Operations"
+    "Operations": "Operations",
+    "Reservations": "Reservations",
+    "destiny": "Destiny",
+    "Client": "Client",
+    "Status": "Status",
+    "tooltipCheckConfirm": "Check confirm reservations",
+    "Draft": "Draft",
+    "Canceled": "Canceled",
+    "Confirmed": "Confirmed",
+    "Approved": "Approved"
 
 
 

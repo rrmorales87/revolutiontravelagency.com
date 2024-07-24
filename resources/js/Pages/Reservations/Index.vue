@@ -15,7 +15,7 @@ import 'moment/locale/es';
 import FormatCurrency from "../../Components/FormatCurrency.vue";
 const props = defineProps(['origin','destiny','origins','destinations','reservations']);
 const page = usePage();
-const locale = computed(()=>page.value.locale);
+const locale = computed(()=>page.props.locale);
 const user = computed(()=>page.props.auth.user);
 const tableData = computed(()=> props.reservations.data)
 const formTravel = ref({

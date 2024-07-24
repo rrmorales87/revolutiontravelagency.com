@@ -70,6 +70,9 @@ const profile = ()=> router.get(route("profile.show"));
         <nav>
           <a :href="route('support')">{{$t('support')}}</a>
         </nav>
+        <nav>
+          <a :href="route('reservations')">{{$t('Reservations')}}</a>
+        </nav>
 
       </div>
       <selector-language/>
