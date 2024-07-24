@@ -23,4 +23,8 @@ class ReservationsController extends Controller
         return Inertia::render("Reservations/Admin/Index", ["tableData"=>$reservations]);
 
     }
+    public function confirmReservation(Request $request)
+    {
+
+    }
 }
