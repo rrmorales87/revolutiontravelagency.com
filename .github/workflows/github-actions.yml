@@ -17,7 +17,7 @@ jobs:
             password: ${{ secrets.SSH_SECRET_PASSWORD }}
             script: |
               cd revolutiontravelagency.com/
-              git pull origin deploy &&  php composer.phar install && php artisan config:cache && php artisan config:clear && php artisan cache:clear && npm install && npm run build
+              git pull origin deploy &&  php composer.phar install && php artisan config:cache && php artisan config:clear && php artisan cache:clear && npm install
               
               
 
