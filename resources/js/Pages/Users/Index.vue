@@ -26,7 +26,7 @@ const changeRole = (id,roles)=>{
               <div class="flex">
                 <el-tooltip
                     class="box-item"
-
+                    v-if="scope.row.roles ==='admin'"
                     :content="$t('tooltipChangeRole')"
                     placement="top-start"
                 >
@@ -35,7 +35,7 @@ const changeRole = (id,roles)=>{
                 </el-tooltip>
                 <el-tooltip
                     class="box-item"
-
+                    v-if="scope.row.roles ==='user'"
                     :content="$t('tooltipChangeRole')"
                     placement="top-start"
                 >

@@ -67,11 +67,12 @@ const profile = ()=> router.get(route("profile.show"));
     </div>
     <div class="flex flex-row gap-8 items-center ">
       <div class="hidden-sm  menu-text flex flex-row gap-8 cursor-pointer">
-        <nav>
-          <a :href="route('support')">{{$t('support')}}</a>
-        </nav>
+
         <nav>
           <a :href="route('reservations')">{{$t('Reservations')}}</a>
+        </nav>
+        <nav>
+          <a :href="route('support')">{{$t('support')}}</a>
         </nav>
 
       </div>
