@@ -62,7 +62,8 @@ Route::middleware([
         Route::post('/changeRole', [\App\Http\Controllers\Admin\UserController::class, 'changeRole'])->name('user.change.roles');
         //Reservations
         Route::get('/admin/reservations', [\App\Http\Controllers\Admin\ReservationsController::class, 'index'])->name('reservations.admin.index');
-        Route::get('/admin/reservations/{id?}', [\App\Http\Controllers\Admin\ReservationsController::class, 'index'])->name('reservations.admin.index');
+        Route::get('/admin/reservations/{id?}', [\App\Http\Controllers\Admin\ReservationsController::class, 'confirmReservation'])->name('reservations.admin.confirm');
+        Route::post('/admin/reservations/approve', [\App\Http\Controllers\Admin\ReservationsController::class, 'approveReservation'])->name('reservations.admin.approve');
     });
 });
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');

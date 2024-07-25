@@ -310,7 +310,9 @@
     "Draft": "Draft",
     "Canceled": "Canceled",
     "Confirmed": "Confirmed",
-    "Approved": "Approved"
+    "Approved": "Approved",
+    "Approve": "Approve",
+    "Approve reservation": "Approve reservation"
 
 
 

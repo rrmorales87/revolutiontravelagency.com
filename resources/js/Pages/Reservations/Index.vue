@@ -13,6 +13,7 @@ import moment from 'moment';
 import 'moment/locale/es';
 
 import FormatCurrency from "../../Components/FormatCurrency.vue";
+import useFilterStatus from "./common/useFilterStatus";
 const props = defineProps(['origin','destiny','origins','destinations','reservations']);
 const page = usePage();
 const locale = computed(()=>page.props.locale);
@@ -96,7 +97,7 @@ const submit = async () => {
 
 const confirmReservations = async () => {
  
-    await router.post(route('reservations.confirm'),{id:formTravel.value.id},{
+     router.post(route('reservations.confirm'),{id:formTravel.value.id},{
       onSuccess:(page)=> {
        
         Notifications.open(wTrans('success_confirm').value,'success');
@@ -108,15 +109,15 @@ const confirmReservations = async () => {
 }
 
 //MAP
-const initMap = async () => {
+/*const initMap = async () => {
  return await  L.map('map').setView([22.004, -76.707], 6);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map.value);
   
-}
+}*/
 onMounted(async()=>{
-  await initMap();
+  //await initMap();
   moment().locale(locale.value);
   console.log("Reservations",props.reservations)
   
@@ -140,6 +141,7 @@ const selectReservations = (row,column,event) => {
 
   }
 }
+const {filterStatus,filterStatusHandler} = useFilterStatus();
 </script>
 <template>
   <HomeLayout>
@@ -243,7 +245,7 @@ const selectReservations = (row,column,event) => {
           <InputError class="mt-0" :errors="$v.contact.$errors"/>
         </div>
         <el-button v-if="formTravel.status ===''" round color="#0F3B53" @click="submit">{{  $t('request')   }}</el-button>
-        <el-button v-if="formTravel.status ==='approve'" round color="#0F3B53" @click="confirmReservations">{{  $t('Confirm')   }}</el-button>
+        <el-button v-if="formTravel.status ==='approved'" round color="#0F3B53" @click="confirmReservations">{{  $t('Confirm')   }}</el-button>
         <el-button v-if="formTravel.status !==''" round color="#0F3B53" @click="resetForm">{{  $t('newRequest')   }}</el-button>
            <p class="@apply font-Lato text-xs text-center mx-6 w-80">
               {{$t('formTravelTerm')}}
@@ -256,9 +258,9 @@ const selectReservations = (row,column,event) => {
      <div class="detail">
        <h1 class="text-3xl font-Musticapro mb-5">{{ $t('yourTravel') }}</h1>
        <div class="detail-content">
-          <div class="map w-1/4">
+<!--          <div class="map w-1/4">
             <div class="w-full  border-2" id="map" style="height:300px"></div>
-          </div>
+          </div>-->
           <div class="detail-ticket w-full font-Musticapro" v-if="formTravel">
               <div class="flex item-center border-b-2 py-2" >
                 <img class="w-8" src="/storage/icon/location.svg" alt="location" >
@@ -311,7 +313,7 @@ const selectReservations = (row,column,event) => {
                       <div class="flex-col" v-if="formTravel.date">
                          <div class="text-xs uppercase font-Lato">{{ $t("date") }}</div>
                          <div class="text-md">
-                          {{ moment(formTravel.date,"YYYY-MM-DD").format('LL') }}
+                          {{ moment().locale(locale.value) &&  moment(formTravel.date,"YYYY-MM-DD").format('LL') }}
                          </div>
                       </div>
                       <div class="flex-col" v-if="formTravel.time">
@@ -330,10 +332,10 @@ const selectReservations = (row,column,event) => {
        <div class="records">
           <h1 class="text-3xl font-Musticapro mb-5">{{ $t('history') }}</h1>
           
-            <el-table :data="tableData" stripe style="width: 100%" table-layout="fixed" @row-click="selectReservations">
-              <el-table-column  prop="date" :label="$t('date')" min-width="40" >
+            <el-table :data="tableData" :default-sort="{ prop: 'date', order: 'descending' }" stripe style="width: 100%" table-layout="fixed" @row-click="selectReservations">
+              <el-table-column  prop="date" sortable :label="$t('date')" min-width="40" >
                 <template #default="scope">
-                  {{ !scope.row.date? '': moment(scope.row.date).format('L') }}                  
+                  {{ !scope.row.date? '':  moment(scope.row.date,"YYYY-MM-DD").format('LL') }}
                 </template>
               </el-table-column>
               <el-table-column prop="client.name" :label="$t('Name')" />
@@ -358,11 +360,16 @@ const selectReservations = (row,column,event) => {
                    <FormatCurrency :balance="scope.row.totalAmount" :locale="locale"/>                        
                 </template>
               </el-table-column>
-              <el-table-column   min-width="20"  fixed="right">
+              <el-table-column   min-width="20"  fixed="right"
+                                 :label="$t('Status')"
+                                 :filters="filterStatus()"
+                                 :filter-method="filterStatusHandler"
+
+              >
                 <template #default="scope">
                   <CheckCircleIcon v-if="scope.row.status!=='canceled'" class="  rounded-l w-8" 
                   :class="[
-                    {'text-[#265873]':scope.row.status === 'approve'},
+                    {'text-[#265873]':scope.row.status === 'approved'},
                     {'text-green-700':scope.row.status === 'confirmed'},
                     {'text-gray-200':scope.row.status === 'draft'}
                     ]" />

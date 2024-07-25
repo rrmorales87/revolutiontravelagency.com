@@ -1,30 +1,25 @@
 <script setup>
-import {LockClosedIcon, CheckCircleIcon as CheckCircleIconOut} from "@heroicons/vue/24/outline";
+import { CheckCircleIcon as CheckCircleIconOut} from "@heroicons/vue/24/outline";
 import AdminLayout from "../../../Layouts/AdminLayout.vue";
 import AdminHeaderContent from "../../../Components/AdminHeaderContent.vue";
 import moment from "moment";
 import 'moment/locale/es';
 import {computed, onMounted} from "vue";
-import {usePage} from "@inertiajs/vue3";
+import {router, usePage} from "@inertiajs/vue3";
 import FormatCurrency from "../../../Components/FormatCurrency.vue";
 import {CheckCircleIcon, XCircleIcon} from "@heroicons/vue/24/solid";
 import {wTrans} from "laravel-vue-i18n";
+import useFilterStatus from "../common/useFilterStatus";
 const props = defineProps(['tableData']);
 const page = usePage();
 const locale = computed(()=>page.props.locale);
 onMounted(()=>{
   moment().locale(locale.value);
 })
-const filterStatus = () => {
-  return [
-    { text: wTrans('Confirmed'), value:'confirmed' },
-    { text: wTrans('Draft'), value:'draft' },
-    { text: wTrans('Canceled'), value:'canceled' },
-    { text: wTrans('Approved'), value:'approve' },
-  ]
-}
-const filterStatusHandler = ( value, row, column) => {
-  return row.status === value
+const {filterStatus,filterStatusHandler} = useFilterStatus();
+
+const approve = id=>{
+  router.visit(route('reservations.admin.confirm',id))
 }
 </script>
 
@@ -93,7 +88,7 @@ const filterStatusHandler = ( value, row, column) => {
             <template #default="scope">
               <CheckCircleIcon v-if="scope.row.status!=='canceled'" class="  rounded-l w-8"
                                :class="[
-                    {'text-[#265873]':scope.row.status === 'approve'},
+                    {'text-[#265873]':scope.row.status === 'approved'},
                     {'text-green-700':scope.row.status === 'confirmed'},
                     {'text-gray-200':scope.row.status === 'draft'}
                     ]" />
@@ -113,7 +108,7 @@ const filterStatusHandler = ( value, row, column) => {
                     placement="top-start"
                 >
                   <CheckCircleIconOut v-if="scope.row.status === 'draft'" class="w-8 text-green-600 cursor-pointer"
-                                @click="changeRole(scope.row.id,'user')" />
+                                @click="approve(scope.row.id)" />
                 </el-tooltip>
 
 

@@ -55,6 +55,11 @@ class ReservationServices
         return Reservations::all();
     }
 
+    public function getById($id)
+    {
+        return Reservations::whereId($id)->first();
+    }
+
     public function getByCurrentUser()
     {
         $user = Auth::user();
@@ -66,6 +71,17 @@ class ReservationServices
     {
         $reservation = Reservations::where('id', $id)->first();
         $reservation->status = 'confirmed';
+        $reservation->save();
+        return $reservation;
+    }
+
+    public function approveStatus($id,$price,$time)
+    {
+
+        $reservation = Reservations::where('id', $id)->first();
+        $reservation->status = 'approved';
+        $reservation->price = $price;
+        $reservation->time_end = $time;
         $reservation->save();
         return $reservation;
     }
