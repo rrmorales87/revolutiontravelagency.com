@@ -1,5 +1,5 @@
 <script setup>
-import {ref, computed, onMounted} from "vue";
+import {ref, computed} from "vue";
 import { HomeIcon, MapPinIcon } from '@heroicons/vue/24/outline';
 import {email, helpers, required} from "@vuelidate/validators";
 import {useVuelidate} from "@vuelidate/core";
@@ -37,9 +37,6 @@ const rules = computed(() => {
 });
 const $v = useVuelidate(rules, form.value,{ $lazy: true });
 
-onMounted(()=>{
-  form.value.status = status.value[0].value
-})
 const submit = async () => {
   const valid = await $v.value.$validate();
   if(valid){

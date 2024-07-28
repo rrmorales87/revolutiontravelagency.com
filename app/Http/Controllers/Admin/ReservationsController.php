@@ -80,4 +80,30 @@ class ReservationsController extends Controller
             return redirect()->back(['error'=>$exception->getMessage()]);
         }
     }
+
+    public function editReservation($id)
+    {
+        $origins = new OriginsCollections($this->origin->getAll());
+        $destinations = new TopDestinationsCollection($this->detiny->getAll());
+        $reservation = new ReservationResource($this->reservationService->getById($id));
+        return Inertia::render(
+            'Reservations/Admin/Edit',
+            [
+
+                "origins" => $origins,
+                "destinations" => $destinations,
+                "reservation" => $reservation,
+
+            ]
+        );
+    }
+    public function updateReservation(Request $request)
+    {
+        try {
+            $this->reservationService->edit($request,$request->id);
+            return redirect()->route('reservations.admin.index');
+        }catch (\Exception $exception){
+            return redirect()->back(['error'=>$exception->getMessage()]);
+        }
+    }
 }

@@ -1,11 +1,11 @@
 <script setup>
-import { CheckCircleIcon as CheckCircleIconOut} from "@heroicons/vue/24/outline";
+import { PencilSquareIcon, CheckCircleIcon as CheckCircleIconOut} from "@heroicons/vue/24/outline";
 import AdminLayout from "../../../Layouts/AdminLayout.vue";
 import AdminHeaderContent from "../../../Components/AdminHeaderContent.vue";
 import moment from "moment";
 import 'moment/locale/es';
 import {computed, onMounted} from "vue";
-import {router, usePage} from "@inertiajs/vue3";
+import {Link, router, usePage} from "@inertiajs/vue3";
 import FormatCurrency from "../../../Components/FormatCurrency.vue";
 import {CheckCircleIcon, XCircleIcon} from "@heroicons/vue/24/solid";
 import {wTrans} from "laravel-vue-i18n";
@@ -107,7 +107,10 @@ const add = ()=> {
           </el-table-column>
           <el-table-column fixed="right" :label="$t('Operations')" width="120">
             <template #default="scope">
-              <div class="flex">
+              <div class="flex gap-4">
+                <Link :href="route('reservations.admin.edit',scope.row.id)" type="button">
+                  <PencilSquareIcon class="w-8 text-blue-600" />
+                </Link>
                 <el-tooltip
                     v-if="scope.row.status === 'draft'"
                     class="box-item"
