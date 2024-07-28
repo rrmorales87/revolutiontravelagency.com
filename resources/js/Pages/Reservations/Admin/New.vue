@@ -11,6 +11,10 @@ const formTravel = ref(form);
 const onSubmit = (form) => {
   router.post(route('reservations.admin.store'),form);
 }
+const onCancel = () => {
+  resetForm();
+  router.visit(route('reservations.admin.index'))
+}
 </script>
 
 <template>
@@ -22,7 +26,7 @@ const onSubmit = (form) => {
           :reservation="formTravel"
           @fetch-destinations="querySearchAsyncAutoCompleteDestinations"
           @fetch-origins="querySearchAsyncAutoCompleteOrigin"
-          @cancel="resetForm"
+          @cancel="onCancel"
           @submit="onSubmit"
       ></Form>
     </div>
