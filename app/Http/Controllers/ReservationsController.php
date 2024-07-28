@@ -78,4 +78,6 @@ class ReservationsController extends Controller
         }
         return redirect()->route('reservations');
     }
+
+
 }

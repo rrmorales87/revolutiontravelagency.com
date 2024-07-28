@@ -38,16 +38,18 @@ class ReservationServices
         }
 
 
-        $reservation->price = $destiny->price;
+        $reservation->price = $request->price ? $request->price : ($destiny->price ? $destiny->price : 1 );
         $reservation->user()->associate(Auth::user());
         $reservation->client()->associate($client);
         $reservation->origin()->associate($origin);
         $reservation->destination()->associate($destiny);
-        $reservation->tax = 1;
+        $reservation->tax = $request->tax ? $request->tax : 1;
         $reservation->status = $request->status;
         $reservation->travellers = $request->travellers;
         $reservation->date = $request->date;
         $reservation->time = $request->time;
+        if($request->time_end) $reservation->time_end = $request->time_end;
+        if($request->status) $reservation->status = $request->status;
         return $reservation->save();
     }
     public function getAll()

@@ -14,63 +14,17 @@ import 'moment/locale/es';
 
 import FormatCurrency from "../../Components/FormatCurrency.vue";
 import useFilterStatus from "./common/useFilterStatus";
+import useFormReservation from "./common/useFormReservation";
 const props = defineProps(['origin','destiny','origins','destinations','reservations']);
 const page = usePage();
 const locale = computed(()=>page.props.locale);
 const user = computed(()=>page.props.auth.user);
-const tableData = computed(()=> props.reservations.data)
-const formTravel = ref({
-  origin: props.origin ? props.origin.data.name : '',
-  destiny: props.destiny ? props.destiny.data.name : '',
-  date:moment().format("YYYY-MM-DD"),
-  time:moment().format("HH:mm:ss"),
-  travellers:1,
-  name:user.value.name,
-  contact:user.value.email,
-  status:""
-})
-const resetForm = () => {
-  formTravel.value = {
-    origin: props.origin ? props.origin.data.name : '',
-    destiny: props.destiny ? props.destiny.data.name : '',
-    date:moment().format("YYYY-MM-DD"),
-    time:moment().format("HH:mm:ss"),
-    travellers:1,
-    name:user.value.name,
-    contact:user.value.email,
-    status:""
-  }
-}
+const tableData = computed(()=> props.reservations.data);
+const { form, resetForm,querySearchAsyncAutoCompleteOrigin, querySearchAsyncAutoCompleteDestinations } = useFormReservation(props.origins.data,props.destinations.data);
+const formTravel = ref(form);
+
 let timeout;
-const querySearchAsyncOrigins = (queryString, cb) => {
-  const results = queryString
-      ? props.origins.data.filter(v=>v.name.toLowerCase().includes(queryString.toLowerCase())).map(v=>{
-        return {value:v.name};})
-      : props.origins.data.map(v=>{
-            return {value:v.name};
-          }
 
-      );
-  clearTimeout(timeout)
-  timeout = setTimeout(() => {
-    cb(results)
-  }, 900 * Math.random())
-}
-const querySearchAsyncDestinations = (queryString, cb) => {
-  const results = queryString
-      ? props.destinations.data.filter(v=>v.name.toLowerCase().includes(queryString.toLowerCase())).map(v=>{
-        return {value:v.name};})
-      : props.destinations.data.map(v=>{
-            return {value:v.name};
-          }
-
-      );
-
-  clearTimeout(timeout)
-  timeout = setTimeout(() => {
-    cb(results)
-  }, 900 * Math.random())
-}
 const rules = computed(() => {
   return {
     origin:{required: helpers.withMessage(wTrans("requiredField"), required)},
@@ -120,7 +74,9 @@ onMounted(async()=>{
   //await initMap();
   moment().locale(locale.value);
   console.log("Reservations",props.reservations)
-  
+  if(props.origin) formTravel.value.origin = props.origin.data.name;
+  if(props.destiny) formTravel.value.destiny = props.destiny.data.name;
+
 })
 const selectReservations = (row,column,event) => {
   console.log("Slelect table row",row);
@@ -157,7 +113,7 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
                              name="origin"
                              size="large"
                              v-model="formTravel.origin"
-                             :fetch-suggestions="querySearchAsyncOrigins"
+                             :fetch-suggestions="querySearchAsyncAutoCompleteOrigin"
             >
               <template #suffix>
                 <el-icon class="el-input__icon" >
@@ -174,7 +130,7 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
                            name="destiny"
                            size="large"
                            v-model="formTravel.destiny"
-                           :fetch-suggestions="querySearchAsyncDestinations"
+                           :fetch-suggestions="querySearchAsyncAutoCompleteDestinations"
           >
             <template #suffix>
               <el-icon class="el-input__icon" >

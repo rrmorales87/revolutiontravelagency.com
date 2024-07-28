@@ -10,6 +10,7 @@ import FormatCurrency from "../../../Components/FormatCurrency.vue";
 import {CheckCircleIcon, XCircleIcon} from "@heroicons/vue/24/solid";
 import {wTrans} from "laravel-vue-i18n";
 import useFilterStatus from "../common/useFilterStatus";
+import AdminAddButton from "../../../Components/AdminAddButton.vue";
 const props = defineProps(['tableData']);
 const page = usePage();
 const locale = computed(()=>page.props.locale);
@@ -21,12 +22,19 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
 const approve = id=>{
   router.visit(route('reservations.admin.confirm',id))
 }
+const add = ()=> {
+  router.visit(route('reservations.admin.new'))
+}
 </script>
 
 <template>
   <AdminLayout>
     <div class="w-full overflow-x-auto">
-      <AdminHeaderContent :title="$t('Reservations')"/>
+      <AdminHeaderContent :title="$t('Reservations')">
+        <div>
+          <AdminAddButton :title="$t('New')" @onClick="add"/>
+        </div>
+      </AdminHeaderContent>
       <div class="container mt-5 overflow-auto">
         <el-table stripe
                   :data="props.tableData.data"

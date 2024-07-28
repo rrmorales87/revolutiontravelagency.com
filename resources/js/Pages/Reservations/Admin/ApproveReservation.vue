@@ -1,7 +1,7 @@
 <script setup>
 import AdminLayout from "../../../Layouts/AdminLayout.vue";
 import AdminHeaderContent from "../../../Components/AdminHeaderContent.vue";
-import Form from "./Form.vue";
+import Form from "./FormApprove.vue";
 import {router} from "@inertiajs/vue3";
 const props = defineProps(['reservation','origins','destinations'])
 console.log("Reservations",props.reservation);

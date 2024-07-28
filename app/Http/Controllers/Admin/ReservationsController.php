@@ -55,4 +55,29 @@ class ReservationsController extends Controller
         }
 
     }
+
+    public function newReservation()
+    {
+        $origins = new OriginsCollections($this->origin->getAll());
+        $destinations = new TopDestinationsCollection($this->detiny->getAll());
+        return Inertia::render(
+            'Reservations/Admin/New',
+            [
+
+                "origins" => $origins,
+                "destinations" => $destinations,
+
+            ]
+        );
+    }
+
+    public function storeReservation(Request $request)
+    {
+        try {
+            $this->reservationService->create($request);
+            return redirect()->route('reservations.admin.index');
+        }catch (\Exception $exception){
+            return redirect()->back(['error'=>$exception->getMessage()]);
+        }
+    }
 }

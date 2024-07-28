@@ -18,6 +18,7 @@ module.exports = {
                Lato:['Lato']
             },
         },
+
     },
 
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
