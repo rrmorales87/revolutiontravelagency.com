@@ -106,4 +106,13 @@ class ReservationsController extends Controller
             return redirect()->back(['error'=>$exception->getMessage()]);
         }
     }
+    public function canceledReservation($id)
+    {
+        try {
+            $this->reservationService->canceleStatus($id);
+            return redirect()->route('reservations.admin.index');
+        }catch (\Exception $exception){
+            return redirect()->back(['error'=>$exception->getMessage()]);
+        }
+    }
 }

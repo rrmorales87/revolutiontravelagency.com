@@ -64,6 +64,7 @@ Route::middleware([
         Route::get('/admin/reservations', [\App\Http\Controllers\Admin\ReservationsController::class, 'index'])->name('reservations.admin.index');
         Route::get('/admin/reservations/new', [\App\Http\Controllers\Admin\ReservationsController::class, 'newReservation'])->name('reservations.admin.new');
         Route::get('/admin/reservations/{id?}', [\App\Http\Controllers\Admin\ReservationsController::class, 'confirmReservation'])->name('reservations.admin.confirm');
+        Route::get('/admin/reservations/cancel/{id}', [\App\Http\Controllers\Admin\ReservationsController::class, 'canceledReservation'])->name('reservations.admin.cancel');
         Route::get('/admin/reservations/edit/{id?}', [\App\Http\Controllers\Admin\ReservationsController::class, 'editReservation'])->name('reservations.admin.edit');
         Route::post('/admin/reservations/approve', [\App\Http\Controllers\Admin\ReservationsController::class, 'approveReservation'])->name('reservations.admin.approve');
         Route::post('/admin/reservations/store', [\App\Http\Controllers\Admin\ReservationsController::class, 'storeReservation'])->name('reservations.admin.store');

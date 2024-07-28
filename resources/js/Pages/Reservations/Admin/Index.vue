@@ -1,5 +1,5 @@
 <script setup>
-import { PencilSquareIcon, CheckCircleIcon as CheckCircleIconOut} from "@heroicons/vue/24/outline";
+import { PencilSquareIcon, CheckCircleIcon as CheckCircleIconOut, XCircleIcon as XCircleIconOut} from "@heroicons/vue/24/outline";
 import AdminLayout from "../../../Layouts/AdminLayout.vue";
 import AdminHeaderContent from "../../../Components/AdminHeaderContent.vue";
 import moment from "moment";
@@ -8,9 +8,9 @@ import {computed, onMounted} from "vue";
 import {Link, router, usePage} from "@inertiajs/vue3";
 import FormatCurrency from "../../../Components/FormatCurrency.vue";
 import {CheckCircleIcon, XCircleIcon} from "@heroicons/vue/24/solid";
-import {wTrans} from "laravel-vue-i18n";
 import useFilterStatus from "../common/useFilterStatus";
 import AdminAddButton from "../../../Components/AdminAddButton.vue";
+import {InfoFilled} from "@element-plus/icons-vue";
 const props = defineProps(['tableData']);
 const page = usePage();
 const locale = computed(()=>page.props.locale);
@@ -25,6 +25,7 @@ const approve = id=>{
 const add = ()=> {
   router.visit(route('reservations.admin.new'))
 }
+const cancelEvent = (id) => router.get(route('reservations.admin.cancel',id));
 </script>
 
 <template>
@@ -109,8 +110,9 @@ const add = ()=> {
             <template #default="scope">
               <div class="flex gap-4">
                 <Link :href="route('reservations.admin.edit',scope.row.id)" type="button">
-                  <PencilSquareIcon class="w-8 text-blue-600" />
+                  <PencilSquareIcon class="w-6 text-blue-600" />
                 </Link>
+
                 <el-tooltip
                     v-if="scope.row.status === 'draft'"
                     class="box-item"
@@ -121,6 +123,23 @@ const add = ()=> {
                   <CheckCircleIconOut v-if="scope.row.status === 'draft'" class="w-8 text-green-600 cursor-pointer"
                                 @click="approve(scope.row.id)" />
                 </el-tooltip>
+                <el-popconfirm
+                    v-if="scope.row.status !== 'canceled'"
+                    :confirm-button-text="$t('Yes')"
+                    cancel-button-text="No"
+                    :icon="InfoFilled"
+                    icon-color="#626AEF"
+                    :title="$t('Are you sure to cancel this?')"
+                    @confirm="cancelEvent(scope.row.id)"
+                >
+                  <template #reference>
+
+                      <XCircleIconOut v-if="scope.row.status !== 'canceled'" class="w-8 text-red-900  cursor-pointer"
+                                       />
+
+                  </template>
+                </el-popconfirm>
+
 
 
 

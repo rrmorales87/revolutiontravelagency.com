@@ -19,242 +19,242 @@
     "file": "assets/TopDestinations-6a22ff6d.css",
     "src": "TopDestinations.css"
   },
-  "_ActionMessage-dea61e32.js": {
-    "file": "assets/ActionMessage-dea61e32.js",
+  "_ActionMessage-53a38de8.js": {
+    "file": "assets/ActionMessage-53a38de8.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_AdminAddButton-0afecffc.js": {
-    "file": "assets/AdminAddButton-0afecffc.js",
+  "_AdminAddButton-e7831235.js": {
+    "file": "assets/AdminAddButton-e7831235.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_AdminHeaderContent-70523e36.js": {
-    "file": "assets/AdminHeaderContent-70523e36.js",
+  "_AdminHeaderContent-97d7ad7c.js": {
+    "file": "assets/AdminHeaderContent-97d7ad7c.js",
     "imports": [
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_SelectorLanguage-351769bd.js",
+      "_HomeIcon-2376233a.js"
     ]
   },
-  "_AppLayout-56f72658.js": {
+  "_AppLayout-74b71e92.js": {
     "css": [
       "assets/AppLayout-aeed72bb.css"
     ],
-    "file": "assets/AppLayout-56f72658.js",
+    "file": "assets/AppLayout-74b71e92.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_AuthenticationCard-c9153ca5.js": {
-    "file": "assets/AuthenticationCard-c9153ca5.js",
+  "_AuthenticationCard-2834e95b.js": {
+    "file": "assets/AuthenticationCard-2834e95b.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_AuthenticationCardLogo-9042513e.js": {
-    "file": "assets/AuthenticationCardLogo-9042513e.js",
+  "_AuthenticationCardLogo-585a8ed7.js": {
+    "file": "assets/AuthenticationCardLogo-585a8ed7.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_Checkbox-ae6312c8.js": {
-    "file": "assets/Checkbox-ae6312c8.js",
+  "_Checkbox-659fc688.js": {
+    "file": "assets/Checkbox-659fc688.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_ConfirmationModal-3f94eeb3.js": {
-    "file": "assets/ConfirmationModal-3f94eeb3.js",
+  "_ConfirmationModal-bd0d1a28.js": {
+    "file": "assets/ConfirmationModal-bd0d1a28.js",
     "imports": [
-      "_Modal-247bfaff.js",
+      "_Modal-db6396bf.js",
       "resources/js/app.js"
     ]
   },
-  "_DangerButton-a26ae673.js": {
-    "file": "assets/DangerButton-a26ae673.js",
+  "_DangerButton-bed1d422.js": {
+    "file": "assets/DangerButton-bed1d422.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_DialogModal-7120c355.js": {
-    "file": "assets/DialogModal-7120c355.js",
+  "_DialogModal-2d1709fd.js": {
+    "file": "assets/DialogModal-2d1709fd.js",
     "imports": [
-      "_Modal-247bfaff.js",
+      "_Modal-db6396bf.js",
       "resources/js/app.js"
     ]
   },
-  "_FormSection-a096ac5f.js": {
-    "file": "assets/FormSection-a096ac5f.js",
+  "_FormSection-fee9c6fa.js": {
+    "file": "assets/FormSection-fee9c6fa.js",
     "imports": [
       "resources/js/app.js",
-      "_SectionTitle-24997be1.js"
+      "_SectionTitle-a019bf35.js"
     ]
   },
-  "_HandThumbUpIcon-dc247b02.js": {
-    "file": "assets/HandThumbUpIcon-dc247b02.js",
+  "_HandThumbUpIcon-0a3d0b54.js": {
+    "file": "assets/HandThumbUpIcon-0a3d0b54.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_HomeIcon-66ff7bbb.js": {
-    "file": "assets/HomeIcon-66ff7bbb.js",
+  "_HomeIcon-2376233a.js": {
+    "file": "assets/HomeIcon-2376233a.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_HomeLayout-189bfdcd.js": {
+  "_HomeLayout-d5a93a2d.js": {
     "css": [
       "assets/HomeLayout-ea834db5.css"
     ],
-    "file": "assets/HomeLayout-189bfdcd.js",
+    "file": "assets/HomeLayout-d5a93a2d.js",
     "imports": [
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_InputError-a6d323b0.js": {
-    "file": "assets/InputError-a6d323b0.js",
+  "_InputError-561c0941.js": {
+    "file": "assets/InputError-561c0941.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_InputLabel-b8661614.js": {
-    "file": "assets/InputLabel-b8661614.js",
+  "_InputLabel-692f0032.js": {
+    "file": "assets/InputLabel-692f0032.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_MapPinIcon-0a27bbe8.js": {
-    "file": "assets/MapPinIcon-0a27bbe8.js",
+  "_MapPinIcon-e953c4a0.js": {
+    "file": "assets/MapPinIcon-e953c4a0.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_Modal-247bfaff.js": {
-    "file": "assets/Modal-247bfaff.js",
+  "_Modal-db6396bf.js": {
+    "file": "assets/Modal-db6396bf.js",
     "imports": [
-      "_SectionTitle-24997be1.js",
+      "_SectionTitle-a019bf35.js",
       "resources/js/app.js"
     ]
   },
-  "_Notifications-7fdd9923.js": {
-    "file": "assets/Notifications-7fdd9923.js",
-    "imports": [
-      "resources/js/app.js"
-    ]
-  },
-  "_PrimaryButton-9f6f767d.js": {
-    "file": "assets/PrimaryButton-9f6f767d.js",
+  "_Notifications-f5d130fe.js": {
+    "file": "assets/Notifications-f5d130fe.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_SecondaryButton-5ccc3236.js": {
-    "file": "assets/SecondaryButton-5ccc3236.js",
+  "_PrimaryButton-fec3364b.js": {
+    "file": "assets/PrimaryButton-fec3364b.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_SectionBorder-84de403c.js": {
-    "file": "assets/SectionBorder-84de403c.js",
+  "_SecondaryButton-2076c17a.js": {
+    "file": "assets/SecondaryButton-2076c17a.js",
     "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_SectionTitle-24997be1.js": {
-    "file": "assets/SectionTitle-24997be1.js",
+  "_SectionBorder-a91f4093.js": {
+    "file": "assets/SectionBorder-a91f4093.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_SelectorLanguage-f3ed0633.js": {
+  "_SectionTitle-a019bf35.js": {
+    "file": "assets/SectionTitle-a019bf35.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_SelectorLanguage-351769bd.js": {
     "css": [
       "assets/SelectorLanguage-695f7205.css"
     ],
-    "file": "assets/SelectorLanguage-f3ed0633.js",
+    "file": "assets/SelectorLanguage-351769bd.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_TermsUse-0eaf1102.js": {
+  "_TermsUse-baa94970.js": {
     "css": [
       "assets/TermsUse-b5d92793.css"
     ],
-    "file": "assets/TermsUse-0eaf1102.js",
+    "file": "assets/TermsUse-baa94970.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ]
   },
-  "_TextInput-6567bd51.js": {
-    "file": "assets/TextInput-6567bd51.js",
+  "_TextInput-0cc2a3c3.js": {
+    "file": "assets/TextInput-0cc2a3c3.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_TopDestinations-82ebba87.js": {
+  "_TopDestinations-966a2d32.js": {
     "css": [
       "assets/TopDestinations-6a22ff6d.css"
     ],
-    "file": "assets/TopDestinations-82ebba87.js",
+    "file": "assets/TopDestinations-966a2d32.js",
     "imports": [
-      "_PrimaryButton-9f6f767d.js",
+      "_PrimaryButton-fec3364b.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HandThumbUpIcon-dc247b02.js"
+      "_HandThumbUpIcon-0a3d0b54.js"
     ]
   },
-  "_TrashIcon-5e7661ce.js": {
-    "file": "assets/TrashIcon-5e7661ce.js",
+  "_TrashIcon-5eff805d.js": {
+    "file": "assets/TrashIcon-5eff805d.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_XCircleIcon-4eac5f1f.js": {
-    "file": "assets/XCircleIcon-4eac5f1f.js",
+  "_XCircleIcon-ceaf1d92.js": {
+    "file": "assets/XCircleIcon-ceaf1d92.js",
     "imports": [
       "resources/js/app.js",
-      "_moment-3a1226c9.js"
+      "_moment-6523845a.js"
     ]
   },
   "__plugin-vue_export-helper-c27b6911.js": {
     "file": "assets/_plugin-vue_export-helper-c27b6911.js"
   },
-  "_moment-3a1226c9.js": {
-    "file": "assets/moment-3a1226c9.js",
+  "_moment-6523845a.js": {
+    "file": "assets/moment-6523845a.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_useFilterStatus-6c2bcb27.js": {
-    "file": "assets/useFilterStatus-6c2bcb27.js",
+  "_useFilterStatus-7a0089b1.js": {
+    "file": "assets/useFilterStatus-7a0089b1.js",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_useFormReservation-c45c86f1.js": {
-    "file": "assets/useFormReservation-c45c86f1.js",
+  "_useFormReservation-87eb76c5.js": {
+    "file": "assets/useFormReservation-87eb76c5.js",
     "imports": [
-      "_moment-3a1226c9.js",
+      "_moment-6523845a.js",
       "resources/js/app.js"
     ]
   },
   "lang/en.json": {
-    "file": "assets/en-8086f6ba.js",
+    "file": "assets/en-d7fc4554.js",
     "isDynamicEntry": true,
     "src": "lang/en.json"
   },
   "lang/es.json": {
-    "file": "assets/es-b80f4186.js",
+    "file": "assets/es-aeb0dcb1.js",
     "isDynamicEntry": true,
     "src": "lang/es.json"
   },
@@ -287,164 +287,164 @@
     "src": "public/fonts/MusticaPro-SemiBold.otf"
   },
   "resources/js/Pages/API/Index.vue": {
-    "file": "assets/Index-efb9a43b.js",
+    "file": "assets/Index-3703d8e8.js",
     "imports": [
       "resources/js/Pages/API/Partials/ApiTokenManager.vue",
-      "_AppLayout-56f72658.js",
+      "_AppLayout-74b71e92.js",
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_Modal-247bfaff.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_Modal-db6396bf.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_Checkbox-ae6312c8.js",
-      "_ConfirmationModal-3f94eeb3.js",
-      "_DangerButton-a26ae673.js",
-      "_DialogModal-7120c355.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_SectionBorder-84de403c.js",
-      "_TextInput-6567bd51.js"
+      "_Checkbox-659fc688.js",
+      "_ConfirmationModal-bd0d1a28.js",
+      "_DangerButton-bed1d422.js",
+      "_DialogModal-2d1709fd.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_SecondaryButton-2076c17a.js",
+      "_SectionBorder-a91f4093.js",
+      "_TextInput-0cc2a3c3.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/API/Index.vue"
   },
   "resources/js/Pages/API/Partials/ApiTokenManager.vue": {
-    "file": "assets/ApiTokenManager-c5763fd4.js",
+    "file": "assets/ApiTokenManager-5fea84e6.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_Modal-247bfaff.js",
-      "_Checkbox-ae6312c8.js",
-      "_ConfirmationModal-3f94eeb3.js",
-      "_DangerButton-a26ae673.js",
-      "_DialogModal-7120c355.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_SectionBorder-84de403c.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_Modal-db6396bf.js",
+      "_Checkbox-659fc688.js",
+      "_ConfirmationModal-bd0d1a28.js",
+      "_DangerButton-bed1d422.js",
+      "_DialogModal-2d1709fd.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_SecondaryButton-2076c17a.js",
+      "_SectionBorder-a91f4093.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/API/Partials/ApiTokenManager.vue"
   },
   "resources/js/Pages/Admin/Index.vue": {
-    "file": "assets/Index-277ea861.js",
+    "file": "assets/Index-ec5cd0c0.js",
     "imports": [
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Admin/Index.vue"
   },
   "resources/js/Pages/Auth/ConfirmPassword.vue": {
-    "file": "assets/ConfirmPassword-cb9178c5.js",
+    "file": "assets/ConfirmPassword-15579f13.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ConfirmPassword.vue"
   },
   "resources/js/Pages/Auth/ForgotPassword.vue": {
-    "file": "assets/ForgotPassword-8a432fe1.js",
+    "file": "assets/ForgotPassword-88c418d9.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ForgotPassword.vue"
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login-5f47bcc9.js",
+    "file": "assets/Login-bf3aaa82.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_Checkbox-ae6312c8.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_Checkbox-659fc688.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.vue"
   },
   "resources/js/Pages/Auth/Register.vue": {
-    "file": "assets/Register-e366e81a.js",
+    "file": "assets/Register-f23138dc.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_Checkbox-ae6312c8.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_Checkbox-659fc688.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Register.vue"
   },
   "resources/js/Pages/Auth/ResetPassword.vue": {
-    "file": "assets/ResetPassword-aac53dac.js",
+    "file": "assets/ResetPassword-5b0f2d22.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/ResetPassword.vue"
   },
   "resources/js/Pages/Auth/TwoFactorChallenge.vue": {
-    "file": "assets/TwoFactorChallenge-79be4309.js",
+    "file": "assets/TwoFactorChallenge-dec9c5e6.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/TwoFactorChallenge.vue"
   },
   "resources/js/Pages/Auth/VerifyEmail.vue": {
-    "file": "assets/VerifyEmail-8ad609bd.js",
+    "file": "assets/VerifyEmail-d3fb6f58.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCard-c9153ca5.js",
-      "_AuthenticationCardLogo-9042513e.js",
-      "_PrimaryButton-9f6f767d.js",
+      "_AuthenticationCard-2834e95b.js",
+      "_AuthenticationCardLogo-585a8ed7.js",
+      "_PrimaryButton-fec3364b.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
@@ -458,12 +458,12 @@
     "css": [
       "assets/Index-d4599426.css"
     ],
-    "file": "assets/Index-24b17e10.js",
+    "file": "assets/Index-e742dba8.js",
     "imports": [
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeLayout-189bfdcd.js",
-      "_SelectorLanguage-f3ed0633.js"
+      "_HomeLayout-d5a93a2d.js",
+      "_SelectorLanguage-351769bd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Builder/Index.vue"
@@ -476,21 +476,21 @@
     "css": [
       "assets/Index-81d85f0c.css"
     ],
-    "file": "assets/Index-9e85cc37.js",
+    "file": "assets/Index-c70f67e2.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
+      "_HomeLayout-d5a93a2d.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
+      "_Notifications-f5d130fe.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_SelectorLanguage-f3ed0633.js"
+      "_SelectorLanguage-351769bd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/ContactUs/Index.vue"
   },
   "resources/js/Pages/Dashboard.vue": {
-    "file": "assets/Dashboard-0dd3c6d0.js",
+    "file": "assets/Dashboard-3d806c1e.js",
     "imports": [
-      "_AppLayout-56f72658.js",
+      "_AppLayout-74b71e92.js",
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
     ],
@@ -498,29 +498,29 @@
     "src": "resources/js/Pages/Dashboard.vue"
   },
   "resources/js/Pages/Home/Index.vue": {
-    "file": "assets/Index-996ad02c.js",
+    "file": "assets/Index-603679bf.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
-      "_TopDestinations-82ebba87.js",
+      "_HomeLayout-d5a93a2d.js",
+      "_TopDestinations-966a2d32.js",
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_HandThumbUpIcon-dc247b02.js"
+      "_PrimaryButton-fec3364b.js",
+      "_HandThumbUpIcon-0a3d0b54.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Home/Index.vue"
   },
   "resources/js/Pages/Home/home.vue": {
-    "file": "assets/home-c68c41b4.js",
+    "file": "assets/home-778c2856.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
-      "_TopDestinations-82ebba87.js",
+      "_HomeLayout-d5a93a2d.js",
+      "_TopDestinations-966a2d32.js",
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_HandThumbUpIcon-dc247b02.js"
+      "_PrimaryButton-fec3364b.js",
+      "_HandThumbUpIcon-0a3d0b54.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Home/home.vue"
@@ -533,13 +533,13 @@
     "css": [
       "assets/Index-fb14e133.css"
     ],
-    "file": "assets/Index-a48d0fb4.js",
+    "file": "assets/Index-b0de9855.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
-      "_TermsUse-0eaf1102.js",
+      "_HomeLayout-d5a93a2d.js",
+      "_TermsUse-baa94970.js",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_SelectorLanguage-f3ed0633.js"
+      "_SelectorLanguage-351769bd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Login/Index.vue"
@@ -552,15 +552,15 @@
     "css": [
       "assets/Register-acbe988c.css"
     ],
-    "file": "assets/Register-422bb9ac.js",
+    "file": "assets/Register-c9a0e3e7.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
-      "_TermsUse-0eaf1102.js",
+      "_HomeLayout-d5a93a2d.js",
+      "_TermsUse-baa94970.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_SelectorLanguage-f3ed0633.js"
+      "_SelectorLanguage-351769bd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Login/Register.vue"
@@ -573,260 +573,279 @@
     "css": [
       "assets/SignIn-852212d2.css"
     ],
-    "file": "assets/SignIn-5b5ca0aa.js",
+    "file": "assets/SignIn-0cadb367.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
-      "_TermsUse-0eaf1102.js",
+      "_HomeLayout-d5a93a2d.js",
+      "_TermsUse-baa94970.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_SelectorLanguage-f3ed0633.js"
+      "_SelectorLanguage-351769bd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Login/SignIn.vue"
   },
   "resources/js/Pages/Origins/Edit.vue": {
-    "file": "assets/Edit-12c66fa3.js",
+    "file": "assets/Edit-bbd5fa78.js",
     "imports": [
       "resources/js/Pages/Origins/Form.vue",
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Origins/Edit.vue"
   },
   "resources/js/Pages/Origins/Form.vue": {
-    "file": "assets/Form-9a10755b.js",
+    "file": "assets/Form-609ca9c4.js",
     "imports": [
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js"
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Origins/Form.vue"
   },
   "resources/js/Pages/Origins/Index.vue": {
-    "file": "assets/Index-55558a2d.js",
+    "file": "assets/Index-044fa9eb.js",
     "imports": [
-      "_AdminHeaderContent-70523e36.js",
-      "_AdminAddButton-0afecffc.js",
+      "_AdminHeaderContent-97d7ad7c.js",
+      "_AdminAddButton-e7831235.js",
       "resources/js/app.js",
-      "_TrashIcon-5e7661ce.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_TrashIcon-5eff805d.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Origins/Index.vue"
   },
   "resources/js/Pages/Origins/New.vue": {
-    "file": "assets/New-f2a33478.js",
+    "file": "assets/New-cc83e658.js",
     "imports": [
       "resources/js/Pages/Origins/Form.vue",
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Origins/New.vue"
   },
   "resources/js/Pages/PrivacyPolicy.vue": {
-    "file": "assets/PrivacyPolicy-4a738139.js",
+    "file": "assets/PrivacyPolicy-fc4e99bf.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCardLogo-9042513e.js"
+      "_AuthenticationCardLogo-585a8ed7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/PrivacyPolicy.vue"
   },
   "resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
-    "file": "assets/DeleteUserForm-d355b665.js",
+    "file": "assets/DeleteUserForm-1d3d71cd.js",
     "imports": [
       "resources/js/app.js",
-      "_Modal-247bfaff.js",
-      "_DangerButton-a26ae673.js",
-      "_DialogModal-7120c355.js",
-      "_InputError-a6d323b0.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_Modal-db6396bf.js",
+      "_DangerButton-bed1d422.js",
+      "_DialogModal-2d1709fd.js",
+      "_InputError-561c0941.js",
+      "_SecondaryButton-2076c17a.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.vue"
   },
   "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue": {
-    "file": "assets/LogoutOtherBrowserSessionsForm-03f762ea.js",
+    "file": "assets/LogoutOtherBrowserSessionsForm-168f77b4.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_Modal-247bfaff.js",
-      "_DialogModal-7120c355.js",
-      "_InputError-a6d323b0.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_Modal-db6396bf.js",
+      "_DialogModal-2d1709fd.js",
+      "_InputError-561c0941.js",
+      "_PrimaryButton-fec3364b.js",
+      "_SecondaryButton-2076c17a.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue"
   },
   "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue": {
-    "file": "assets/TwoFactorAuthenticationForm-cbbc217a.js",
+    "file": "assets/TwoFactorAuthenticationForm-2b424204.js",
     "imports": [
       "resources/js/app.js",
-      "_Modal-247bfaff.js",
-      "_DialogModal-7120c355.js",
-      "_InputError-a6d323b0.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_TextInput-6567bd51.js",
-      "_DangerButton-a26ae673.js",
-      "_InputLabel-b8661614.js",
-      "_SectionTitle-24997be1.js",
+      "_Modal-db6396bf.js",
+      "_DialogModal-2d1709fd.js",
+      "_InputError-561c0941.js",
+      "_PrimaryButton-fec3364b.js",
+      "_SecondaryButton-2076c17a.js",
+      "_TextInput-0cc2a3c3.js",
+      "_DangerButton-bed1d422.js",
+      "_InputLabel-692f0032.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue"
   },
   "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
-    "file": "assets/UpdatePasswordForm-39fdf99a.js",
+    "file": "assets/UpdatePasswordForm-5dc5f5e7.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue"
   },
   "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
-    "file": "assets/UpdateProfileInformationForm-b3c91b7b.js",
+    "file": "assets/UpdateProfileInformationForm-4ea5770d.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_SecondaryButton-2076c17a.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue"
   },
   "resources/js/Pages/Profile/Show.vue": {
-    "file": "assets/Show-f64e27b8.js",
+    "file": "assets/Show-b3c0e481.js",
     "imports": [
       "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
       "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue",
-      "_SectionBorder-84de403c.js",
+      "_SectionBorder-a91f4093.js",
       "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue",
       "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
-      "_HomeLayout-189bfdcd.js",
+      "_HomeLayout-d5a93a2d.js",
       "resources/js/app.js",
-      "_Modal-247bfaff.js",
-      "_SectionTitle-24997be1.js",
+      "_Modal-db6396bf.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_DangerButton-a26ae673.js",
-      "_DialogModal-7120c355.js",
-      "_InputError-a6d323b0.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_TextInput-6567bd51.js",
-      "_ActionMessage-dea61e32.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_InputLabel-b8661614.js",
-      "_FormSection-a096ac5f.js",
-      "_SelectorLanguage-f3ed0633.js"
+      "_DangerButton-bed1d422.js",
+      "_DialogModal-2d1709fd.js",
+      "_InputError-561c0941.js",
+      "_SecondaryButton-2076c17a.js",
+      "_TextInput-0cc2a3c3.js",
+      "_ActionMessage-53a38de8.js",
+      "_PrimaryButton-fec3364b.js",
+      "_InputLabel-692f0032.js",
+      "_FormSection-fee9c6fa.js",
+      "_SelectorLanguage-351769bd.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Profile/Show.vue"
   },
   "resources/js/Pages/Reservations/Admin/ApproveReservation.vue": {
-    "file": "assets/ApproveReservation-7e1cc5c3.js",
+    "file": "assets/ApproveReservation-ea71b55d.js",
     "imports": [
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/Pages/Reservations/Admin/FormApprove.vue",
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js",
-      "_moment-3a1226c9.js"
+      "_HomeIcon-2376233a.js",
+      "_moment-6523845a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservations/Admin/ApproveReservation.vue"
   },
-  "resources/js/Pages/Reservations/Admin/Form.vue": {
-    "file": "assets/Form-4f639f7c.js",
+  "resources/js/Pages/Reservations/Admin/Edit.vue": {
+    "file": "assets/Edit-f2a1098a.js",
     "imports": [
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
-      "_useFilterStatus-6c2bcb27.js",
+      "_AdminHeaderContent-97d7ad7c.js",
+      "resources/js/Pages/Reservations/Admin/Form.vue",
+      "_useFormReservation-87eb76c5.js",
       "resources/js/app.js",
-      "_HomeIcon-66ff7bbb.js",
-      "_MapPinIcon-0a27bbe8.js"
+      "_SelectorLanguage-351769bd.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_HomeIcon-2376233a.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_useFilterStatus-7a0089b1.js",
+      "_MapPinIcon-e953c4a0.js",
+      "_moment-6523845a.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Reservations/Admin/Edit.vue"
+  },
+  "resources/js/Pages/Reservations/Admin/Form.vue": {
+    "file": "assets/Form-05613b59.js",
+    "imports": [
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_useFilterStatus-7a0089b1.js",
+      "resources/js/app.js",
+      "_HomeIcon-2376233a.js",
+      "_MapPinIcon-e953c4a0.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservations/Admin/Form.vue"
   },
   "resources/js/Pages/Reservations/Admin/FormApprove.vue": {
-    "file": "assets/FormApprove-313ef4dc.js",
+    "file": "assets/FormApprove-9b3f5918.js",
     "imports": [
       "resources/js/app.js",
-      "_moment-3a1226c9.js"
+      "_moment-6523845a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservations/Admin/FormApprove.vue"
   },
   "resources/js/Pages/Reservations/Admin/Index.vue": {
-    "file": "assets/Index-933273dd.js",
+    "file": "assets/Index-215fc04d.js",
     "imports": [
-      "_AdminHeaderContent-70523e36.js",
-      "_XCircleIcon-4eac5f1f.js",
+      "_AdminHeaderContent-97d7ad7c.js",
+      "_XCircleIcon-ceaf1d92.js",
       "resources/js/app.js",
-      "_useFilterStatus-6c2bcb27.js",
-      "_AdminAddButton-0afecffc.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_useFilterStatus-7a0089b1.js",
+      "_AdminAddButton-e7831235.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js",
-      "_moment-3a1226c9.js"
+      "_HomeIcon-2376233a.js",
+      "_moment-6523845a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservations/Admin/Index.vue"
   },
   "resources/js/Pages/Reservations/Admin/New.vue": {
-    "file": "assets/New-6974ff71.js",
+    "file": "assets/New-08a6a3f3.js",
     "imports": [
       "resources/js/Pages/Reservations/Admin/Form.vue",
-      "_useFormReservation-c45c86f1.js",
-      "_AdminHeaderContent-70523e36.js",
+      "_useFormReservation-87eb76c5.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
-      "_useFilterStatus-6c2bcb27.js",
-      "_HomeIcon-66ff7bbb.js",
-      "_MapPinIcon-0a27bbe8.js",
-      "_moment-3a1226c9.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_useFilterStatus-7a0089b1.js",
+      "_HomeIcon-2376233a.js",
+      "_MapPinIcon-e953c4a0.js",
+      "_moment-6523845a.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
@@ -840,206 +859,206 @@
     "css": [
       "assets/Index-9c0bee8c.css"
     ],
-    "file": "assets/Index-3f502a37.js",
+    "file": "assets/Index-40198f35.js",
     "imports": [
-      "_HomeLayout-189bfdcd.js",
-      "_Notifications-7fdd9923.js",
+      "_HomeLayout-d5a93a2d.js",
+      "_Notifications-f5d130fe.js",
       "resources/js/app.js",
-      "_InputError-a6d323b0.js",
-      "_XCircleIcon-4eac5f1f.js",
-      "_useFilterStatus-6c2bcb27.js",
-      "_useFormReservation-c45c86f1.js",
+      "_InputError-561c0941.js",
+      "_XCircleIcon-ceaf1d92.js",
+      "_useFilterStatus-7a0089b1.js",
+      "_useFormReservation-87eb76c5.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js",
-      "_MapPinIcon-0a27bbe8.js",
-      "_SelectorLanguage-f3ed0633.js",
-      "_moment-3a1226c9.js"
+      "_HomeIcon-2376233a.js",
+      "_MapPinIcon-e953c4a0.js",
+      "_SelectorLanguage-351769bd.js",
+      "_moment-6523845a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Reservations/Index.vue"
   },
   "resources/js/Pages/Teams/Create.vue": {
-    "file": "assets/Create-c7daadec.js",
+    "file": "assets/Create-ea35f1f5.js",
     "imports": [
-      "_AppLayout-56f72658.js",
+      "_AppLayout-74b71e92.js",
       "resources/js/Pages/Teams/Partials/CreateTeamForm.vue",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_FormSection-a096ac5f.js",
-      "_SectionTitle-24997be1.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js"
+      "_FormSection-fee9c6fa.js",
+      "_SectionTitle-a019bf35.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Teams/Create.vue"
   },
   "resources/js/Pages/Teams/Partials/CreateTeamForm.vue": {
-    "file": "assets/CreateTeamForm-248ca96b.js",
+    "file": "assets/CreateTeamForm-f6cddece.js",
     "imports": [
       "resources/js/app.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Teams/Partials/CreateTeamForm.vue"
   },
   "resources/js/Pages/Teams/Partials/DeleteTeamForm.vue": {
-    "file": "assets/DeleteTeamForm-8bb6404d.js",
+    "file": "assets/DeleteTeamForm-dc02e65b.js",
     "imports": [
       "resources/js/app.js",
-      "_Modal-247bfaff.js",
-      "_ConfirmationModal-3f94eeb3.js",
-      "_DangerButton-a26ae673.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_SectionTitle-24997be1.js",
+      "_Modal-db6396bf.js",
+      "_ConfirmationModal-bd0d1a28.js",
+      "_DangerButton-bed1d422.js",
+      "_SecondaryButton-2076c17a.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Teams/Partials/DeleteTeamForm.vue"
   },
   "resources/js/Pages/Teams/Partials/TeamMemberManager.vue": {
-    "file": "assets/TeamMemberManager-67e41344.js",
+    "file": "assets/TeamMemberManager-c126ba9b.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_Modal-247bfaff.js",
-      "_ConfirmationModal-3f94eeb3.js",
-      "_DangerButton-a26ae673.js",
-      "_DialogModal-7120c355.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_SectionBorder-84de403c.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_Modal-db6396bf.js",
+      "_ConfirmationModal-bd0d1a28.js",
+      "_DangerButton-bed1d422.js",
+      "_DialogModal-2d1709fd.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_SecondaryButton-2076c17a.js",
+      "_SectionBorder-a91f4093.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Teams/Partials/TeamMemberManager.vue"
   },
   "resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue": {
-    "file": "assets/UpdateTeamNameForm-d10cef8f.js",
+    "file": "assets/UpdateTeamNameForm-bd980492.js",
     "imports": [
       "resources/js/app.js",
-      "_ActionMessage-dea61e32.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js",
-      "_SectionTitle-24997be1.js",
+      "_ActionMessage-53a38de8.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js",
+      "_SectionTitle-a019bf35.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue"
   },
   "resources/js/Pages/Teams/Show.vue": {
-    "file": "assets/Show-2da69c73.js",
+    "file": "assets/Show-3ea39ae1.js",
     "imports": [
-      "_AppLayout-56f72658.js",
+      "_AppLayout-74b71e92.js",
       "resources/js/Pages/Teams/Partials/DeleteTeamForm.vue",
-      "_SectionBorder-84de403c.js",
+      "_SectionBorder-a91f4093.js",
       "resources/js/Pages/Teams/Partials/TeamMemberManager.vue",
       "resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue",
       "resources/js/app.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_Modal-247bfaff.js",
-      "_SectionTitle-24997be1.js",
-      "_ConfirmationModal-3f94eeb3.js",
-      "_DangerButton-a26ae673.js",
-      "_SecondaryButton-5ccc3236.js",
-      "_ActionMessage-dea61e32.js",
-      "_DialogModal-7120c355.js",
-      "_FormSection-a096ac5f.js",
-      "_InputError-a6d323b0.js",
-      "_InputLabel-b8661614.js",
-      "_PrimaryButton-9f6f767d.js",
-      "_TextInput-6567bd51.js"
+      "_Modal-db6396bf.js",
+      "_SectionTitle-a019bf35.js",
+      "_ConfirmationModal-bd0d1a28.js",
+      "_DangerButton-bed1d422.js",
+      "_SecondaryButton-2076c17a.js",
+      "_ActionMessage-53a38de8.js",
+      "_DialogModal-2d1709fd.js",
+      "_FormSection-fee9c6fa.js",
+      "_InputError-561c0941.js",
+      "_InputLabel-692f0032.js",
+      "_PrimaryButton-fec3364b.js",
+      "_TextInput-0cc2a3c3.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Teams/Show.vue"
   },
   "resources/js/Pages/TermsOfService.vue": {
-    "file": "assets/TermsOfService-73c2f158.js",
+    "file": "assets/TermsOfService-2cb937ee.js",
     "imports": [
       "resources/js/app.js",
-      "_AuthenticationCardLogo-9042513e.js"
+      "_AuthenticationCardLogo-585a8ed7.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TermsOfService.vue"
   },
   "resources/js/Pages/TopDestinations/Edit.vue": {
-    "file": "assets/Edit-5b9b4d6a.js",
+    "file": "assets/Edit-53fd3123.js",
     "imports": [
       "resources/js/Pages/TopDestinations/Form.vue",
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TopDestinations/Edit.vue"
   },
   "resources/js/Pages/TopDestinations/Form.vue": {
-    "file": "assets/Form-7ad043d1.js",
+    "file": "assets/Form-4daf84f2.js",
     "imports": [
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js"
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TopDestinations/Form.vue"
   },
   "resources/js/Pages/TopDestinations/Index.vue": {
-    "file": "assets/Index-df718d98.js",
+    "file": "assets/Index-d06c87b6.js",
     "imports": [
-      "_AdminHeaderContent-70523e36.js",
-      "_AdminAddButton-0afecffc.js",
+      "_AdminHeaderContent-97d7ad7c.js",
+      "_AdminAddButton-e7831235.js",
       "resources/js/app.js",
-      "_HandThumbUpIcon-dc247b02.js",
-      "_TrashIcon-5e7661ce.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_HandThumbUpIcon-0a3d0b54.js",
+      "_TrashIcon-5eff805d.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TopDestinations/Index.vue"
   },
   "resources/js/Pages/TopDestinations/New.vue": {
-    "file": "assets/New-84a50d87.js",
+    "file": "assets/New-cf96e470.js",
     "imports": [
       "resources/js/Pages/TopDestinations/Form.vue",
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_Notifications-7fdd9923.js",
-      "_InputError-a6d323b0.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_Notifications-f5d130fe.js",
+      "_InputError-561c0941.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/TopDestinations/New.vue"
   },
   "resources/js/Pages/Users/Index.vue": {
-    "file": "assets/Index-9c82898c.js",
+    "file": "assets/Index-92b63ac2.js",
     "imports": [
-      "_AdminHeaderContent-70523e36.js",
+      "_AdminHeaderContent-97d7ad7c.js",
       "resources/js/app.js",
-      "_SelectorLanguage-f3ed0633.js",
+      "_SelectorLanguage-351769bd.js",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_HomeIcon-66ff7bbb.js"
+      "_HomeIcon-2376233a.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Users/Index.vue"
@@ -1052,7 +1071,7 @@
     "css": [
       "assets/Welcome-665689a9.css"
     ],
-    "file": "assets/Welcome-4dd048b4.js",
+    "file": "assets/Welcome-e7626322.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -1060,7 +1079,7 @@
     "src": "resources/js/Pages/Welcome.vue"
   },
   "resources/js/app.css": {
-    "file": "assets/app-9a989f5f.css",
+    "file": "assets/app-5da0a31c.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -1069,7 +1088,7 @@
       "assets/Lato-Regular-e82542ae.ttf"
     ],
     "css": [
-      "assets/app-9a989f5f.css"
+      "assets/app-5da0a31c.css"
     ],
     "dynamicImports": [
       "resources/js/Pages/API/Index.vue",
@@ -1102,6 +1121,7 @@
       "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
       "resources/js/Pages/Profile/Show.vue",
       "resources/js/Pages/Reservations/Admin/ApproveReservation.vue",
+      "resources/js/Pages/Reservations/Admin/Edit.vue",
       "resources/js/Pages/Reservations/Admin/Form.vue",
       "resources/js/Pages/Reservations/Admin/FormApprove.vue",
       "resources/js/Pages/Reservations/Admin/Index.vue",
@@ -1127,7 +1147,7 @@
       "lang/php_es.json",
       "lang/php_fr.json"
     ],
-    "file": "assets/app-0722d6d9.js",
+    "file": "assets/app-4de5419b.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

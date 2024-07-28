@@ -98,4 +98,12 @@ class ReservationServices
         $reservation->save();
         return $reservation;
     }
+    public function canceleStatus($id)
+    {
+
+        $reservation = Reservations::where('id', $id)->first();
+        $reservation->status = 'canceled';
+        $reservation->save();
+        return $reservation;
+    }
 }

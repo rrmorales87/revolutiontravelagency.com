@@ -11,7 +11,6 @@ const emit = defineEmits(['submit','cancel','fetchDestinations','fetchOrigins'])
 import useFilterStatus from "../common/useFilterStatus";
 import {wTrans} from "laravel-vue-i18n";
 const form = ref(props.reservation);
-import {router} from "@inertiajs/vue3";
 const { filterStatus } = useFilterStatus();
 const status = computed(()=>filterStatus());
 const totalAmount = computed(()=>{

@@ -307,11 +307,14 @@
     "Client": "Cliente",
     "Status": "Estado",
     "tooltipCheckConfirm": "Confirmar la reservación",
+    "tooltipCheckCancel": "Cancelar la reservations",
     "Draft": "Borrador",
     "Canceled": "Cancelado",
     "Confirmed": "Confirmado",
     "Approved": "Aprobado",
     "Approve": "Aprobar",
-    "Approve reservation": "Aprovar reservación"
+    "Approve reservation": "Aprovar reservación",
+    "Are you sure to cancel this?": "Está seguro que desea cancelar la reservación?",
+    "Yes": "Si"
 
 }
