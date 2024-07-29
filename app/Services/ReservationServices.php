@@ -49,7 +49,8 @@ class ReservationServices
        $reservation->time = $request->time;
        if($request->time_end) $reservation->time_end = $request->time_end;
        if($request->status) $reservation->status = $request->status;
-       return $reservation->save();
+       $reservation->save();
+       return $reservation;
    }
     public function create(Request $request)
     {

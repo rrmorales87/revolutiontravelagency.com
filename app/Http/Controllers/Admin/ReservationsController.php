@@ -7,10 +7,12 @@ use App\Http\Resources\OriginsCollections;
 use App\Http\Resources\ReservationResource;
 use App\Http\Resources\ReservationsCollections;
 use App\Http\Resources\TopDestinationsCollection;
+use App\Notifications\ReservationCreated;
 use App\Services\OriginServices;
 use App\Services\ReservationServices;
 use App\Services\TopDestinations;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
 
 class ReservationsController extends Controller
@@ -51,7 +53,7 @@ class ReservationsController extends Controller
            $this->reservationService->approveStatus($request->id,$request->price,$request->time);
             return redirect()->route('reservations.admin.index');
         }catch (\Exception $exception){
-            return redirect()->back(['error'=>$exception->getMessage()]);
+            return redirect()->back()->withErrors(['msg'=>$exception->getMessage()]);
         }
 
     }
@@ -74,10 +76,13 @@ class ReservationsController extends Controller
     public function storeReservation(Request $request)
     {
         try {
-            $this->reservationService->create($request);
+            $reservation = $this->reservationService->create($request);
+            $resource = new ReservationResource($reservation);
+            Notification::route('mail',$resource->contact)
+                ->notify(new ReservationCreated($resource));
             return redirect()->route('reservations.admin.index');
         }catch (\Exception $exception){
-            return redirect()->back(['error'=>$exception->getMessage()]);
+            return redirect()->back()->withErrors(['msg'=>$exception->getMessage()]);
         }
     }
 
@@ -103,7 +108,7 @@ class ReservationsController extends Controller
             $this->reservationService->edit($request,$request->id);
             return redirect()->route('reservations.admin.index');
         }catch (\Exception $exception){
-            return redirect()->back(['error'=>$exception->getMessage()]);
+            return redirect()->back()->withErrors(['msg'=>$exception->getMessage()]);
         }
     }
     public function canceledReservation($id)
@@ -112,7 +117,7 @@ class ReservationsController extends Controller
             $this->reservationService->canceleStatus($id);
             return redirect()->route('reservations.admin.index');
         }catch (\Exception $exception){
-            return redirect()->back(['error'=>$exception->getMessage()]);
+            return redirect()->back()->withErrors(['msg'=>$exception->getMessage()]);
         }
     }
 }
