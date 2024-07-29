@@ -39,12 +39,12 @@ class ReservationCreated extends Notification
      */
     public function toMail(object $notifiable)
     {
-        /*return (new MailMessage)
+        return (new MailMessage)
                 ->subject(__('newRequest').$this->reservation->slug)
-            ->view('emails.reserva_confirmada', ['reserva' => $this->reservation]);*/
+            ->view('emails.reservation_created', ['reserva' => $this->reservation]);
 
-        return Mail::to($this->reservation->client->contact)
-            ->send(new CreateReservationMail($this->reservation));
+        /*return Mail::to($this->reservation->client->contact)
+            ->send(new CreateReservationMail($this->reservation));*/
     }
 
     /**

@@ -50,7 +50,7 @@ class CreateReservationMail extends Mailable
         $this->mailersend(
             template_id: null,
             variables: [
-                new Variable($to, ['name' => $this->reservation->client->name])
+                new Variable($to, ['name' => $this->reservation->client->name,'reservation' => $this->reservation]),
             ],
             precedenceBulkHeader: true,
             sendAt: new Carbon(),
