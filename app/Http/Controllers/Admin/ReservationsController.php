@@ -79,7 +79,7 @@ class ReservationsController extends Controller
             $reservation = $this->reservationService->create($request);
             $resource = new ReservationResource($reservation);
             Notification::route('mail',$resource->client->contact)
-                ->notify(new ReservationCreated($resource));
+                ->notifyNow(new ReservationCreated($resource));
             return redirect()->route('reservations.admin.index');
         }catch (\Exception $exception){
             return redirect()->back()->withErrors(['msg'=>$exception->getMessage()]);

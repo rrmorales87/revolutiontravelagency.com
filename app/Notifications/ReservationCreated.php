@@ -10,7 +10,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Mail;
 
-class ReservationCreated extends Notification
+class ReservationCreated extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -40,8 +40,8 @@ class ReservationCreated extends Notification
     public function toMail(object $notifiable)
     {
         return (new MailMessage)
-                ->subject(__('newRequest').$this->reservation->slug)
-            ->view('emails.reservation_created', ['reserva' => $this->reservation]);
+                ->subject(__('newRequest').'-'.strtoupper($this->reservation->slug))
+            ->view('emails.reservation_created', ['reservation' => $this->reservation]);
 
         /*return Mail::to($this->reservation->client->contact)
             ->send(new CreateReservationMail($this->reservation));*/

@@ -69,6 +69,9 @@ Route::middleware([
         Route::post('/admin/reservations/approve', [\App\Http\Controllers\Admin\ReservationsController::class, 'approveReservation'])->name('reservations.admin.approve');
         Route::post('/admin/reservations/store', [\App\Http\Controllers\Admin\ReservationsController::class, 'storeReservation'])->name('reservations.admin.store');
         Route::post('/admin/reservations/update', [\App\Http\Controllers\Admin\ReservationsController::class, 'updateReservation'])->name('reservations.admin.update');
+
+        Route::get('/test-email',[\App\Http\Controllers\Admin\TestMail::class,'index'])->name('test-email');
+
     });
 });
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
