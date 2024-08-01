@@ -1,5 +1,5 @@
 <script setup>
-import { HomeIcon, ClipboardDocumentCheckIcon, UsersIcon, GlobeAmericasIcon, PaperAirplaneIcon } from '@heroicons/vue/24/outline'
+import { HomeIcon, ClipboardDocumentCheckIcon, UsersIcon, GlobeAmericasIcon, PaperAirplaneIcon, UserCircleIcon} from '@heroicons/vue/24/outline'
 import {computed, ref} from "vue";
 import {router, usePage} from "@inertiajs/vue3";
 import { useTawkto } from "../module/useTawkto";
@@ -98,7 +98,7 @@ const logout = (e)=>{
 
                 <ClipboardDocumentCheckIcon class="w-8 text-gray-950" />
 
-                <span :class="{ 'lg:hidden': !isSidebarOpen }">Dashboard</span>
+                <span :class="{ 'lg:hidden': !isSidebarOpen }">{{$t('Reservations')}}</span>
               </a>
             </li>
             <li>
@@ -135,6 +135,18 @@ const logout = (e)=>{
                 <PaperAirplaneIcon class="w-8 text-gray-950" />
 
                 <span :class="{ 'lg:hidden': !isSidebarOpen }">{{ $t('origins')}}</span>
+              </a>
+            </li>
+            <li>
+              <a
+                  :href="route('support.admin.index')"
+                  class="flex items-center p-2 space-x-2 rounded-md hover:bg-gray-100"
+                  :class="{'justify-center': !isSidebarOpen}"
+              >
+
+                <UserCircleIcon class="w-8 text-gray-950" />
+
+                <span :class="{ 'lg:hidden': !isSidebarOpen }">{{ $t('support')}}</span>
               </a>
             </li>
             <!-- Sidebar Links... -->

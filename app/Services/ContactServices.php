@@ -13,4 +13,9 @@ class ContactServices
         return $concat->save();
     }
 
+    public function getAll()
+    {
+        return Contact::all();
+    }
+
 }

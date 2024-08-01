@@ -72,6 +72,9 @@ Route::middleware([
 
         Route::get('/test-email',[\App\Http\Controllers\Admin\TestMail::class,'index'])->name('test-email');
 
+        //Contact us
+        Route::get('/admin/support', [\App\Http\Controllers\Admin\ContactController::class, 'index'])->name('support.admin.index');
+
     });
 });
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('index');
