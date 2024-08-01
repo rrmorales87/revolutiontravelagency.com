@@ -65,4 +65,12 @@ class TopDestinations
         return $destiny;
     }
 
+    public function addLike($id)
+    {
+        $dest = \App\Models\TopDestinations::where('id',$id)->first();
+        $dest->likes = $dest->likes+1;
+        $dest->save();
+        return $dest;
+    }
+
 }

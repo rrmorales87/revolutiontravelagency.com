@@ -89,3 +89,4 @@ Route::get('/aboutUs', [\App\Http\Controllers\ContactUsController::class, 'index
 Route::post('/support_create', [\App\Http\Controllers\ContactUsController::class, 'create'])->name('support_create');
 Route::get('/pprivacy', [\App\Http\Controllers\BuilderController::class, 'index'])->name('ppprivacity');
 Route::get('/term', [\App\Http\Controllers\BuilderController::class, 'index'])->name('term');
+Route::post('/addlike/{id}', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'addLike'])->name('addlike');

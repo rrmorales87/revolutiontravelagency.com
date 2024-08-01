@@ -104,5 +104,24 @@ class TopDestinationsController extends Controller
 
     }
 
+    public function addLike($id):RedirectResponse
+    {
+
+        try {
+           $this->service->addLike($id);
+           return back();
+
+        } catch (\Exception $exception)
+        {
+            Log::error($exception);
+
+
+            return back()->with(["seccess"=>false,"message"=>__('destination.error_delete')]);
+
+        }
+
+
+    }
+
 
 }
