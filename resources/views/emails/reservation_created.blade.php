@@ -1,4 +1,3 @@
-
 @extends('emails.layout')
 @section('body')
     @if(isset($reservation) && isset($reservation->client) )
@@ -6,7 +5,7 @@
         <div class="w-full flex-col items-center">
             <div class="min-w-96 m-12 py-3 px-5 rounded-xl bg-[#EDF2F8] flex flex-col items-center ">
                 <div class="flex gap-1">
-                    <img class="w-4"  src="{{ asset('storage/icon/logo.webp') }}" alt="logo">
+                    <img class="w-4"  src="{{ asset('/icons/logo.webp') }}" alt="logo">
                     <h1 class="text-2xl font-bold @apply font-Musticapro ">{{ config('app.name', 'Laravel') }}</h1>
                 </div>
                 <div class="flex @apply font-Lato mt-5 text-xl">

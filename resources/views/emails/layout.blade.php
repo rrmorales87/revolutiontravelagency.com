@@ -6,7 +6,9 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link href="../../../build/assets/css/app.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 
 
 </head>
