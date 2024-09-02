@@ -21,3 +21,5 @@ yarn.lock
 /package-lock.json
 /composer.lock
 /.editorconfig
+maizzle
+maizzle/*

@@ -19,6 +19,6 @@ class TestMail extends Controller
     {
         $resources = $this->service->getById(1000000);
         if ( isset($resources->client))
-            return view('emails.reservation_created',['reservation' => $resources]);
+            return view('emails.request',['reservation' => $resources]);
     }
 }

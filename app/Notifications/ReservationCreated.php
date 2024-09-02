@@ -39,13 +39,13 @@ class ReservationCreated extends Notification implements ShouldQueue
      */
     public function toMail(object $notifiable)
     {
-       /*return (new MailMessage)
+       return (new MailMessage)
             ->subject(__('newRequest').'-'.strtoupper($this->reservation->slug))
-            ->view('emails.reservation_created', ['reservation' => $this->reservation])
-           ->;*/
+            ->view('emails.request', ['reservation' => $this->reservation]);
 
-        Mail::to($this->reservation->client->contact)
-          ->queue(new CreateReservationMail($this->reservation));
+
+       /* Mail::to($this->reservation->client->contact)
+          ->queue(new CreateReservationMail($this->reservation));*/
 
 
     }

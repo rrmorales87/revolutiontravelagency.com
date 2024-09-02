@@ -42,7 +42,7 @@ class CreateReservationMail extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            view: 'emails.reservation_created',
+            view: 'emails.request',
             with: ['reservation' => $this->reservation],
 
         );
