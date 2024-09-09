@@ -20,31 +20,6 @@
     </style>
     <![endif]-->
     <style>
-        .my-5 {
-            margin-top: 20px !important;
-            margin-bottom: 20px !important;
-        }
-        .flex {
-            display: flex !important;
-        }
-        .h-2 {
-            height: 8px !important;
-        }
-        .flex-col {
-            flex-direction: column !important;
-        }
-        .items-center {
-            align-items: center !important;
-        }
-        .justify-end {
-            justify-content: flex-end !important;
-        }
-        .justify-center {
-            justify-content: center !important;
-        }
-        .justify-between {
-            justify-content: space-between !important;
-        }
         @media screen {
             @font-face {
                 font-family: "Musticapro";
@@ -102,22 +77,78 @@
                         <tbody>
                         <tr style="font-family: Musticapro;">
                             <td style="text-align: left; gap: 2px;">
-                                <span>{{ __('Order ID') }}:</span>
-                                <span> {{ $reservation->slug }}</span>
+                                <div>{{ __('Order ID') }}:</div>
+                                <div style="text-transform:uppercase;"> {{ $reservation->slug }}</div>
                             </td>
                             <td style="gap: 8px; text-align: right">
-                                <span>{{ __('Billed to') }}:</span>
-                                <span> {{ $reservation->client->contact }}</span>
+                                <div>{{ __('Billed to') }}:</div>
+                                <div> {{ $reservation->client->contact }}</div>
                             </td>
                         </tr>
                         <tr style="margin-top: 8px; font-family: Musticapro;">
                             <td style="text-align: left; gap: 2px;">
-                                <span>{{ __('Date') }}:</span>
-                                <span>{{ \Carbon\Carbon::parse($reservation->date)->format('d/m/Y ') }}</span>
+                                <div>{{ __('totalTravelers') }}:</div>
+                                <div>{{ $reservation->travellers }}</div>
                             </td>
                             <td style="text-align: right; gap: 2px;">
-                                <span> {{ __('Circuit') }}:</span>
-                                <span> {{ $reservation->origin->name }}-{{ $reservation->destination->name  }}</span>
+                                <div> {{ __('Circuit') }}:</div>
+                                <div> {{ $reservation->origin->name }}-{{ $reservation->destination->name  }}</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 24px; margin-bottom: 24px; background-color: #EDF2F8; padding: 8px; text-align: center; font-family: Musticapro; font-weight: 700;">
+                        {{ __("Trip information") }}
+                    </div>
+                    <table style="margin-top: 20px; width: 100%;" cellpadding="0" cellspacing="0" role="none">
+                        <tbody>
+                        <tr style="font-family: Musticapro;">
+                            <td style="text-align: left; gap: 2px;">
+                                <div>{{ __('Date') }}:</div>
+                                <div>{{ \Carbon\Carbon::parse($reservation->date)->format('d/m/Y ') }}</div>
+                            </td>
+                            <td style="gap: 8px; text-align: right;">
+                                <div>{{ __('travelTime') }}:</div>
+                                <div>{{ \Carbon\Carbon::parse($reservation->time)->format('h:i A') }}</div>
+                            </td>
+                        </tr>
+                        <tr style="margin-top: 8px; font-family: Musticapro;">
+                            <td style="text-align: left; gap: 2px;">
+                                <div>{{ __('checkin') }}:</div>
+                                <div>{{ \Carbon\Carbon::parse($reservation->time_end)->format('h:i A') }}</div>
+                            </td>
+                            <td style="text-align: right; gap: 2px;">
+                                <div>{{ __('Duration trip') }}:</div>
+                                <div>{{ \Carbon\Carbon::parse($reservation->time)->diffForHumans(\Carbon\Carbon::parse($reservation->time_end)) }}</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 24px; margin-bottom: 24px; background-color: #EDF2F8; padding: 8px; text-align: center; font-family: Musticapro; font-weight: 700;">
+                        {{ __("Payment Breakdown") }}
+                    </div>
+                    <table style="margin-top: 20px; width: 100%;" cellpadding="0" cellspacing="0" role="none">
+                        <tbody>
+                        <tr style="font-family: Musticapro;">
+                            <td style="text-align: left; gap: 2px;">
+                                <div>{{ __('feeTrip') }}:</div>
+                                <div>{{ Currency::currency("USD")->format($reservation->price)   }}</div>
+                            </td>
+                            <td style="gap: 8px; text-align: right;">
+                                <div>{{ __('taxes') }}:</div>
+                                <div>{{ Currency::currency("USD")->format($reservation->tax)   }}</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 8px; margin-bottom: 8px; background-color: #EDF2F8; padding: 8px; text-align: center; font-family: Musticapro; font-weight: 700">
+                    </div>
+                    <table style="margin-top: 20px; width: 100%;" cellpadding="0" cellspacing="0" role="none">
+                        <tbody>
+                        <tr style="font-family: Musticapro;">
+                            <td style="gap: 8px; text-align: right; font-size: 24px; font-weight: 700;">
+                                <div>{{ __('totalAmount') }}:</div>
+                                <div style="text-align: right;">{{ Currency::currency("USD")->format($reservation->total_amount)   }}</div>
                             </td>
                         </tr>
                         </tbody>
@@ -128,15 +159,15 @@
         <tr>
             <td style="text-align: center;">
                 <div style="font-family: Lato;">
-                    <p>{{__('Do you need help?')}} <a style="color: #2563eb; text-decoration: underline">www.revolutiontravelagency.com</a></p>
+                    <p>{{__('Do you need help?')}} <a href="{{route('support')}}" style="color: #2563eb; text-decoration: underline">www.revolutiontravelagency.com</a></p>
                 </div>
                 <div style="font-family: Lato;">
                     <p><span style="margin-right: 4px">&copy;</span>{{__('Revolution Travel Agency. All rights reserved')}}</p>
                 </div>
                 <div style="margin-top: 20px; gap: 4px; font-family: Lato">
-                    <a style="color: #2563eb; text-decoration: underline;">{{__('Terms of Service')}}</a>
+                    <a href="{{route('term')}}" style="color: #2563eb; text-decoration: underline;">{{__('Terms of Service')}}</a>
                     <span>|<span>
-                <a style="color: #2563eb; text-decoration: underline;">{{__('Privacy Policy')}}</a>
+                <a href="{{route('term')}}" style="color: #2563eb; text-decoration: underline;">{{__('Privacy Policy')}}</a>
             </span> </span>
                 </div>
             </td>
