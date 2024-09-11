@@ -5,15 +5,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\OriginsCollections;
 use App\Http\Resources\OriginsResources;
+use App\Http\Resources\ReservationResource;
 use App\Http\Resources\ReservationsCollections;
 use App\Http\Resources\TopDestinationResource;
 use App\Http\Resources\TopDestinationsCollection;
+use App\Notifications\ReservationCreated;
 use App\Services\OriginServices;
 use App\Services\ReservationServices;
 use App\Services\TopDestinations;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Notification;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -57,7 +60,10 @@ class ReservationsController extends Controller
     {
 
         try {
-            $this->reservation->create($request);
+            $reservation = $this->reservation->create($request);
+            $resource = new ReservationResource($reservation);
+            Notification::route('mail',$resource->client->contact)
+                ->notify(new ReservationCreated($resource));
         } catch (\Error $e) {
             Log::error($e->getMessage());
         }
