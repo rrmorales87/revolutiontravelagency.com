@@ -20,28 +20,23 @@
     </style>
     <![endif]-->
     <style>
-        @media screen {
-            @font-face {
-                font-family: "Musticapro";
-                src: local("Musticapro"), url("../fonts/MusticaPro-SemiBold.otf") format('OTF');
-            }
-            @font-face {
-                font-family: "Lato";
-                src: local("Lato"), url("../fonts/Lato-Regular.ttf") format('TTF');
-            }
+        @font-face {
+            font-family: "Musticapro";
+            src: local("Musticapro"), url("../fonts/MusticaPro-SemiBold.otf") format('OTF');
+        }
+        @font-face {
+            font-family: "Lato";
+            src: local("Lato"), url("./fonts/Lato-Regular.ttf") format('TTF');
         }
     </style>
 </head>
 <body>
-<div style="margin: 48px; border-radius: 12px; background-color: #EDF2F8; padding: 12px 20px">
-    <table style="width: 100%" cellpadding="0" cellspacing="0" role="none">
+<div style="margin: 24px; border-radius: 12px; background-color: #EDF2F8; padding: 12px 8px">
+    <table style="width: 100%;" cellpadding="0" cellspacing="0" role="none">
         <tbody>
         <tr>
             <td style="text-align: center;">
-                <div style="gap: 20px">
-                    <span><img src="{{asset('icons/logo.webp')}}" alt="logo" style="width: 16px"></span>
-                    <span style="font-family: Musticapro; font-size: 24px; font-weight: 700">{{ config('app.name', 'Laravel') }}</span>
-                </div>
+                <img src="{{asset('icons/RtravelLogo.png')}}" alt="logo">
                 <div style="margin-top: 8px; font-family: Lato; font-size: 20px">
                     <p>
                         {{ __('Thanks for traveling with us') }}
@@ -54,7 +49,7 @@
                 <div style="border-radius: 12px; background-color: #FFFFFF; padding: 20px">
                     <table style="margin-top: 20px; width: 100%" cellpadding="0" cellspacing="0" role="none">
                         <tbody>
-                        <tr style="font-family: Musticapro;">
+                        <tr style="font-family: Musticapro">
                             <td style="text-align: left;">
                                 <span style="margin-right: 8px">{{ __('Hellos!') }}</span>
                                 <span>{{ $reservation->client->name }}:</span>
@@ -146,7 +141,7 @@
                     <table style="margin-top: 20px; width: 100%;" cellpadding="0" cellspacing="0" role="none">
                         <tbody>
                         <tr style="font-family: Musticapro;">
-                            <td style="gap: 8px; text-align: right; font-size: 24px; font-weight: 700;">
+                            <td style="gap: 8px; text-align: right; font-size: 24px; font-weight: 700">
                                 <div>{{ __('totalAmount') }}:</div>
                                 <div style="text-align: right;">{{ Currency::currency("USD")->format($reservation->total_amount)   }}</div>
                             </td>
