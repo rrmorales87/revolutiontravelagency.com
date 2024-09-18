@@ -10,12 +10,14 @@
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.6.8",
         "laravel/framework": "^10.8",
+        "laravel/horizon": "^5.28",
         "laravel/jetstream": "^3.1",
         "laravel/sanctum": "^3.2",
         "laravel/socialite": "^5.12",
         "laravel/tinker": "^2.8",
         "magarrent/laravel-currency-formatter": "^1.0",
         "mailersend/laravel-driver": "^2.6",
+        "predis/predis": "^2.2",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
