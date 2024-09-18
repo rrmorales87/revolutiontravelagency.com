@@ -22,21 +22,23 @@
     <style>
         @font-face {
             font-family: "Musticapro";
-            src: local("Musticapro"), url("../fonts/MusticaPro-SemiBold.otf") format('OTF');
+            src: local("Musticapro"),
+            url("{{asset('fonts/MusticaPro-SemiBold.otf')}}") format('OTF');
         }
         @font-face {
             font-family: "Lato";
-            src: local("Lato"), url("./fonts/Lato-Regular.ttf") format('TTF');
+            src: local("Lato"),
+            url("{{asset('fonts/Lato-Regular.ttf')}}") format('TTF');
         }
     </style>
 </head>
 <body>
-<div style="margin: 24px; border-radius: 12px; background-color: #EDF2F8; padding: 12px 8px">
-    <table style="width: 100%;" cellpadding="0" cellspacing="0" role="none">
+<div style="width: 50rem; border-radius: 12px; background-color: #EDF2F8; padding: 12px 20px; text-align: center">
+    <table style="width:100%;" cellpadding="0" cellspacing="0" role="none">
         <tbody>
         <tr>
             <td style="text-align: center;">
-                <img src="{{asset('icons/RtravelLogo.png')}}" alt="logo">
+                <img src="{{asset('icons/RtravelLogo.png')}}" alt="logo" style="width: 192px">
                 <div style="margin-top: 8px; font-family: Lato; font-size: 20px">
                     <p>
                         {{ __('Thanks for traveling with us') }}
@@ -46,7 +48,7 @@
         </tr>
         <tr>
             <td>
-                <div style="border-radius: 12px; background-color: #FFFFFF; padding: 20px">
+                <div style="border-radius: 12px; background-color: #FFFFFF; padding: 32px">
                     <table style="margin-top: 20px; width: 100%" cellpadding="0" cellspacing="0" role="none">
                         <tbody>
                         <tr style="font-family: Musticapro">
