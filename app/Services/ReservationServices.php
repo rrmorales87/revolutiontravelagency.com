@@ -7,6 +7,7 @@ use App\Models\Origins;
 use App\Models\Reservations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\TopDestinations;
 
 class ReservationServices
 {
@@ -20,7 +21,7 @@ class ReservationServices
            $client->save();
        }
 
-
+       
        $origin = Origins::where('name', $request->origin)->first();
        if (!$origin) {
            $origin = new Origins();
@@ -29,10 +30,15 @@ class ReservationServices
            $origin->location = '';
            $origin->save();
        }
-       $destiny = \App\Models\TopDestinations::where('name', $request->destiny)->first();
+      
+       $destiny = TopDestinations::where('name', $request->destiny)->first();
+       
        if (!$destiny) {
-           $destiny = new \App\Models\TopDestinations();
-           $destiny->name = $request->destiny;
+           $destiny = new TopDestinations();
+           $destiny->name = $request->destiny;  
+           $destiny->likes = 0;
+           $destiny->price = 0;
+           $destiny->photo = "whitout-image.jpg";
            $destiny->save();
        }
 

@@ -30,6 +30,13 @@ class TopDestinations
     public function getAll(){
         return \App\Models\TopDestinations::all();
     }
+    /**
+     * @retun 
+     */
+    public function getDestinationWithoutImagen()
+    {
+        return \App\Models\TopDestinations::where('price','>',0)->get();
+    }
 
     /**
      * @param $id
