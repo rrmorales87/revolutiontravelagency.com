@@ -3,7 +3,7 @@ import {HandThumbUpIcon} from "@heroicons/vue/24/outline";
 import {router} from "@inertiajs/vue3";
 const props = defineProps(['destination']);
 const  addLike = (id) => {
-router.post(route('addlike',id));
+router.post(route('addlike',id),{},{ preserveScroll: true});
 }
 const goToReservation = destiny => {
   console.log("Destiny",destiny);
