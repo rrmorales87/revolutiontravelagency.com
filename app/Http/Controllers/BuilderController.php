@@ -14,6 +14,7 @@ class BuilderController extends Controller
      */
     public function index(): Response
     {
+        
         return Inertia::render('Builder/Index', []);
     }
 }
