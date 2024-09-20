@@ -135,11 +135,11 @@ watch(()=>store.state.locale,(newVal)=>{
   <div class="fallow mt-10 border-b pb-5">
     <div class="icons">
         <h1>{{$t("fallow")}} {{$t("agency-name")}}</h1>
-        <img src="/storage/icon/linkedin-icon.svg" alt="linkedin">
+        <!-- <img src="/storage/icon/linkedin-icon.svg" alt="linkedin"> -->
         <a href="https://www.facebook.com/share/X3JeMJxXtGaiLjQz/?mibextid=qi2Omg">
           <img src="/storage/icon/facebook.svg" alt="facebook">
         </a>
-        <img src="/storage/icon/instagram.svg" alt="instagram">
+        <!-- <img src="/storage/icon/instagram.svg" alt="instagram"> -->
     </div>
     <div class="underline underline-offset-1">
         {{formatLocale(showLocale)}}

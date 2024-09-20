@@ -90,6 +90,6 @@ Route::get('/change-locale', [\App\Http\Controllers\LanguageController::class, '
 Route::get('/support', [\App\Http\Controllers\ContactUsController::class, 'index'])->name('support');
 Route::get('/aboutUs', [\App\Http\Controllers\ContactUsController::class, 'index'])->name('abouts');
 Route::post('/support_create', [\App\Http\Controllers\ContactUsController::class, 'create'])->name('support_create');
-Route::get('/pprivacy', [\App\Http\Controllers\BuilderController::class, 'index'])->name('ppprivacity');
-Route::get('/term', [\App\Http\Controllers\BuilderController::class, 'index'])->name('term');
+Route::get('/pprivacy', [\App\Http\Controllers\PrivacyPolicyController::class, 'index'])->name('ppprivacity');
+Route::get('/term', [\App\Http\Controllers\TermController::class, 'index'])->name('term');
 Route::post('/addlike/{id}', [\App\Http\Controllers\Admin\TopDestinationsController::class, 'addLike'])->name('addlike');
