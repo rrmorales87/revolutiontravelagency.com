@@ -9,7 +9,7 @@
 - **Marketing:** Conducting marketing and advertising campaigns.
 ## **Legal Basis for Processing:**
 - **Consent:** Obtaining explicit consent from the user for the processing of their data.
-**Contract Performance:** Processing data to fulfill the booking made.
+- **Contract Performance:** Processing data to fulfill the booking made.
 - **Legitimate Interest:** Using data to improve services and personalize the user experience.
 ## **Data Recipients:**
 - **Service Providers:** Taxis, hotels, etc.
