@@ -1,1 +1,0 @@
-import{o as t,d as s,f as a,a as o,t as n,F as c,g as m}from"./app-bdc1dccc.js";const d={class:"text-sm text-red-600"},g={__name:"InputError",props:{errors:Array},setup(e){return(i,u)=>e.errors&&e.errors.length>0?(t(!0),s(c,{key:0},a(e.errors,r=>(t(),s("div",{key:r.$uid},[o("p",d,n(r.$message),1)]))),128)):m("",!0)}};export{g as _};
