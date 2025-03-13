@@ -50,6 +50,7 @@ const querySearchAsyncOrigins = (queryString, cb) => {
   <div class=" flex flex-col p-2 ">
     <div class="form flex flex-col w-80">
       <el-autocomplete
+          rounded
           v-model="form.origin"
           :fetch-suggestions="querySearchAsyncOrigins"
           :placeholder="$t('inputOrigin')">

@@ -7,6 +7,7 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { ZiggyVue } from '../../vendor/tightenco/ziggy/dist/vue.m';
 import { i18nVue } from 'laravel-vue-i18n';
 import ElementPlus from 'element-plus';
+import HighchartsVue from 'highcharts-vue';
 import 'element-plus/dist/index.css';
 import store from '@/store/index';
 import TawkMessengerVue from '@tawk.to/tawk-messenger-vue-3';
@@ -38,6 +39,7 @@ createInertiaApp({
                 widgetId : widgetId
             })
             .use(store)
+            .use(HighchartsVue)
             .mount(el);
 
     },

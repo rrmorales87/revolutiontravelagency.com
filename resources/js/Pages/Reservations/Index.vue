@@ -143,6 +143,7 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
         </div>
         <div class="row gap-4">
           <div class="w-auto flex-col">
+            <label for="time">{{$t('date') }}:</label>
             <el-date-picker
                 v-model="formTravel.date"
                 name="date"
@@ -157,6 +158,7 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
           </div>
 
           <div class="w-auto flex-col">
+            <label for="time">{{$t('hours') }}:</label>
             <el-time-picker
                 v-model="formTravel.time"
                 arrow-control
@@ -173,6 +175,7 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
         </div>
 
         <div class="w-auto flex-col">
+          <label for="travellers">{{ $t('totalTravelers') }}:</label>
           <el-input-number name="travellers"  v-model="formTravel.travellers" :min="1" size="large" :placeholder="$t('totalTravelers')" class="w-fit">
             <template #decrease-icon>
 
@@ -191,12 +194,14 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
           </el-input-number>
           <InputError :errors="$v.travellers.$errors"/>
         </div>
-        <div class="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">Datos de contacto</div>
+        <div class="py-3 flex items-center text-sm  before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6 dark:text-[#0F3B53] dark:before:border-neutral-600 dark:after:border-neutral-600">Datos de contacto</div>
         <div class="w-auto flex-col">
+          <label for="name">{{$t('whoIs') }}:</label>
           <el-input :placeholder="$t('whoIs')" name="name" v-model="formTravel.name" />
           <InputError :errors="$v.name.$errors"/>
         </div>
         <div class="w-auto flex-col">
+          <label for="contact">{{$t('contactTravel') }}:</label>
           <el-input :placeholder="$t('contactTravel')" name="contact" v-model="formTravel.contact"/>
           <InputError class="mt-0" :errors="$v.contact.$errors"/>
         </div>
@@ -279,6 +284,17 @@ const {filterStatus,filterStatusHandler} = useFilterStatus();
                       <div class="flex-col" v-if="formTravel.time_end">
                         <div class="text-xs uppercase font-Lato">{{ $t("checkin") }}</div>
                          <div class="text-md">{{ moment(formTravel.time_end,"HH:mm:ss").format('LT') }}</div>
+                      </div>
+                      
+                  </div>
+                  
+              </div>
+              <div class="flex item-center border-b-2 py-4">
+                  <div class="columns-1 w-full">
+                    
+                      <div class="flex-col" v-if="formTravel.status">
+                        <div class="text-xs uppercase font-Lato">{{ $t("Status") }}</div>
+                         <div class="text-md">{{$t(`${formTravel.status.charAt(0).toLocaleUpperCase() + formTravel.status.slice(1) }`) }}</div>
                       </div>
                   </div>
                   

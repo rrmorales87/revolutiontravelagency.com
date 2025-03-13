@@ -8,6 +8,9 @@ use App\Http\Resources\ReservationResource;
 use App\Http\Resources\ReservationsCollections;
 use App\Http\Resources\TopDestinationsCollection;
 use App\Notifications\ReservationCreated;
+use App\Notifications\ReservationConfirmt;
+use App\Notifications\ReservationCanceled;
+use App\Notifications\ReservationApprove;
 use App\Services\OriginServices;
 use App\Services\ReservationServices;
 use App\Services\TopDestinations;
@@ -78,8 +81,19 @@ class ReservationsController extends Controller
         try {
             $reservation = $this->reservationService->create($request);
             $resource = new ReservationResource($reservation);
+            switch($resource->status){
+                case 'draf': $email = new ReservationCreated($resource);
+                break;
+                case 'confirmed': $email = new ReservationConfirmt($resource);
+                break;
+                case 'approved': $email =  new ReservationApprove($resource);
+                break;
+                case 'canceled': $email = new ReservationCanceled($resource);
+                break;
+                default: $email = new ReservationCreated($resource);
+            }
             Notification::route('mail',$resource->client->contact)
-                ->notify(new ReservationCreated($resource));
+                ->notify($email);
             return redirect()->route('reservations.admin.index');
         }catch (\Exception $exception){
             return redirect()->back()->withErrors(['msg'=>$exception->getMessage()]);

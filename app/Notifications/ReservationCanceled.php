@@ -2,26 +2,21 @@
 
 namespace App\Notifications;
 
-use App\Http\Resources\ReservationResource;
-use App\Mail\CreateReservationMail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-use Illuminate\Support\Facades\Mail;
 
-class ReservationCreated extends Notification implements ShouldQueue
+class ReservationCanceled extends Notification
 {
     use Queueable;
-
-    private $reservation;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct(ReservationResource $reservation)
+    public function __construct()
     {
-        $this->reservation = $reservation;
+        //
     }
 
     /**
@@ -37,18 +32,11 @@ class ReservationCreated extends Notification implements ShouldQueue
     /**
      * Get the mail representation of the notification.
      */
-    public function toMail(object $notifiable)
+    public function toMail(object $notifiable): MailMessage
     {
-        $status = ucfirst($this->reservation->status);
         return (new MailMessage)
-        ->subject(__('newRequest').'-'.strtoupper($this->reservation->slug))
-        ->view('emails.request', ['reservation' => $this->reservation,'status'=>$status]);
-
-
-       /* Mail::to($this->reservation->client->contact)
-          ->queue(new CreateReservationMail($this->reservation));*/
-
-
+        ->subject(__('Reservation canceled').'-'.strtoupper($this->reservation->slug))
+        ->view('emails.request', ['reservation' => $this->reservation]);
     }
 
     /**
