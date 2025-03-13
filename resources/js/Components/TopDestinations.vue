@@ -6,14 +6,14 @@ import {onMounted, ref} from "vue";
 const props = defineProps(["destinations"]);
 const renderComponent = ref(true);
 
-const itemsToShow = ref( 4);
+const itemsToShow = ref(6);
 
 const windowResize = () => {
 
     const width = window.innerWidth;
     
     if(width > 1344){
-      itemsToShow.value = 4;
+      itemsToShow.value = 5;
       return ;
     }
 
@@ -40,12 +40,12 @@ onMounted(()=>{
 <template>
   <div class="content" v-if="renderComponent" >
     <div class="title mb-4">
-      <span>Top </span>
-      <span class="text-[#0084BD]">natural paradises </span>
+      <span>{{$t('top')}} </span>
+      <span class="text-[#0084BD]"> {{ $t('natural_paradises') }} </span>
       <span>you have to visit</span>
 
     </div>
-    <Carousel :itemsToShow="itemsToShow" :wrapAround="false" :transition="500">
+    <Carousel :itemsToShow="itemsToShow" :wrapAround="false" :transition="200">
       <Slide v-for="slide in props.destinations" :key="slide">
         <div class="carousel__item">
           <TopDestinationCard :destination="slide"/>
@@ -73,6 +73,7 @@ onMounted(()=>{
     font-weight: 600;
     line-height: 55.04px;
     text-align: left;
+    text-transform: uppercase;
 
   }
 }

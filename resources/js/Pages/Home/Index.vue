@@ -32,7 +32,10 @@ const request = (params)=> {
 <template>
     <HomeLayout>
        <item-banner :destinations="destinations" :origins="origins" @request="request"/>
-      <TopDestinations :destinations="props.destinations.data"/>
+       <div class="mt-5">
+        <TopDestinations :destinations="props.destinations.data"/>
+       </div>
+      
       <TrustPilot/>
     </HomeLayout>
 

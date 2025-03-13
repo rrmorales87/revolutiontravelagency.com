@@ -280,7 +280,7 @@
     "hours": "Horas",
     "totalTravelers": "Cantidad de pasajeros",
     "whoIs": "Para quien es la solicitud",
-    "contactTravel": "Número o correo electrónico",
+    "contactTravel": "Correo electrónico",
     "request": "Solicitar",
     "formTravelTerm": "Al enviar una solicitud usted estara aceptando nuestros terminos y condiciones de uso",
     "yourTravel": "Su viaje",
@@ -326,6 +326,12 @@
     "Duration trip": "Duración del viaje",
     "Payment Breakdown": "Desglose de pago",
     "Do you need help?": "Necesitas ayudas?",
-    "Revolution Travel Agency. All rights reserved": "Revolution Travel Agency. Todos los derechos reservados."
+    "Revolution Travel Agency. All rights reserved": "Revolution Travel Agency. Todos los derechos reservados.",
+    "Reservation confirmed": "Reservación confirmada",
+    "Reservation canceled": "Reservación cancelada",
+    "dear": "Estimando/a",
+    "top": "Los mejores",
+    "natural_paradises": " paraísos naturales ",
+    "you_visit": "que puedes visitar"
 
 }

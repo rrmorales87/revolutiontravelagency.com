@@ -8,6 +8,7 @@ use App\Models\Reservations;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\TopDestinations;
+use Carbon\Carbon;
 
 class ReservationServices
 {
@@ -113,4 +114,21 @@ class ReservationServices
         $reservation->save();
         return $reservation;
     }
+
+    public function getSerieCountByDate(){
+
+        // Obtener el primer día del mes actual
+        $firstDayMonth = Carbon::now()->startOfMonth()->format('Y-m-d');
+
+        // Obtener el último día del mes actual
+        $lastDayMonth = Carbon::now()->endOfMonth()->format('Y-m-d');
+
+     
+        
+        return Reservations::select(\DB::raw("DATE_FORMAT(DATE(created_at),'%d-%m-%Y') as day"),\DB::raw('count(*) as total'))
+                            // ->whereBetween('created_at', [$firstDayMonth, $lastDayMonth])
+                            ->groupBy('day')
+                            ->get();
+    }
+
 }
